@@ -2,8 +2,9 @@ name: Cash Out hourly
 
 on:
   schedule:
-    # Every hour at :17 (GitHub delays jobs scheduled on the hour).
-    - cron: "17 * * * *"
+    # Every hour on the hour. GitHub often starts these a few minutes late; each frame
+    # is filed under the hour it belongs to. The last run is at 20:00 UTC on 25 October (17:00 in Brasília).
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -26,7 +27,7 @@ jobs:
       - name: Collect odds, trades and anomalies
         run: node collect.js
       - name: Render this hour's frame
-        run: node render-frame.js --latest --size 1600
+        run: node render-frame.js --latest --size 1600 --force
       - name: Save
         run: |
           git config user.name "cash-out"
