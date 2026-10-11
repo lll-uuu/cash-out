@@ -6,7 +6,8 @@
 // Reading the bath (default "brasil" palette):
 //   red ink                 bets on Lula (buying Lula Yes or selling Flávio Yes)
 //   yellow and green ink    bets on Flávio (the flag's amarelo and verde)
-//   pearl / cream ink       $1,000+ trades by wallets flagged as whales or freshly created: interference
+//   pearl / cream ink       $1,000+ trades by wallets flagged as whales or freshly created: interference,
+//                           softly edged in red (backing Lula) or yellow/green (backing Flávio)
 //   where a wallet's ink lands, its exact hue, saturation, lightness and opacity: the wallet address
 //   how much ink            the stake (more and larger drops, ringed stones for big ones)
 //   comb strokes            one pass per hour, pulled in proportion to that hour's odds
@@ -40,7 +41,7 @@
 
   const STONE_HOURS = 2;      // the newest hours stay uncombed
   const COVERAGE = 2.1;       // ink covers the bath about twice over
-  const STRIDE = 10;          // floats per operation
+  const STRIDE = 13;          // floats per operation
 
   const hexv = (w, a, b) => parseInt(w.slice(2 + a, 2 + b), 16) || 0;
   function hsl(h, s, l) {
@@ -82,7 +83,12 @@
     const trades = (snap.trades || []).slice().sort((a, b) => a[0] - b[0]);
     const ops = [], meta = [];
     const push = (...v) => { while (v.length < STRIDE) v.push(0); ops.push(...v); };
-    const drop = (cx, cy, r, ink, m) => { push(0, cx, cy, r * r, ink.c[0], ink.c[1], ink.c[2], ink.a, meta.length); meta.push(m); };
+    // a drop may carry a coloured rim: [rimR, rimG, rimB, rim width as a fraction of the radius]
+    const drop = (cx, cy, r, ink, m, rim) => {
+      const rc = rim ? rim.c : [0, 0, 0], rw = rim ? rim.w : 0;
+      push(0, cx, cy, r * r, ink.c[0], ink.c[1], ink.c[2], ink.a, meta.length, rc[0], rc[1], rc[2], rw);
+      meta.push(m);
+    };
     const tine = (bx, by, mx, my, z, lam) => push(1, bx, by, mx, my, -my, mx, z, lam);
     const wave = (mx, my, A, lam, phi) => push(2, mx, my, -my, mx, A, 2 * Math.PI / lam, phi);
     const swirl = (cx, cy, th, R) => push(3, cx, cy, th, R * R);
@@ -128,11 +134,13 @@
       const m = { trade: ti, kind: fam };
       if (usd < 3) { drop(cx0, cy0, r * 0.7, { c: P.speck, a: 0.95 }, { trade: ti, kind: "speck" }); return; }
       const n = dropsFor(t);
+      // interference keeps its pearl, but every ring of it is edged in the ink of the side it backs
+      const edge = fam === "whale" || fam === "fresh" ? { c: inkFor(P, wallet, side, 0).c, w: 0.3 } : null;
       for (let i = 0; i < n; i++) {
         const ang = B(i * 2) * Math.PI * 2, dist = i ? r * (0.9 + 1.6 * B(i * 2 + 1)) : 0;
         const cx = cx0 + Math.cos(ang) * dist, cy = cy0 + Math.sin(ang) * dist;
         const ri = r * (i ? 0.55 + 0.45 * B(20 + i) : 1);
-        drop(cx, cy, ri, inkFor(P, wallet, fam, i * 0.2), m);
+        drop(cx, cy, ri, inkFor(P, wallet, fam, i * 0.2), m, edge);
         if (ri > 0.02) drop(cx, cy, ri * 0.55, inkFor(P, wallet, fam, 1), m);
         if (ri > 0.035) drop(cx, cy, ri * 0.28, inkFor(P, wallet, fam, 2), m);
       }
@@ -159,9 +167,15 @@
         const dx = px - ops[j + 1], dy = py - ops[j + 2], d2 = dx * dx + dy * dy, r2 = ops[j + 3];
         if (d2 < r2) {
           const q = Math.sqrt(d2 / r2);
+          const a = ops[j + 7] * T, rw = ops[j + 12];
           const rim = q > 0.9 ? 0.78 + 2.2 * (1 - q) : 1;      // pigment gathers at the rim
-          const a = ops[j + 7] * T;
-          R += a * ops[j + 4] * rim; G += a * ops[j + 5] * rim; Bl += a * ops[j + 6] * rim;
+          let cr = ops[j + 4], cg = ops[j + 5], cb = ops[j + 6];
+          if (rw > 0 && q > 1 - rw) {
+            // a whale's or new wallet's pearl drop: the ink of the side it backs bleeds in softly from the edge
+            let e = (q - (1 - rw)) / rw; e = e * e * (3 - 2 * e);
+            cr += (ops[j + 9] - cr) * e; cg += (ops[j + 10] - cg) * e; cb += (ops[j + 11] - cb) * e;
+          }
+          R += a * cr * rim; G += a * cg * rim; Bl += a * cb * rim;
           T *= 1 - ops[j + 7];
           if (hit < 0) hit = ops[j + 8];
           px = ops[j + 1] + dx * 0.5; py = ops[j + 2] + dy * 0.5;   // older ink glimpsed through the glaze
