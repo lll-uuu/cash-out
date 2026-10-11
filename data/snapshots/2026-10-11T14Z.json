@@ -1,14 +1,14 @@
 {
  "v": 2,
  "id": "2026-10-11T14Z",
- "ts": 1791728725,
- "at": "2026-10-11T14:25:25.000Z",
+ "ts": 1791729174,
+ "at": "2026-10-11T14:32:54.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 378431.288208
+  "volume24hr": 386727.36130700004
  },
  "palette": "brasil",
  "candidates": [
@@ -40,18 +40,64 @@
  ],
  "totals": {
   "lula": {
-   "wallets": 144,
-   "usd": 56005.04,
-   "trades": 195
+   "wallets": 141,
+   "usd": 55978.3,
+   "trades": 194
   },
   "flavio": {
-   "wallets": 136,
-   "usd": 45497.08,
-   "trades": 251
+   "wallets": 137,
+   "usd": 45597.08,
+   "trades": 252
   }
  },
- "anomalies": [],
- "newAnomalies": 0,
+ "anomalies": [
+  {
+   "kind": "fresh",
+   "wallet": "0x49b1adcc4f6ac1fff4ab4db0cd287bee29525291",
+   "backs": "flavio",
+   "usd": 8353.36,
+   "ts": 1791661216,
+   "tx": "0xe20ce375ffb2811fd2ab48e1c0b0ce0b6d4f985bf723751d7b218f5ae97fef05",
+   "note": "wallet first active 0 h ago, staked $8,353 on Flávio Bolsonaro"
+  },
+  {
+   "kind": "whale",
+   "wallet": "0x720bd69011aa5a9ef7846e88648218a7b33d37f6",
+   "backs": "lula",
+   "usd": 11530.4,
+   "ts": 1791661612,
+   "tx": "0x7558bf7760789d93569be4abf9ef5d1b623023280d9c4908955bb146d3bf5e24",
+   "note": "$11,530 backing Lula within an hour"
+  },
+  {
+   "kind": "fresh",
+   "wallet": "0x0f3e25a6f79f908a2724e04d5198d3101859a997",
+   "backs": "lula",
+   "usd": 1779.05,
+   "ts": 1791662395,
+   "tx": "0x17d627dba3233fa4dbd8f44d0f4e3988299bf03dca0b305df53296d79fdc5f30",
+   "note": "wallet first active 5.9 days ago, staked $1,779 on Lula"
+  },
+  {
+   "kind": "whale",
+   "wallet": "0x2e7bf3e7b8ba0351b737897197fd5cc34fbfbd8c",
+   "backs": "lula",
+   "usd": 13070.75,
+   "ts": 1791673356,
+   "tx": "0xd7ff402bb86a25650dc39dcb801200319d45576302b4c0b3464f575935c971db",
+   "note": "$13,071 backing Lula within an hour"
+  },
+  {
+   "kind": "whale",
+   "wallet": "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
+   "backs": "flavio",
+   "usd": 15960,
+   "ts": 1791675316,
+   "tx": "0x5c939c6394da73e4840a410e36697717d6be1ca09e9e15a71070d25e085ffa06",
+   "note": "$15,960 backing Flávio Bolsonaro within an hour"
+  }
+ ],
+ "newAnomalies": 5,
  "contracts": {
   "collateral": {
    "name": "pUSD collateral token",
@@ -67,27 +113,6 @@
   }
  },
  "trades": [
-  [
-   1791642372,
-   "0xd13a53ec7771a801fbe85fbf2ba30bcbf77d5b20",
-   10.53,
-   "lula",
-   "0xd78c51643ccdc49c89ac4447dfada9b3489eadb6f440464c9855379cf1c11133"
-  ],
-  [
-   1791642691,
-   "0x0cad11457a4a513f0227fcac7fc8b049e41b5dd0",
-   132.75,
-   "lula",
-   "0xa49dae2cd624c3d4e3748e819f54699bf8ddf5261edb7223647f7e030284823c"
-  ],
-  [
-   1791642693,
-   "0xf435c18569e1598d8597327f216546a79353cfce",
-   4.7,
-   "lula",
-   "0x92415c5d79c903f2e3074627f35b5dbd71c40300479996b5848668cb74c974db"
-  ],
   [
    1791642789,
    "0x28a286753fc2ae311da60189e0d5b99001be3117",
@@ -3188,6 +3213,27 @@
    5.7,
    "flavio",
    "0xfaae63c3841663fa5476e834b981109a17aa9e03cc68abc2c5af6109fdcc6753"
+  ],
+  [
+   1791728427,
+   "0x76d48e8fb2b2982478605a5ee80f037ac1463ad4",
+   108.9,
+   "lula",
+   "0xceb0f2ccb8a122e13cc427ba47cb1ddd2207afb1a405b01ec15a0c56870a7a07"
+  ],
+  [
+   1791728566,
+   "0x1631ab2d89b30496bd4ded1e18505b5750acdfd2",
+   100,
+   "flavio",
+   "0x9e306cef33ff730c6ac259359a3a3867b16e3f8cef6cb5ce36e128212ae027ee"
+  ],
+  [
+   1791728739,
+   "0x4df332e27f9ee3224f52ce30e3ce15c1075e788f",
+   12.34,
+   "lula",
+   "0x01ef5323968903891e0cc35591446bdb66d0c315b6811b13d949a8cc64e3f73b"
   ]
  ]
 }
