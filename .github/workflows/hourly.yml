@@ -1,0 +1,38 @@
+name: Cash Out hourly
+
+on:
+  schedule:
+    # Every hour at :17 (GitHub delays jobs scheduled on the hour).
+    - cron: "17 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cash-out
+  cancel-in-progress: false
+
+jobs:
+  marble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-audit --no-fund
+      - name: Collect odds, trades and anomalies
+        run: node collect.js
+      - name: Render this hour's frame
+        run: node render-frame.js --latest --size 1600
+      - name: Save
+        run: |
+          git config user.name "cash-out"
+          git config user.email "cash-out@users.noreply.github.com"
+          git add data frames
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "marble $(date -u +%Y-%m-%dT%HZ)"
+          git pull --rebase
+          git push
