@@ -2,7 +2,7 @@
 
 Luiza Prado, 2026
 
-A marbling bath, recorded every hour until counting night on 25 October, made from the money betting on Brazil's presidential runoff on Polymarket.
+A marbling bath, recorded every hour until the polls close on 25 October (17:00 in Brasília, 15:00 in Acre), made from the money betting on Brazil's presidential runoff on Polymarket.
 
 Each frame marbles the last 24 hours of trades. Every trade is a drop of ink; every hour a comb is dragged through the bath, pulled by that hour's odds.
 
@@ -31,7 +31,7 @@ Thresholds live in `lib.js`. A second palette, `contracts` (blue, magenta and re
 3. Open **Actions**, enable workflows if asked, choose **Cash Out hourly**, and click **Run workflow** once. A first file appears in `data/snapshots/` and `frames/`.
 4. For the live page: **Settings → Pages → Deploy from a branch → main / (root)**. The page shows the latest hour and refreshes itself. Hovering names the wallet whose ink is under the cursor.
 
-The job runs every hour at :17 and stops on its own after 26 Oct 03:00 UTC (midnight in Brasília on election day). Each run takes a few minutes. Scheduled GitHub jobs are sometimes late or skipped at busy times, so expect the odd gap; `data/index.json` lists every hour that ran.
+The job runs every hour on the hour; its last run is at 20:00 UTC on 25 October (17:00 in Brasília, 15:00 in Acre), and that final frame is pinned to the moment the polls close. GitHub often starts scheduled runs a few minutes late; each frame is still filed under its hour. Each run takes a few minutes. Scheduled GitHub jobs are sometimes late or skipped at busy times, so expect the odd gap; `data/index.json` lists every hour that ran.
 
 ## What gets kept
 

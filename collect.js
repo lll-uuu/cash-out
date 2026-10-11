@@ -45,11 +45,16 @@ const yesPrice = m => {
 };
 
 async function main() {
-  const now = Math.floor(Date.now() / 1000);
-  if (now > Date.parse(L.CONFIG.endAt) / 1000 && !process.env.FORCE) {
-    console.log(`Past ${L.CONFIG.endAt}; the bath is finished. Nothing collected.`);
+  // Runs are scheduled on the hour but GitHub often starts them a few minutes late.
+  // The final hour still counts if its run starts late; its snapshot is pinned to the moment polls close.
+  const realNow = Math.floor(Date.now() / 1000);
+  const finalTs = Math.floor(Date.parse(L.CONFIG.finalAt) / 1000);
+  if (Math.floor(realNow / 3600) > Math.floor(finalTs / 3600) && !process.env.FORCE) {
+    console.log(`Past ${L.CONFIG.finalAt}; the polls have closed and the bath is finished. Nothing collected.`);
     return;
   }
+  const final = realNow >= finalTs;
+  const now = final ? finalTs : realNow;
   const id = new Date(now * 1000).toISOString().slice(0, 13) + "Z";
 
   const events = await getJSON(`${GAMMA}/events?slug=${encodeURIComponent(L.CONFIG.eventSlug)}`);
@@ -104,7 +109,7 @@ async function main() {
     .map(r => [Math.floor(r.ts / 3600), r.share])
     .concat([[Math.floor(now / 3600), Number(share.toFixed(4))]]);
   const snap = {
-    v: 2, id, ts: now, at: new Date(now * 1000).toISOString(),
+    v: 2, id, ts: now, at: new Date(now * 1000).toISOString(), final,
     event: { slug: ev.slug, id: ev.id, title: ev.title, volume24hr: Number(ev.volume24hr) || null },
     palette: L.CONFIG.palette,
     candidates, share, shareHistory, totals,

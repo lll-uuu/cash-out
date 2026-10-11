@@ -157,7 +157,9 @@
       d.append(head, el("div", "muted", a.note || a.kind));
       ev.append(d);
     }
-    document.getElementById("status").textContent = (snap.source ? snap.source + " · " : "") + "marbled " + when(snap.ts);
+    document.getElementById("status").textContent = snap.final
+      ? "The polls have closed. The bath stopped at " + when(snap.ts) + "."
+      : (snap.source ? snap.source + " · " : "") + "marbled " + when(snap.ts);
   }
 
   function showFrame(src) {

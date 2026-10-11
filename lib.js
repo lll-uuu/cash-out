@@ -15,8 +15,9 @@ const CONFIG = {
   freshMinUsd: 1000,        // ...when it stakes at least this much in the hour
   swingPoints: 0.03,        // a 3-point move in an hour is a swing
   anomalyMemoryHours: 24,   // anomalies stay in the bath for this long
-  // Stop collecting after polls close and counting night ends (midnight in Brasília, 25 Oct).
-  endAt: "2026-10-26T03:00:00Z",
+  // The last frame: 17:00 Brasília time on 25 October (20:00 UTC), when polls close everywhere
+  // (voting runs on Brasília time nationwide, so Acre closes at 15:00 local).
+  finalAt: "2026-10-25T20:00:00Z",
 };
 
 // Contracts the bets settle through. Their addresses double as colours.
