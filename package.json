@@ -1,0 +1,19 @@
+{
+  "name": "cash-out",
+  "version": "1.0.0",
+  "description": "Cash Out (Luiza Prado, 2026): a marbling bath poured hourly from the money betting on Brazil's 2026 runoff",
+  "scripts": {
+    "collect": "node collect.js",
+    "frame": "node render-frame.js --latest --size 1600",
+    "print": "node render-frame.js --all --size 2400 --format png --out frames-print",
+    "build": "node scripts/build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0"
+  },
+  "private": true
+}
