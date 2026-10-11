@@ -74,24 +74,32 @@ async function main() {
   for (const c of candidates) trades.push(...await tradesFor(c.conditionId, c.key, since));
   const windowTrades = trades.filter(t => t.timestamp >= since);
 
-  // --- anomalies since the previous run ---
+  // --- anomalies across the whole 24-hour window the bath marbles ---
+  // Every frame judges all of its ink by the same rule, however long the system has been running.
+  // Whales: $5,000+ on one side within any 60-minute stretch of the window.
   const prev = readJSON("data/latest.json", null);
-  const fromTs = prev ? Math.max(prev.ts, now - 3 * 3600) : now - 3600;
-  const movers = L.hourlyMovers(windowTrades, fromTs, now + 1);
-  const found = L.detectWhales(movers);
+  const found = L.detectWhalesRolling(windowTrades, since, now + 1), movers = [];
+  for (let h = Math.floor(since / 3600) * 3600; h <= now; h += 3600) {
+    movers.push(...L.hourlyMovers(windowTrades, Math.max(h, since), Math.min(h + 3600, now + 1)));
+  }
 
+  // fresh wallets: how old was the wallet when it placed the bet?
   const cache = readJSON("data/wallets.json", {});
-  for (const mv of movers.filter(m => m.usd >= L.CONFIG.freshMinUsd).slice(0, 25)) {
+  let lookups = 0;
+  const candidates4fresh = movers.filter(m => m.usd >= L.CONFIG.freshMinUsd).sort((a, b) => b.usd - a.usd);
+  for (const mv of candidates4fresh) {
     if (!(mv.wallet in cache)) {
+      if (lookups >= 60) continue;   // keep each run polite to the API; the cache fills over a few runs
+      lookups++;
       try {
         const act = await getJSON(`${DATA}/activity?user=${mv.wallet}&limit=1&sortBy=TIMESTAMP&sortDirection=ASC`);
         cache[mv.wallet] = Array.isArray(act) && act[0] ? Number(act[0].timestamp) : null;
       } catch (e) { console.warn("activity lookup failed for", mv.wallet, e.message); continue; }
       await sleep(200);
     }
-    const fresh = L.detectFresh(mv, cache[mv.wallet], now);
+    const fresh = L.detectFresh(mv, cache[mv.wallet], mv.ts);
     if (fresh) {
-      const w = found.findIndex(a => a.kind === "whale" && a.wallet === fresh.wallet);
+      const w = found.findIndex(a => a.kind === "whale" && a.wallet === fresh.wallet && a.tx === fresh.tx);
       if (w >= 0) found.splice(w, 1); // a fresh wallet that is also large counts once, as fresh
       found.push(fresh);
     }
@@ -99,6 +107,9 @@ async function main() {
   const swing = L.detectSwing(prev && prev.share, share, now);
   if (swing) found.push(swing);
   const anomalies = L.mergeAnomalies(prev && prev.anomalies, found, now);
+  const seenBefore = new Set(((prev && prev.anomalies) || []).map(a => `${a.kind}|${a.wallet || ""}|${a.tx || Math.floor(a.ts / 3600)}`));
+  const fresh_ = anomalies.filter(a => !seenBefore.has(`${a.kind}|${a.wallet || ""}|${a.tx || Math.floor(a.ts / 3600)}`));
+  found.length = 0; found.push(...fresh_);   // "new" = not already in the previous hour's record
 
   const compact = L.compactTrades(windowTrades, now);
   const totals = L.sideTotals(compact);

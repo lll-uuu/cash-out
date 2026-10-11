@@ -83,6 +83,43 @@ function detectWhales(movers) {
     }));
 }
 
+// Whales over a whole window: a wallet that moves whaleUsd or more on one side within any 60-minute stretch.
+// Returns one anomaly per such stretch (overlapping stretches of the same wallet count once).
+function detectWhalesRolling(trades, fromTs, toTs) {
+  const groups = new Map();
+  for (const t of trades) {
+    if (t.timestamp < fromTs || t.timestamp >= toTs) continue;
+    const w = (t.proxyWallet || "").toLowerCase();
+    const k = w + "|" + backedCandidate(t, t.market);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(t);
+  }
+  const out = [];
+  for (const [k, list] of groups) {
+    const [wallet, backs] = k.split("|");
+    list.sort((a, b) => a.timestamp - b.timestamp);
+    let i = 0, sum = 0;
+    for (let j = 0; j < list.length; j++) {
+      sum += usd(list[j]);
+      while (list[j].timestamp - list[i].timestamp >= 3600) { sum -= usd(list[i]); i++; }
+      if (sum >= CONFIG.whaleUsd) {
+        const win = list.slice(i, j + 1);
+        // extend to the whole run of trades that keeps the total above the line
+        let k2 = j, s2 = sum;
+        while (k2 + 1 < list.length && list[k2 + 1].timestamp - list[i].timestamp < 3600) { k2++; s2 += usd(list[k2]); win.push(list[k2]); }
+        const big = win.reduce((a, b) => (usd(b) > usd(a) ? b : a));
+        out.push({
+          kind: "whale", wallet, backs, usd: round2(s2), ts: big.timestamp, tx: big.transactionHash || null,
+          note: `${fmtUsd(s2)} backing ${labelOf(backs)} within an hour`,
+        });
+        // start looking again after this stretch
+        i = k2 + 1; sum = 0; j = k2;
+      }
+    }
+  }
+  return out.sort((a, b) => a.ts - b.ts);
+}
+
 // firstSeen: unix seconds of the wallet's first Polymarket activity (or null if unknown)
 function detectFresh(mover, firstSeen, nowTs) {
   if (firstSeen == null || mover.usd < CONFIG.freshMinUsd) return null;
@@ -119,5 +156,5 @@ const fmtUsd = x => "$" + Math.round(x).toLocaleString("en-US");
 
 module.exports = {
   CONFIG, CONTRACTS, usd, backedCandidate, compactTrades, sideTotals, hourlyMovers,
-  detectWhales, detectFresh, detectSwing, mergeAnomalies, labelOf, fmtUsd,
+  detectWhales, detectWhalesRolling, detectFresh, detectSwing, mergeAnomalies, labelOf, fmtUsd,
 };
