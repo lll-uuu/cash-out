@@ -1,0 +1,16 @@
+[
+ {
+  "id": "2026-10-11T13Z",
+  "ts": 1791723969,
+  "share": 0.1156,
+  "prices": {
+   "lula": 0.115,
+   "flavio": 0.8795
+  },
+  "wallets": {
+   "lula": 153,
+   "flavio": 131
+  },
+  "newAnomalies": []
+ }
+]
