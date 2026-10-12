@@ -1,14 +1,14 @@
 {
  "v": 2,
- "id": "2026-10-12T04Z",
- "ts": 1791777658,
- "at": "2026-10-12T04:00:58.000Z",
+ "id": "2026-10-12T05Z",
+ "ts": 1791781256,
+ "at": "2026-10-12T05:00:56.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 236790.829359
+  "volume24hr": 241030.6314530001
  },
  "palette": "brasil",
  "candidates": [
@@ -22,12 +22,12 @@
   {
    "key": "flavio",
    "label": "Flávio Bolsonaro",
-   "price": 0.8605,
+   "price": 0.8595,
    "conditionId": "0x1a01bf78f56a507fcb666d564d8c8b91b0750679163ed6e96746102c9b7d285d",
    "closed": false
   }
  ],
- "share": 0.12683916793505834,
+ "share": 0.12696800406297612,
  "shareHistory": [
   [
    497701,
@@ -92,18 +92,22 @@
   [
    497716,
    0.1268
+  ],
+  [
+   497717,
+   0.127
   ]
  ],
  "totals": {
   "lula": {
-   "wallets": 162,
-   "usd": 73094.55,
-   "trades": 192
+   "wallets": 163,
+   "usd": 74023.61,
+   "trades": 194
   },
   "flavio": {
-   "wallets": 162,
-   "usd": 50818.43,
-   "trades": 301
+   "wallets": 166,
+   "usd": 50925.12,
+   "trades": 306
   }
  },
  "anomalies": [
@@ -162,7 +166,7 @@
    "note": "$9,798 backing Lula within an hour"
   }
  ],
- "newAnomalies": 1,
+ "newAnomalies": 0,
  "contracts": {
   "collateral": {
    "name": "pUSD collateral token",
@@ -178,20 +182,6 @@
   }
  },
  "trades": [
-  [
-   1791692501,
-   "0xb46475d7785fd066f5f65eaf328763325b1d9cda",
-   108,
-   "lula",
-   "0xc348035db8c0ecb0f89d86eb49c1f1ba09e3e672de9af9c8177f79e7ebaa8500"
-  ],
-  [
-   1791692628,
-   "0xaa32d8c16240eb1f2e6258181fcb983e86d3a55b",
-   10,
-   "lula",
-   "0xae6e9ba1efef0b384ba87dd87b79a613d72694626701ecd71274607e23b499e4"
-  ],
   [
    1791695802,
    "0x564803d9c357a83337fe90b75c9b78363f10314e",
@@ -3628,6 +3618,69 @@
    3.36,
    "flavio",
    "0x57a3ff871a7a9685c36a0bd454153c09babaf68d651e07e6d55a9e81efe6962c"
+  ],
+  [
+   1791777584,
+   "0x279bc54fba66ea74eef17938d3ae53f27c10e05b",
+   17.09,
+   "flavio",
+   "0xd800f5a430d28054f342558fa11148ecf79f0cb5420bfd1921201461264486bb"
+  ],
+  [
+   1791778755,
+   "0x53d035f0e32ee762ecb1b1f32cf1837489294b17",
+   39.95,
+   "lula",
+   "0x6a7afab70f186f3234ff33b91f9b558e64869d47c07f8ec8d4661dff0e4c2443"
+  ],
+  [
+   1791778781,
+   "0x89fbaf933eb10b8c5801ac12ed07a8693a966106",
+   5.98,
+   "lula",
+   "0x078264c6b7d1a9c337e80fafa4158c66b83846cc9203be8e517ab578ba75ea1b"
+  ],
+  [
+   1791779738,
+   "0x1b9cb1d3db6bc65300a51dcf02c5a8e3fd83878d",
+   20,
+   "flavio",
+   "0x037ce483ecc96ba15b4edd426955f69bef4f419a5e8b5239215eff96f1af70a9"
+  ],
+  [
+   1791779882,
+   "0x43cb4ae1f4ddc9e671486c79c9f40a6fd98b84df",
+   47.36,
+   "flavio",
+   "0xc3c93c5f5cd9e1e3989dc9ad5f372a3c446fbc91d261469c75afbf846a0f5b63"
+  ],
+  [
+   1791779967,
+   "0x35bbbad2415fe5e39b12da9a316cdc80b022009b",
+   133.39,
+   "lula",
+   "0x11d30410557acce6a7c2f6aa1277e9d5ffb33d74523e7d412656f71e4680a3b9"
+  ],
+  [
+   1791779991,
+   "0x85dc683f5452ae3cfef99dd8d01b1a06f5658d9e",
+   1,
+   "flavio",
+   "0xc049b5819787a44fe6b4fa7d52a036ae1e76a9511642c228df76e8e6a3035d9a"
+  ],
+  [
+   1791780230,
+   "0x120ccd78c9b63bd94416fbe4cfbe6381f5c5e1fb",
+   867.74,
+   "lula",
+   "0xa8275225ca0ca9d9d0eba9b73c03f201f273172854b9f955615b62a9962a9b8d"
+  ],
+  [
+   1791780234,
+   "0x01adea599a865a092b51ee4573581a75fc1390f6",
+   21.24,
+   "flavio",
+   "0x35797a92dbe3544b64045cb78ab35d98554bd6e43a07cec12318f109953475b9"
   ]
  ]
 }
