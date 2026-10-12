@@ -6,7 +6,8 @@
     "collect": "node collect.js",
     "frame": "node render-frame.js --latest --size 1600",
     "print": "node render-frame.js --all --size 2400 --format png --out frames-print",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "analyze": "node analyze.js"
   },
   "keywords": [],
   "author": "",

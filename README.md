@@ -12,7 +12,7 @@ Each frame marbles the last 24 hours of trades. Every trade is a drop of ink; ev
 |---|---|
 | Red ink | Bets on Lula (buying Lula Yes or selling Flávio Yes) |
 | Yellow and green ink | Bets on Flávio Bolsonaro, the flag's *amarelo* and *verde* |
-| Pearl and cream ink | $1,000+ moves by wallets flagged as whales ($5,000+ in an hour) or newly created (first active less than 7 days ago). They also swirl the bath around themselves |
+| Pearl and cream ink | $1,000+ moves by wallets flagged as whales ($5,000+ within any 60 minutes) or newly created (first active less than 7 days before the bet). Each pearl drop is edged in the ink of the side it backs: red for Lula, yellow or green for Flávio. They also swirl the bath around themselves |
 | Where a wallet's ink lands | Address digits 1–4 (horizontal) and 5–8 (vertical) |
 | The exact shade | Address digits 9–10 hue, 11–12 saturation, 13–14 brightness, 15–16 opacity, 17–18 yellow or green band |
 | How much ink | The stake: more and larger drops, ringed stones for big bets, clusters scattered by the transaction hash |
@@ -36,7 +36,7 @@ The job runs every hour on the hour; its last run is at 20:00 UTC on 25 October 
 ## What gets kept
 
 - `data/snapshots/*.json`: the master record of each hour (odds, the 24 hours of trades, anomalies). Frames are rendered from these exactly, at any size.
-- `frames/*.jpg`: a 1600px image per hour, about 1 MB each.
+- `frames/*.jpg`: a 1600px image per hour, about 1 MB each, for the live page.
 - `data/index.json`: one line per hour, useful for captions or a colophon.
 
 ## Print files for the textile
@@ -49,6 +49,18 @@ npm run print
 ```
 
 This renders every hour as a 2400 × 2400 PNG in `frames-print/`. That's 20 cm at 300 dpi, which is plenty when many hours share one cloth. For a single large piece, render one hour bigger, for example `node render-frame.js data/snapshots/2026-10-25T23Z.json --size 8000 --format png --out frames-print`. Rendering uses every CPU core; expect roughly one to three minutes per 2400px frame on a laptop, longer for very large sizes.
+
+## Aggregate analysis
+
+`analyze.js` runs once a day (workflow **Cash Out analysis**, or `npm run analyze` locally) and writes `analysis/`:
+
+- `relatorio.md`: a readable report in Portuguese, covering who bets, the hours of day, the money placed ahead of swings, estimated time zones, wallet ages, other markets and where the money came from.
+- `hourly.csv`: every recorded hour, with money per side, big-bettor money, new-wallet money, odds and swings. It is ready to set against the campaign calendar.
+- `report.json`: the same figures for other tools.
+
+It studies big bettors (whales, flagged new wallets, and anyone with US$ 5,000+ in total) against a sample of ordinary wallets, using their public Polymarket history. No wallet or funder address appears in the outputs, and any figure covering fewer than 3 wallets is hidden. `analysis/cache.json` keeps per-wallet summaries between runs, to save requests. Those wallets are already public in the snapshots.
+
+The funding section needs a free Etherscan API key (etherscan.io → API Keys), saved as a repository secret named `ETHERSCAN_API_KEY` (Settings → Secrets and variables → Actions). Without the key, the rest of the report still runs.
 
 ## Files
 
