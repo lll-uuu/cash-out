@@ -6,11 +6,13 @@ Luiza Prado, 2026 · [lll-uuu.github.io/cash-out](https://lll-uuu.github.io/cash
 
 ## Português
 
-**O que acompanha.** Cash Out acompanha o dinheiro apostado no segundo turno da eleição presidencial brasileira de 2026, entre Lula e Flávio Bolsonaro, no Polymarket, um site de apostas que funciona com criptomoedas. A cada hora, até o fechamento das urnas em 25 de outubro, o projeto registra todas as apostas feitas nas 24 horas anteriores e as transforma numa imagem marmorizada, uma gota de tinta por aposta. Uma imagem é guardada por hora.
+Cash Out acompanha o dinheiro apostado no segundo turno da eleição presidencial brasileira de 2026, entre Lula e Flávio Bolsonaro, no Polymarket, um site de apostas que funciona com criptomoedas. A cada hora, até o fechamento das urnas em 25 de outubro, o projeto registra todas as apostas feitas nas 24 horas anteriores e as transforma numa imagem marmorizada, uma gota de tinta por aposta. Uma imagem é guardada por hora.
 
-**Por quê.** Quem especula sobre os nossos futuros? O Brasil proibiu os sites de apostas pouco antes do primeiro turno, mas qualquer pessoa com uma carteira de criptomoedas ainda pode apostar em quem vai governar o país, de qualquer lugar do mundo, sem se identificar. Este projeto busca entender como o capital circula nos emaranhados contemporâneos entre poder colonial e tecnologia: de quem é o dinheiro que move as odds de uma eleição brasileira, quando ele se move e de onde vem.
+**Quem especula sobre os nossos futuros?** 
+O Brasil proibiu os sites de apostas pouco antes do primeiro turno, mas qualquer pessoa com uma carteira de criptomoedas ainda pode apostar em quem vai governar o país, de qualquer lugar do mundo, sem se identificar. Este projeto busca entender como o capital circula nos emaranhados contemporâneos entre poder colonial e tecnologia: de quem é o dinheiro que move as odds de uma eleição brasileira, quando ele se move e de onde vem.
 
-**Que dados gera e onde ficam.** Tudo vem de fontes públicas: os dados abertos do Polymarket e a blockchain Polygon, onde cada aposta fica registrada. Nada é coletado de quem visita a página. Tudo fica guardado neste repositório público:
+**Que dados gera e onde ficam.** 
+Tudo vem de fontes públicas: os dados abertos do Polymarket e a blockchain Polygon, onde cada aposta fica registrada. Nada é coletado de quem visita a página. Tudo fica guardado neste repositório público:
 
 - `data/snapshots/`: um arquivo por hora, com as odds e todas as apostas das 24 horas anteriores (horário, endereço da carteira, valor, candidato e código da transação), além das apostas fora do comum: baleias e carteiras novas.
 - `frames/`: a imagem feita a cada hora.
@@ -79,9 +81,10 @@ A seção sobre a origem do dinheiro precisa de uma chave gratuita do Etherscan 
 
 ## English
 
-**What it tracks.** Cash Out follows the money bet on the runoff of Brazil's 2026 presidential election, between Lula and Flávio Bolsonaro, on Polymarket, a betting website that runs on cryptocurrency. Every hour until the polls close on 25 October, the project records every bet placed in the previous 24 hours and turns them into a marbled image, one drop of paint per bet. One image is saved per hour.
+Cash Out follows the money bet on the runoff of Brazil's 2026 presidential election, between Lula and Flávio Bolsonaro, on Polymarket, a betting website that runs on cryptocurrency. Every hour until the polls close on 25 October, the project records every bet placed in the previous 24 hours and turns them into a marbled image, one drop of paint per bet. One image is saved per hour.
 
-**Why.** Who speculates on our futures? Brazil banned betting sites shortly before the first round, yet anyone with a crypto wallet can still bet on who will govern the country, from anywhere in the world, without leaving a name. This project tries to understand how capital flows through today's entanglements of colonial power and technology: whose money moves the odds on a Brazilian election, when it moves, and where it comes from.
+**Who speculates on our futures?** 
+Brazil banned betting sites shortly before the first round, yet anyone with a crypto wallet can still bet on who will govern the country, from anywhere in the world, without leaving a name. This project tries to understand how capital flows through today's entanglements of colonial power and technology: whose money moves the odds on a Brazilian election, when it moves, and where it comes from.
 
 **What data it generates and where it is kept.** Everything comes from public sources: Polymarket's public data and the Polygon blockchain, where every bet is recorded. Nothing is collected from anyone who visits the page. All of it is saved in this public repository:
 
