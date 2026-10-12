@@ -194,6 +194,45 @@ function hourlyTimeline(trades, groups, anomalies, share) {
   }));
 }
 
+// Who the big bettors back. A wallet counts as backing one side when 90%+ of its money went there;
+// otherwise it bet on both (hedging, trading the swings, or market making).
+function sidesOf(label, set, per) {
+  const out = { label, lula: { wallets: 0, usd: 0 }, flavio: { wallets: 0, usd: 0 }, both: { wallets: 0, usd: 0 }, lulaUsd: 0, flavioUsd: 0 };
+  for (const w of set) {
+    const p = per.get(w); if (!p || !p.usd) continue;
+    const k = p.lula / p.usd >= 0.9 ? "lula" : p.flavio / p.usd >= 0.9 ? "flavio" : "both";
+    out[k].wallets++; out[k].usd += p.usd;
+    out.lulaUsd += p.lula; out.flavioUsd += p.flavio;
+  }
+  for (const k of ["lula", "flavio", "both"]) out[k].usd = r2(out[k].usd);
+  out.lulaUsd = r2(out.lulaUsd); out.flavioUsd = r2(out.flavioUsd);
+  out.lulaPct = pct(out.lulaUsd, out.lulaUsd + out.flavioUsd);
+  return out;
+}
+
+// Day by day (Brasília dates): big-bettor money on each side next to everyone else's, and the odds at day's end.
+function dailySides(trades, isBig, share) {
+  const days = new Map();
+  for (const t of trades) {
+    const d = new Date((t.ts - 3 * 3600) * 1000).toISOString().slice(0, 10);
+    const x = days.get(d) || days.set(d, { day: d, bigLula: 0, bigFlavio: 0, restLula: 0, restFlavio: 0, bigWallets: new Set() }).get(d);
+    const big = isBig(t);
+    x[(big ? "big" : "rest") + (t.backs === "lula" ? "Lula" : "Flavio")] += t.u;
+    if (big) x.bigWallets.add(t.w);
+  }
+  const hours = [...share.keys()].sort((a, b) => a - b);
+  return [...days.values()].sort((a, b) => a.day.localeCompare(b.day)).map(x => {
+    const end = Date.parse(x.day + "T23:00:00-03:00") / 1000;
+    const h = hours.filter(k => k <= end).pop();
+    return {
+      day: x.day, bigWallets: x.bigWallets.size,
+      bigLula: r2(x.bigLula), bigFlavio: r2(x.bigFlavio), bigLulaPct: pct(x.bigLula, x.bigLula + x.bigFlavio),
+      restLulaPct: pct(x.restLula, x.restLula + x.restFlavio),
+      lulaOdds: h != null ? Math.round(share.get(h) * 1000) / 10 : null,
+    };
+  });
+}
+
 function hourOfDay(trades, filter) {
   const h = new Array(24).fill(0);
   let tot = 0;
@@ -347,6 +386,23 @@ function markdown(R) {
   p(``);
   p(`Grandes apostadores = baleias (US$ 5.000+ em menos de uma hora), carteiras novas sinalizadas, ou quem somou US$ ${A.bigWalletUsd.toLocaleString("pt-BR")}+ no período. Eles são ${pc(R.concentration.bigWalletsPct)} das carteiras e põem ${pc(R.concentration.bigUsdPct)} do dinheiro.`);
   p(``);
+  p(`## Em quem apostam os grandes apostadores`);
+  p(``);
+  p(`Uma carteira conta como apostando em um candidato quando 90% ou mais do dinheiro dela foi para ele. As demais apostaram nos dois lados: para se proteger, para lucrar com as oscilações das odds ou como intermediárias do mercado.`);
+  p(``);
+  p(`| Grupo | Só Lula | Só Flávio | Nos dois | Dinheiro em Lula | Dinheiro em Flávio |`);
+  p(`|---|---:|---:|---:|---:|---:|`);
+  const cell = c => c.wallets >= A.minGroup ? `${c.wallets} (${money(c.usd)})` : few(c.wallets);
+  for (const g of R.sides) p(`| ${g.label} | ${cell(g.lula)} | ${cell(g.flavio)} | ${cell(g.both)} | ${pc(g.lulaPct)} | ${pc(r2(100 - g.lulaPct))} |`);
+  p(``);
+  if (R.daily.length) {
+    p(`Dia a dia (datas de Brasília). Compare a parcela do dinheiro dos grandes que foi para Lula com a das demais carteiras e com as odds de Lula no fim do dia:`);
+    p(``);
+    p(`| Dia | Grandes ativos | Grandes em Lula | Grandes em Flávio | % dos grandes em Lula | % dos demais em Lula | Odds de Lula |`);
+    p(`|---|---:|---:|---:|---:|---:|---:|`);
+    for (const d of R.daily) p(`| ${d.day} | ${few(d.bigWallets)} | ${d.bigWallets >= A.minGroup ? money(d.bigLula) : "–"} | ${d.bigWallets >= A.minGroup ? money(d.bigFlavio) : "–"} | ${d.bigWallets >= A.minGroup ? pc(d.bigLulaPct) : "–"} | ${pc(d.restLulaPct)} | ${d.lulaOdds == null ? "–" : pc(d.lulaOdds)} |`);
+    p(``);
+  }
   p(`## Horários (hora de Brasília)`);
   p(``);
   p(`Parcela do dinheiro apostado em cada hora do dia. A linha do tempo completa, hora a hora, está em \`hourly.csv\`, pronta para cruzar com a agenda de campanha.`);
@@ -473,6 +529,13 @@ async function main() {
     ].filter(g => g.wallets >= A.minGroup),
     concentration: { bigWalletsPct: pct(G.flagged.size, all.size), bigUsdPct: pct(bigUsd, allUsd) },
     hourOfDay: { big: G.flagged.size >= A.minGroup ? hourOfDay(trades, isBig) : null, rest: hourOfDay(trades, t => !isBig(t)) },
+    sides: [
+      sidesOf("Todos os grandes apostadores", G.flagged, G.per),
+      sidesOf("Baleias", G.whale, G.per),
+      sidesOf("Carteiras novas sinalizadas", G.fresh, G.per),
+      sidesOf("Demais carteiras", new Set([...all].filter(w => !G.flagged.has(w))), G.per),
+    ].filter(g => g.lula.wallets + g.flavio.wallets + g.both.wallets >= A.minGroup),
+    daily: G.flagged.size >= A.minGroup ? dailySides(trades, isBig, share) : [],
     aheadOfSwings: aheadOfSwings(trades, G, anomalies),
     timezones: { big: timezones(G.flagged, cache.history), baseline: timezones(G.baseline, cache.history) },
     walletAge: walletAge(G.flagged, cache.history, G.per, trades),
