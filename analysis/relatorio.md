@@ -1,6 +1,6 @@
 # Cash Out: análise agregada
 
-Atualizado em 2026-10-12 07:36 (Brasília). 22 horas registradas, de 2026-10-10T13Z a 2026-10-12T09Z (UTC).
+Atualizado em 2026-10-12 16:07 (Brasília). 31 horas registradas, de 2026-10-10T13Z a 2026-10-12T18Z (UTC).
 
 Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de um grupo, e grupos com menos de 3 carteiras são omitidos.
 
@@ -8,12 +8,12 @@ Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de u
 
 | | Carteiras | Apostado | Em Lula | Em Flávio |
 |---|---:|---:|---:|---:|
-| Todas as carteiras | 527 | US$ 249.744 | 61,8% | 38,2% |
-| Grandes apostadores | 12 | US$ 155.433 | 67,1% | 32,9% |
-| …baleias | 9 | US$ 143.168 | 70,1% | 29,9% |
-| …carteiras novas sinalizadas | 3 | US$ 12.265 | 31,9% | 68,1% |
+| Todas as carteiras | 628 | US$ 265.790 | 61,5% | 38,5% |
+| Grandes apostadores | 13 | US$ 156.630 | 67,3% | 32,7% |
+| …baleias | 9 | US$ 143.175 | 70,1% | 29,9% |
+| …carteiras novas sinalizadas | 4 | US$ 13.455 | 37,9% | 62,1% |
 
-Grandes apostadores = baleias (US$ 5.000+ em menos de uma hora), carteiras novas sinalizadas, ou quem somou US$ 5.000+ no período. Eles são 2,3% das carteiras e põem 62,2% do dinheiro.
+Grandes apostadores = baleias (US$ 5.000+ em menos de uma hora), carteiras novas sinalizadas, ou quem somou US$ 5.000+ no período. Eles são 2,1% das carteiras e põem 58,9% do dinheiro.
 
 ## Em quem apostam os grandes apostadores
 
@@ -21,10 +21,10 @@ Uma carteira conta como apostando em um candidato quando 90% ou mais do dinheiro
 
 | Grupo | Só Lula | Só Flávio | Nos dois | Dinheiro em Lula | Dinheiro em Flávio |
 |---|---:|---:|---:|---:|---:|
-| Todos os grandes apostadores | 9 (US$ 104.285) | 3 (US$ 51.148) | 0 | 67,1% | 32,9% |
+| Todos os grandes apostadores | 10 (US$ 105.475) | 3 (US$ 51.155) | 0 | 67,3% | 32,7% |
 | Baleias | 7 (US$ 100.373) | <3 | 0 | 70,1% | 29,9% |
-| Carteiras novas sinalizadas | <3 | <3 | 0 | 31,9% | 68,1% |
-| Demais carteiras | 243 (US$ 39.641) | 234 (US$ 38.909) | 38 (US$ 15.761) | 53,1% | 46,9% |
+| Carteiras novas sinalizadas | 3 (US$ 5.102) | <3 | 0 | 37,9% | 62,1% |
+| Demais carteiras | 283 (US$ 44.607) | 285 (US$ 44.373) | 47 (US$ 20.180) | 53% | 47% |
 
 Dia a dia (datas de Brasília). Compare a parcela do dinheiro dos grandes que foi para Lula com a das demais carteiras e com as odds de Lula no fim do dia:
 
@@ -32,7 +32,7 @@ Dia a dia (datas de Brasília). Compare a parcela do dinheiro dos grandes que fo
 |---|---:|---:|---:|---:|---:|---:|
 | 2026-10-10 | 6 | US$ 26.380 | US$ 24.735 | 51,6% | 59,7% | 12,6% |
 | 2026-10-11 | 6 | US$ 40.166 | US$ 26.413 | 60,3% | 49,5% | 12,7% |
-| 2026-10-12 | <3 | – | – | – | 39,5% | 12,6% |
+| 2026-10-12 | 4 | US$ 38.929 | US$ 7 | 100% | 48,5% | 12,6% |
 
 ## Horários (hora de Brasília)
 
@@ -40,44 +40,45 @@ Parcela do dinheiro apostado em cada hora do dia. A linha do tempo completa, hor
 
 | Hora | Grandes | Demais |
 |---|---:|---:|
-| 00h | 6,3% | 1,6% |
-| 01h | 0% | 1,3% |
+| 00h | 6,3% | 1,4% |
+| 01h | 0% | 1,1% |
 | 02h | 0% | 0,5% |
-| 03h | 0% | 3% |
-| 04h | 0% | 1,1% |
-| 05h | 18% | 6,6% |
-| 06h | 0% | 1,5% |
-| 07h | 0% | 0,3% |
-| 08h | 0% | 2,4% |
-| 09h | 0% | 4,5% |
-| 10h | 0% | 10,5% |
-| 11h | 0% | 5,9% |
-| 12h | 0% | 8,4% |
-| 13h | 6,6% | 8,1% |
-| 14h | 0% | 3,8% |
-| 15h | 0% | 3,3% |
-| 16h | 12,7% | 7,1% |
-| 17h | 29,5% | 12,6% |
-| 18h | 1,4% | 5,3% |
-| 19h | 2,7% | 2,8% |
-| 20h | 19,3% | 3,2% |
-| 21h | 3,5% | 2,5% |
-| 22h | 0% | 2,4% |
-| 23h | 0% | 1,4% |
+| 03h | 0% | 2,6% |
+| 04h | 0% | 0,9% |
+| 05h | 17,8% | 5,7% |
+| 06h | 0% | 1,3% |
+| 07h | 0% | 2% |
+| 08h | 0% | 3,6% |
+| 09h | 0% | 4,6% |
+| 10h | 0% | 13,4% |
+| 11h | 0% | 6,3% |
+| 12h | 0,8% | 8,3% |
+| 13h | 6,6% | 8,7% |
+| 14h | 0% | 3,4% |
+| 15h | 0% | 3,9% |
+| 16h | 12,6% | 6,1% |
+| 17h | 29,3% | 10,9% |
+| 18h | 1,4% | 4,6% |
+| 19h | 2,6% | 2,4% |
+| 20h | 19,1% | 2,8% |
+| 21h | 3,5% | 2,2% |
+| 22h | 0% | 2,1% |
+| 23h | 0% | 1,2% |
 
 **Antes das viradas.** Houve 0 viradas de 3+ pontos em uma hora. Em 0 delas, grandes apostadores tinham posto dinheiro nas 2 horas anteriores: US$ 0 no lado para onde as odds foram, US$ 0 no outro. Isso mostra coincidência no tempo, não prova que alguém sabia antes; também pode ser o próprio dinheiro deles movendo as odds.
 
 ## Fusos horários (estimativa)
 
-Para cada carteira com histórico suficiente, as seis horas mais quietas do dia são tratadas como noite. 6 grandes apostadores tiveram um padrão claro; 6 não (robôs, várias pessoas ou pouca atividade). O método não separa o Brasil (UTC−3) do leste dos EUA (UTC−4 em outubro).
+Para cada carteira com histórico suficiente, as seis horas mais quietas do dia são tratadas como noite. 6 grandes apostadores tiveram um padrão claro; 7 não (robôs, várias pessoas ou pouca atividade). O método não separa o Brasil (UTC−3) do leste dos EUA (UTC−4 em outubro).
 
 | Faixa | Grandes | Comparação |
 |---|---:|---:|
-| UTC−5 a −2 (leste dos EUA, Canadá, Brasil, resto da América do Sul) | 66,7% | 24% |
-| UTC−1 a +3 (Europa, África) | – | 45,3% |
-| UTC−8 a −6 (costa oeste e centro dos EUA, México) | – | 10,7% |
-| UTC+7 a +10 (Sudeste e Leste Asiático, Austrália) | – | 10,7% |
-| UTC+4 a +6 (Golfo, Ásia Central, Índia) | – | 6,7% |
+| UTC−5 a −2 (leste dos EUA, Canadá, Brasil, resto da América do Sul) | 66,7% | 28% |
+| UTC−1 a +3 (Europa, África) | – | 39% |
+| UTC+4 a +6 (Golfo, Ásia Central, Índia) | – | 13,4% |
+| UTC−8 a −6 (costa oeste e centro dos EUA, México) | – | 9,8% |
+| outros fusos | – | 4,9% |
+| UTC+7 a +10 (Sudeste e Leste Asiático, Austrália) | – | 4,9% |
 
 ## Idade das carteiras na primeira aposta na eleição
 
@@ -86,23 +87,23 @@ Para cada carteira com histórico suficiente, as seis horas mais quietas do dia 
 | menos de 1 dia | <3 | – | – |
 | 1 a 7 dias | <3 | – | – |
 | 1 a 4 semanas | 0 | 0% | – |
-| 1 a 6 meses | 4 | 33,3% | US$ 70.984 |
-| mais de 6 meses | 5 | 41,7% | US$ 72.184 |
+| 1 a 6 meses | 4 | 30,8% | US$ 70.984 |
+| mais de 6 meses | 5 | 38,5% | US$ 72.192 |
 
 ## Em que mais eles apostam
 
-33,3% dos grandes apostadores nunca apostaram em outra coisa no Polymarket (na comparação: 10,7%). Carteiras de uso único são um dos sinais clássicos de aposta com informação privilegiada, mas também de quem só se interessa pelo Brasil.
+38,5% dos grandes apostadores nunca apostaram em outra coisa no Polymarket (na comparação: 11,3%). Carteiras de uso único são um dos sinais clássicos de aposta com informação privilegiada, mas também de quem só se interessa pelo Brasil.
 
 | Área | Grandes | Comparação |
 |---|---:|---:|
-| Brasil | 58,3% | 42% |
-| Política dos EUA | 58,3% | 60% |
-| Esporte | 58,3% | 72,7% |
-| Outros | 50% | 73,3% |
-| Guerra e geopolítica | 41,7% | 71,3% |
-| Outras eleições | 41,7% | 48% |
-| Economia | 33,3% | 55,3% |
-| Cripto | 25% | 60% |
+| Brasil | 53,8% | 38,7% |
+| Política dos EUA | 53,8% | 61,3% |
+| Esporte | 53,8% | 73,3% |
+| Outros | 46,2% | 75,3% |
+| Guerra e geopolítica | 38,5% | 65,3% |
+| Outras eleições | 38,5% | 51,3% |
+| Economia | 30,8% | 52% |
+| Cripto | 23,1% | 62% |
 | Cultura e tecnologia | – | 38,7% |
 
 Mercados em comum entre os grandes apostadores (3+ carteiras):
@@ -128,14 +129,14 @@ Mercados em comum entre os grandes apostadores (3+ carteiras):
 
 ## De onde vem o dinheiro
 
-Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 12 grandes apostadores verificados, na rede Polygon. Contratos do próprio Polymarket não contam como origem.
+Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 13 grandes apostadores verificados, na rede Polygon. Contratos do próprio Polymarket não contam como origem.
 
 | Origem | Carteiras | Apostado na eleição |
 |---|---:|---:|
-| Endereço que também abasteceu 5+ das carteiras estudadas (provável corretora, ponte ou serviço de depósito) | 7 | US$ 123.678 |
+| Endereço que também abasteceu 5+ das carteiras estudadas (provável corretora, ponte ou serviço de depósito) | 7 | US$ 123.685 |
 | Endereço que abasteceu 2 a 4 das carteiras estudadas (possível mesmo dono) | 3 | US$ 21.269 |
 | Endereço exclusivo | 0 | US$ 0 |
-| Sem entrada visível (dinheiro chegou por dentro do Polymarket) | <3 | – |
+| Sem entrada visível (dinheiro chegou por dentro do Polymarket) | 3 | – |
 
 13 grupos de carteiras dividem uma mesma origem (tamanhos: 4, 4, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2). Carteiras estudadas que abasteceram outras carteiras estudadas: 0.
 
