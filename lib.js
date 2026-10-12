@@ -127,6 +127,7 @@ function detectFresh(mover, firstSeen, nowTs) {
   if (ageDays > CONFIG.freshWalletDays) return null;
   return {
     kind: "fresh", wallet: mover.wallet, backs: mover.backs, usd: round2(mover.usd), ts: mover.ts, tx: mover.maxTx,
+    ageDays: round2(ageDays),
     note: `wallet first active ${ageDays < 1 ? Math.round(ageDays * 24) + " h" : ageDays.toFixed(1) + " days"} ago, staked ${fmtUsd(mover.usd)} on ${labelOf(mover.backs)}`,
   };
 }
@@ -137,6 +138,7 @@ function detectSwing(prevShare, share, nowTs) {
   if (Math.abs(d) < CONFIG.swingPoints) return null;
   return {
     kind: "swing", wallet: null, backs: d > 0 ? CONFIG.candidates[0].key : CONFIG.candidates[1].key,
+    points: round2(Math.abs(d) * 100),
     usd: 0, ts: nowTs, tx: null,
     note: `odds moved ${(Math.abs(d) * 100).toFixed(1)} points toward ${labelOf(d > 0 ? CONFIG.candidates[0].key : CONFIG.candidates[1].key)} in an hour`,
   };

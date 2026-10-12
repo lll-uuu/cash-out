@@ -41,6 +41,7 @@
   .label { color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.13em; font-size: 9.5px; }
   .row { display: flex; gap: 10px; align-items: baseline; justify-content: space-between; min-width: 0; }
   .row > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+  .row > span:last-child:not(:first-child) { white-space: nowrap; }
   .big { font-size: 15px; font-weight: 500; }
   .sw { display: inline-block; width: 10px; height: 10px; margin-right: 7px; transform: translateY(1px); border-radius: 50%; outline: 1px solid rgba(255,255,255,0.2); }
   .sw + .sw { margin-left: -4px; }
@@ -57,52 +58,78 @@
   #toggle:focus-visible, #panel button:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
   #panel .close { align-self: flex-start; font: 500 10px var(--mono); color: var(--ink-dim); background: none; border: 1px solid var(--rule); padding: 4px 8px; cursor: pointer; letter-spacing: 0.08em; }
   #status { color: var(--ink-dim); font-size: 10.5px; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .lang { display: flex; gap: 2px; flex: none; }
+  details summary { cursor: pointer; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.13em; font-size: 9.5px; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: "+ "; }
+  details[open] summary::before { content: "– "; }
+  details summary:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
+  dl { margin: 10px 0 0; display: grid; gap: 8px; }
+  dt { font-weight: 500; }
+  dd { margin: 0; color: var(--ink-dim); }
+  .lang button { font: 500 10px var(--mono); letter-spacing: 0.08em; color: var(--ink-dim); background: none; border: 1px solid var(--rule); padding: 4px 7px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { color: var(--bath); background: var(--ink); border-color: var(--ink); }
+  .lang button:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { #panel { transition: none; } }
 </style>
 
-<img id="bath" alt="A marbled surface of red, yellow, green and pearl inks: each drop is a bet on Brazil's 2026 presidential runoff placed on Polymarket in the last 24 hours">
-<button id="toggle" type="button" hidden>READ THE BATH</button>
+<img id="bath" data-i18n-alt="alt" alt="A marbled image in red, yellow, green and white: each drop of colour is a bet on the second round of Brazil&#39;s 2026 presidential election, placed on the Polymarket betting website in the last 24 hours">
+<button id="toggle" type="button" hidden data-i18n="read">ABOUT THIS IMAGE</button>
 
 <aside id="panel" aria-live="polite">
-  <div>
-    <h1>Cash Out</h1>
-    <div class="sub">Brasil 2026, segundo turno. A marbling bath poured every hour from the money betting on it on Polymarket.</div>
+  <div class="head">
+    <div>
+      <h1>Cash Out</h1>
+      <div class="sub" data-i18n="sub">Brazil 2026, presidential runoff. An image made every hour from the money being bet on the election on Polymarket.</div>
+    </div>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
   </div>
 
   <section>
-    <div class="label">The odds</div>
+    <div class="label" data-i18n="odds">The odds</div>
     <div id="odds"></div>
   </section>
 
   <section>
-    <div class="label">Ink poured, last 24 hours</div>
+    <div class="label" data-i18n="poured">Money bet in the last 24 hours</div>
     <div id="totals"></div>
   </section>
 
   <section>
-    <div class="label">Under the cursor</div>
-    <div id="cursor" class="muted">Move over the bath to see whose money the ink is.</div>
+    <div class="label" data-i18n="under">Under your mouse</div>
+    <div id="cursor" class="muted" data-i18n="hover">Move your mouse over the image to see whose bet each patch of colour is.</div>
   </section>
 
   <section>
-    <div class="label">Interference</div>
+    <div class="label" data-i18n="interference">Unusual bets</div>
     <div id="events" style="display:grid;gap:10px"></div>
   </section>
 
   <section>
-    <div class="label">Reading the bath</div>
+    <div class="label" data-i18n="reading">How to read the image</div>
     <div class="key">
-      <span><span class="sw" style="background:var(--red)"></span></span><span>Red ink: bets on Lula</span>
-      <span><span class="sw" style="background:var(--amarelo)"></span><span class="sw" style="background:var(--verde)"></span></span><span>Yellow and green ink: bets on Flávio Bolsonaro</span>
-      <span><span class="sw" style="background:var(--pearl)"></span></span><span>Pearl ink: $1,000+ moves by whales and newly created wallets, which also stir the bath</span>
-      <span><span class="sw" style="background:#18091a"></span></span><span>Dark specks: transaction hashes, pinholes to the bath</span>
+      <span><span class="sw" style="background:var(--red)"></span></span><span data-i18n="k_red">Red: bets on Lula</span>
+      <span><span class="sw" style="background:var(--amarelo)"></span><span class="sw" style="background:var(--verde)"></span></span><span data-i18n="k_yg">Yellow and green: bets on Flávio Bolsonaro</span>
+      <span><span class="sw" style="background:var(--pearl);outline:2px solid var(--red)"></span><span class="sw" style="background:var(--pearl);outline:2px solid var(--verde)"></span></span><span data-i18n="k_pearl">White: unusual bets of $1,000 or more, from whales (wallets that bet $5,000 or more within an hour) or from new wallets. They swirl the colours around them. Their edges show who they bet on: red for Lula, yellow or green for Flávio</span>
+      <span><span class="sw" style="background:#18091a"></span></span><span data-i18n="k_specks">Black dots: every transaction leaves one or two</span>
     </div>
-    <div class="muted">Where each wallet's ink lands, and its exact hue, saturation, brightness and opacity, come from the digits of its address. Bigger stakes pour more and larger drops. Every hour a comb is dragged through the bath, pulled by that hour's odds. The last two hours sit on top as round stones, not yet combed.</div>
-    <div class="muted">The bath itself is pUSD, Polymarket's collateral token, <span class="addr">0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB</span>, taken almost to black.</div>
+    <div class="muted" data-i18n="how">Every bet is a drop of paint. Each wallet has an address, and the digits of that address decide where its paint falls and its exact shade, so the same wallet always paints the same way. Bigger bets make bigger drops. Every hour the paint is dragged across the image, pulled by that hour's odds, the way marbled paper is made. The newest bets stay on top as round drops.</div>
+    <div class="muted" data-i18n="ground">The dark background comes from pUSD, the digital currency every bet on Polymarket is made in.</div>
   </section>
 
-  <div id="status">loading…</div>
-  <button class="close" type="button" id="close">HIDE</button>
+  <section>
+    <details id="glossary">
+      <summary data-i18n="glossary">Glossary</summary>
+      <dl id="gl"></dl>
+    </details>
+  </section>
+
+  <div id="status" data-i18n="loading">loading…</div>
+  <button class="close" type="button" id="close" data-i18n="hide">HIDE</button>
 </aside>
 
 <script src="engine.js"></script>
@@ -112,11 +139,112 @@
   const probe = document.createElement("canvas"), pctx = probe.getContext("2d", { willReadFrequently: true });
   let snap = null, built = null, S = 0, probeReady = false;
 
-  const fmtUsd = x => "$" + Math.round(x).toLocaleString("en-US");
+  // ---------- English / Portuguese ----------
+  const I18N = {
+    en: {
+      alt: "A marbled image in red, yellow, green and white: each drop of colour is a bet on the second round of Brazil's 2026 presidential election, placed on the Polymarket betting website in the last 24 hours",
+      read: "ABOUT THIS IMAGE", hide: "HIDE", loading: "loading…", glossary: "Glossary",
+      sub: "Brazil 2026, presidential runoff. An image made every hour from the money being bet on the election on Polymarket.",
+      odds: "The odds", poured: "Money bet in the last 24 hours", under: "Under your mouse",
+      hover: "Move your mouse over the image to see whose bet each patch of colour is.",
+      interference: "Unusual bets", reading: "How to read the image",
+      k_red: "Red: bets on Lula",
+      k_yg: "Yellow and green: bets on Flávio Bolsonaro",
+      k_pearl: "White: unusual bets of $1,000 or more, from whales (wallets that bet $5,000 or more within an hour) or from new wallets. They swirl the colours around them. Their edges show who they bet on: red for Lula, yellow or green for Flávio",
+      k_specks: "Black dots: every transaction leaves one or two",
+      how: "Every bet is a drop of paint. Each wallet has an address, and the digits of that address decide where its paint falls and its exact shade, so the same wallet always paints the same way. Bigger bets make bigger drops. Every hour the paint is dragged across the image, pulled by that hour's odds, the way marbled paper is made. The newest bets stay on top as round drops.",
+      ground: "The dark background comes from pUSD, the digital currency every bet on Polymarket is made in.",
+      gl: [
+        ["Polymarket", "A website where people bet on real-world events, from elections to wars. It runs on cryptocurrency."],
+        ["Odds", "How likely something is, according to the bets. If a candidate's odds are 88%, bettors think there's an 88% chance they'll win."],
+        ["Wallet", "A bettor's account. Every wallet has a public address, a long code of letters and numbers, like 0x2f9d…deb3."],
+        ["Whale", "A wallet that bets $5,000 or more on one candidate within an hour."],
+        ["New wallet", "A wallet first used less than a week before its bet. When it bets $1,000 or more, it shows up in white."],
+        ["Transaction", "The public record of a bet. Each one has its own unique code, called a hash."],
+        ["pUSD", "Polymarket's digital currency, pegged to the US dollar. Every bet is placed in it."],
+      ],
+      totals: (w, n, who) => `${w} wallets, ${n} bets on ${who}`,
+      none: "None in the last 24 hours. White appears when a whale bets $5,000 or more within an hour, or when a new wallet bets $1,000 or more. When the odds jump by three points or more in an hour, the whole image gets swirled.",
+      whale: "whale", fresh: "new wallet", swing: "odds swing",
+      n_whale: (usd, who) => `${usd} on ${who} within an hour`,
+      n_fresh: (usd, who, age) => age == null ? `a wallet less than a week old bet ${usd} on ${who}` : `a wallet first used ${age} ago bet ${usd} on ${who}`,
+      n_swing: (pts, who) => pts == null ? `the odds moved sharply in ${who}'s favour within an hour` : `the odds moved ${pts} points in ${who}'s favour within an hour`,
+      hoursAgo: h => `${h} hours`, daysAgo: d => `${d} days`,
+      final: t => `Voting is over. The image stopped at ${t}.`,
+      marbled: t => `updated ${t}`,
+      error: "Couldn't load the latest image. The page will try again in five minutes.",
+      bare: "Empty background: no bet here.",
+      speck: "a black dot left by a transaction", on: (usd, who) => `${usd} on ${who}`,
+      x_whale: "White: a whale.", x_fresh: "White: a new wallet.",
+      locale: "en-GB", money: x => "$" + Math.round(x).toLocaleString("en-US"),
+    },
+    pt: {
+      alt: "Uma imagem marmorizada em vermelho, amarelo, verde e branco: cada gota de cor é uma aposta no segundo turno da eleição presidencial de 2026 no Brasil, feita no site de apostas Polymarket nas últimas 24 horas",
+      read: "SOBRE A IMAGEM", hide: "ESCONDER", loading: "carregando…", glossary: "Glossário",
+      sub: "Brasil 2026, segundo turno. Uma imagem feita a cada hora com o dinheiro apostado na eleição no Polymarket.",
+      odds: "As odds", poured: "Dinheiro apostado nas últimas 24 horas", under: "Sob o mouse",
+      hover: "Passe o mouse sobre a imagem para ver de quem é a aposta em cada mancha de cor.",
+      interference: "Apostas fora do comum", reading: "Como ler a imagem",
+      k_red: "Vermelho: apostas em Lula",
+      k_yg: "Amarelo e verde: apostas em Flávio Bolsonaro",
+      k_pearl: "Branco: apostas fora do comum, de US$ 1.000 ou mais, feitas por baleias (carteiras que apostam US$ 5.000 ou mais em menos de uma hora) ou por carteiras novas. Elas fazem um redemoinho nas cores em volta. A borda mostra em quem apostaram: vermelho para Lula, amarelo ou verde para Flávio",
+      k_specks: "Pontos pretos: cada transação deixa um ou dois",
+      how: "Cada aposta é uma gota de tinta. Cada carteira tem um endereço, e são os dígitos desse endereço que decidem onde a tinta cai e o tom exato da cor. Por isso, a mesma carteira sempre pinta do mesmo jeito. Apostas maiores fazem gotas maiores. A cada hora, a tinta é arrastada pela imagem, puxada pelas odds daquela hora, do jeito que se faz papel marmorizado. As apostas mais recentes ficam por cima, em gotas redondas.",
+      ground: "O fundo escuro vem do pUSD, a moeda digital em que todas as apostas do Polymarket são feitas.",
+      gl: [
+        ["Polymarket", "Um site onde as pessoas apostam no resultado de acontecimentos reais, de eleições a guerras. Funciona com criptomoedas."],
+        ["Odds", "A chance de algo acontecer, segundo as apostas. Se as odds de um candidato são de 88%, quem aposta acredita que ele tem 88% de chance de vencer."],
+        ["Carteira", "A conta de quem aposta. Toda carteira tem um endereço público, um código longo de letras e números, como 0x2f9d…deb3."],
+        ["Baleia", "Uma carteira que aposta US$ 5.000 ou mais em um candidato em menos de uma hora."],
+        ["Carteira nova", "Uma carteira usada pela primeira vez menos de uma semana antes da aposta. Quando aposta US$ 1.000 ou mais, aparece em branco."],
+        ["Transação", "O registro público de uma aposta. Cada transação tem um código único, chamado hash."],
+        ["pUSD", "A moeda digital do Polymarket, atrelada ao dólar. Todas as apostas são feitas nela."],
+      ],
+      totals: (w, n, who) => `${w} carteiras, ${n} apostas em ${who}`,
+      none: "Nenhuma nas últimas 24 horas. O branco aparece quando uma baleia aposta US$ 5.000 ou mais em menos de uma hora, ou quando uma carteira nova aposta US$ 1.000 ou mais. Quando as odds mudam três pontos ou mais em uma hora, a imagem inteira ganha um redemoinho.",
+      whale: "baleia", fresh: "carteira nova", swing: "virada nas odds",
+      n_whale: (usd, who) => `${usd} em ${who} em menos de uma hora`,
+      n_fresh: (usd, who, age) => age == null ? `uma carteira com menos de uma semana apostou ${usd} em ${who}` : `uma carteira usada pela primeira vez há ${age} apostou ${usd} em ${who}`,
+      n_swing: (pts, who) => pts == null ? `as odds mudaram bruscamente a favor de ${who} em uma hora` : `as odds mudaram ${pts} pontos a favor de ${who} em uma hora`,
+      hoursAgo: h => `${h} horas`, daysAgo: d => `${d} dias`,
+      final: t => `A votação terminou. A imagem parou em ${t}.`,
+      marbled: t => `atualizado em ${t}`,
+      error: "Não foi possível carregar a imagem mais recente. A página vai tentar de novo em cinco minutos.",
+      bare: "Fundo vazio: nenhuma aposta aqui.",
+      speck: "um ponto preto deixado por uma transação", on: (usd, who) => `${usd} em ${who}`,
+      x_whale: "Branco: uma baleia.", x_fresh: "Branco: uma carteira nova.",
+      locale: "pt-BR", money: x => "US$ " + Math.round(x).toLocaleString("pt-BR"),
+    },
+  };
+  const pickLang = () => {
+    try { const s = localStorage.getItem("cashout-lang"); if (s === "en" || s === "pt") return s; } catch (e) {}
+    return (navigator.language || "en").toLowerCase().startsWith("pt") ? "pt" : "en";
+  };
+  let lang = pickLang();
+  const T = () => I18N[lang];
+
+  const fmtUsd = x => T().money(x);
   const short = a => a ? a.slice(0, 6) + "…" + a.slice(-4) : "";
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   const swatch = color => { const s = el("span", "sw"); s.style.background = color; return s; };
-  const when = ts => new Date(ts * 1000).toLocaleString([], { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  const when = ts => new Date(ts * 1000).toLocaleString(T().locale, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  const age = d => d < 1 ? T().hoursAgo(Math.max(1, Math.round(d * 24))) : T().daysAgo(d.toFixed(1).replace(".", lang === "pt" ? "," : "."));
+
+  function applyStatic() {
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+    for (const n of document.querySelectorAll("[data-i18n]")) n.textContent = T()[n.dataset.i18n];
+    for (const n of document.querySelectorAll("[data-i18n-alt]")) n.alt = T()[n.dataset.i18nAlt];
+    for (const b of document.querySelectorAll(".lang button")) b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    const gl = document.getElementById("gl"); gl.textContent = "";
+    for (const [term, def] of T().gl) gl.append(el("dt", null, term), el("dd", null, def));
+  }
+  function noteFor(a, label) {
+    const who = label[a.backs] || a.backs;
+    if (a.kind === "whale") return T().n_whale(fmtUsd(a.usd), who);
+    if (a.kind === "fresh") return T().n_fresh(fmtUsd(a.usd), who, a.ageDays == null ? null : age(a.ageDays));
+    if (a.kind === "swing") return T().n_swing(a.points == null ? null : String(a.points).replace(".", lang === "pt" ? "," : "."), who);
+    return a.note || a.kind;
+  }
   const SIDE_SW = { lula: ["var(--red)"], flavio: ["var(--amarelo)", "var(--verde)"] };
 
   function fillPanel() {
@@ -133,25 +261,26 @@
     for (const c of snap.candidates) {
       const t = (snap.totals || {})[c.key]; if (!t) continue;
       const r = el("div", "row");
-      r.append(el("span", null, `${t.wallets} wallets, ${t.trades} bets on ${c.label}`), el("span", null, fmtUsd(t.usd)));
+      r.append(el("span", null, T().totals(t.wallets, t.trades, c.label)), el("span", null, fmtUsd(t.usd)));
       tot.append(r);
     }
 
     const ev = document.getElementById("events"); ev.textContent = "";
     const list = (snap.anomalies || []).slice().reverse();
-    if (!list.length) ev.append(el("div", "muted", "None in the last 24 hours. Pearl ink appears when a wallet moves $5,000 or more in an hour, or when a wallet less than a week old stakes $1,000 or more. A swing of three points in an hour drags a bouquet comb through the bath."));
+    const label = Object.fromEntries(snap.candidates.map(c => [c.key, c.label]));
+    if (!list.length) ev.append(el("div", "muted", T().none));
     for (const a of list) {
       const d = el("div", "event " + a.kind);
       const head = el("div", "row"), left = el("span");
-      if (a.wallet) left.append(el("span", "addr", short(a.wallet) + (a.kind === "fresh" ? " · new wallet" : " · whale")));
-      else left.append(el("span", null, "odds swing"));
+      if (a.wallet) left.append(el("span", "addr", short(a.wallet) + " · " + (a.kind === "fresh" ? T().fresh : T().whale)));
+      else left.append(el("span", null, T().swing));
       head.append(left, el("span", "muted", when(a.ts)));
-      d.append(head, el("div", "muted", a.note || a.kind));
+      d.append(head, el("div", "muted", noteFor(a, label)));
       ev.append(d);
     }
     document.getElementById("status").textContent = snap.final
-      ? "The polls have closed. The bath stopped at " + when(snap.ts) + "."
-      : (snap.source ? snap.source + " · " : "") + "marbled " + when(snap.ts);
+      ? T().final(when(snap.ts))
+      : (snap.source ? snap.source + " · " : "") + T().marbled(when(snap.ts));
   }
 
   function showFrame(src) {
@@ -175,18 +304,27 @@
     const [x, y] = framePoint(e);
     const hit = CashOutEngine.inspect(snap, S, img.naturalHeight, x, y, { built });
     const box = document.getElementById("cursor"); box.textContent = ""; box.className = "";
-    if (!hit) { box.className = "muted"; box.textContent = "Bare bath: pUSD showing through."; return; }
+    if (!hit) { box.className = "muted"; box.textContent = T().bare; return; }
     const label = Object.fromEntries(snap.candidates.map(c => [c.key, c.label]));
     let color = "transparent";
     if (probeReady) { const p = pctx.getImageData(Math.max(0, Math.min(S - 1, x | 0)), Math.max(0, Math.min(probe.height - 1, y | 0)), 1, 1).data; color = `rgb(${p[0]},${p[1]},${p[2]})`; }
     const r1 = el("div", "row"), left = el("span");
     left.append(swatch(color), el("span", "addr", short(hit.wallet)));
-    const what = hit.kind === "speck" ? "a transaction's speck" : `${fmtUsd(hit.usd)} on ${label[hit.side]}`;
+    const what = hit.kind === "speck" ? T().speck : T().on(fmtUsd(hit.usd), label[hit.side]);
     r1.append(left, el("span", null, what));
     box.append(r1);
-    const extra = hit.kind === "whale" ? "Pearl ink: a whale's move." : hit.kind === "fresh" ? "Pearl ink: a newly created wallet." : "";
+    const extra = hit.kind === "whale" ? T().x_whale : hit.kind === "fresh" ? T().x_fresh : "";
     box.append(el("div", "muted", `${when(hit.ts)}${extra ? " · " + extra : ""}`));
   });
+
+  for (const b of document.querySelectorAll(".lang button")) b.addEventListener("click", () => {
+    lang = b.dataset.lang;
+    try { localStorage.setItem("cashout-lang", lang); } catch (e) {}
+    applyStatic();
+    if (snap) fillPanel();
+    const box = document.getElementById("cursor"); box.className = "muted"; box.textContent = T().hover;
+  });
+  applyStatic();
 
   const panel = document.getElementById("panel"), toggle = document.getElementById("toggle");
   document.getElementById("close").addEventListener("click", () => { panel.classList.add("off"); toggle.hidden = false; });
@@ -207,7 +345,7 @@
         next = await r.json();
         frame = "frames/" + next.id + ".jpg";
       } catch (e) {
-        document.getElementById("status").textContent = "Couldn't load the latest hour. The page tries again every five minutes.";
+        document.getElementById("status").textContent = T().error;
         return;
       }
     }
