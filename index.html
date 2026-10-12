@@ -7,112 +7,110 @@
 </head>
 <body>
 <title>Cash Out</title>
+<!-- Panel theme: "dark" or "light" -->
+<script>document.documentElement.dataset.theme = "dark";</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
   /* The marbled image fills the window. A light reading panel docks right on desktop, at the bottom on phones.
-     One typeface throughout: Ubuntu Mono. */
+     One typeface throughout, Ubuntu Mono, at its regular weight; hierarchy comes from size and tone. */
   :root {
     --bath: #160a1c;
-    --paper: #f3f3f1;
+    --paper: #f4f4f2;
     --ink: #17111b;
-    --dim: #554d5a;          /* 7.6:1 on paper */
-    --frame: rgba(23, 17, 27, 0.22);
+    --dim: #5b5360;          /* 7:1 on paper */
+    --rule: rgba(23, 17, 27, 0.16);
     --red: #d61f26;
     --amarelo: #f2c618;
     --verde: #149a43;
     --pearl: #f1eadb;
     --focus: #3b5bdb;
-    --read: "Ubuntu Mono", ui-monospace, Menlo, monospace;
-    --figure: var(--read);
+    --mono: "Ubuntu Mono", ui-monospace, Menlo, monospace;
+    --speck-edge: transparent;
+  }
+  /* Dark panel: solid (not see-through, so the image never muddies the text), near-white text,
+     greys kept bright enough to read easily (about 10:1). */
+  :root[data-theme="dark"] {
+    --paper: #150e19;
+    --ink: #f6f3ee;
+    --dim: #c6bfca;
+    --rule: rgba(246, 243, 238, 0.22);
+    --focus: #8ea6ff;
+    --speck-edge: rgba(246, 243, 238, 0.55);
   }
   html, body { height: 100%; margin: 0; }
-  body { background: var(--bath); color: var(--ink); font-family: var(--read); overflow: hidden; }
+  body { background: var(--bath); color: var(--ink); font-family: var(--mono); overflow: hidden; }
   #bath { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; cursor: crosshair; }
 
   #panel {
     position: fixed; top: 16px; right: 16px; bottom: 16px;
-    width: min(24.5rem, calc(100% - 32px));
-    background: var(--paper); border-radius: 0;
-    
-    overflow-y: auto; overscroll-behavior: contain;
-    font-size: 16px; line-height: 1.45;
+    width: min(24rem, calc(100% - 32px));
+    background: var(--paper);
+    overflow-y: auto; overscroll-behavior: contain; padding: 20px 20px 18px;
+    font-size: 15.5px; line-height: 1.45; font-variant-numeric: tabular-nums;
     transition: transform 0.45s ease, opacity 0.45s ease;
   }
   #panel.off { transform: translateX(calc(100% + 24px)); opacity: 0; pointer-events: none; }
   @media (max-width: 640px) {
-    #panel { top: auto; left: 16px; right: 16px; width: auto; max-height: 56%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+    #panel { top: auto; left: 16px; right: 16px; width: auto; max-height: 56%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); padding: 16px; }
     #panel.off { transform: translateY(calc(100% + 24px)); }
-    #odds .fig { font-size: 38px; }
-    .head { padding: 14px 16px 13px; }
+    #odds .fig { font-size: 32px; }
   }
 
-  /* masthead: same paper as the panel, closed by a single rule */
-  .head { background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--ink); padding: 18px 18px 16px; display: grid; gap: 10px; }
+  .head { display: grid; gap: 14px; }
   .head-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-  h1 { margin: 0; font: 800 44px/0.88 var(--figure); letter-spacing: -0.005em; }
-  .sub { color: var(--dim); font-size: 15px; line-height: 1.4; }
+  h1 { margin: 0; font: 400 30px/1 var(--mono); letter-spacing: -0.01em; }
+  .sub { color: var(--dim); }
 
-  .body { padding: 6px 14px 16px; display: grid; gap: 22px; }
-  /* each block is drawn as a frame with its heading set into the top edge */
-  section { position: relative; border: 1px solid var(--frame); border-radius: 0; padding: 16px 13px 13px; display: grid; gap: 10px; }
-  section > h2 {
-    position: absolute; top: -0.72em; left: 9px; margin: 0; padding: 0 5px; background: var(--paper);
-    font: 700 16px/1.2 var(--figure); letter-spacing: 0.005em;
-  }
-  section:first-child { margin-top: 16px; }
+  #odds { display: flex; justify-content: space-between; align-items: end; gap: 12px; }
+  #odds .fig { font-size: 38px; line-height: 1; display: block; letter-spacing: -0.02em; }
+  #odds > div:last-child { text-align: right; }
+  #odds .who { color: var(--dim); margin-top: 4px; display: block; }
+
+  .body { display: grid; gap: 18px; margin-top: 18px; }
+  section { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 12px; }
+  section > h2 { margin: 0; font: 400 14px/1.3 var(--mono); color: var(--dim); }
 
   .row { display: flex; gap: 12px; align-items: baseline; justify-content: space-between; min-width: 0; }
   .row > span:first-child { min-width: 0; overflow-wrap: anywhere; }
   .row > span:last-child:not(:first-child) { white-space: nowrap; }
-  .fig { font-family: var(--figure); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .fig { font-weight: 400; }
   .muted { color: var(--dim); }
   .small { font-size: 14px; }
-  .sw { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -1px; border-radius: 0; box-shadow: inset 0 0 0 1px rgba(23,17,27,0.18); }
+  .sw { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: 0; border-radius: 50%; }
   .sw + .sw { margin-left: -3px; }
-
-  /* odds: the current numbers, large, in the header */
-  #odds { display: flex; justify-content: space-between; align-items: end; gap: 12px; padding: 4px 0 2px; border-top: 1px solid var(--frame); padding-top: 12px; }
-  #odds .fig { font-size: 46px; line-height: 0.95; display: block; letter-spacing: -0.02em; }
-  #odds > div:last-child { text-align: right; }
-  #odds .who { font-size: 15px; color: var(--dim); margin-top: 4px; display: block; }
-  #odds .sw { box-shadow: none; }
+  .ring { display: inline-block; width: 11px; height: 11px; margin-right: 7px; vertical-align: -1px; border-radius: 50%; background: var(--pearl); box-shadow: inset 0 0 0 2.5px var(--side, var(--ink)); }
 
   .money { display: grid; gap: 8px; }
-  .money .row .fig { font-size: 19px; }
-  .money .count { display: block; font-size: 14px; color: var(--dim); margin-left: 21px; }
+  .money .count { display: block; font-size: 14px; color: var(--dim); margin-left: 16px; }
 
-  .addr { font-family: var(--figure); font-weight: 600; letter-spacing: 0.01em; }
-  .event { display: grid; gap: 3px; }
-  .event + .event { border-top: 1px solid var(--frame); padding-top: 10px; }
-  .tag { display: inline-block; font: 700 14px/1 var(--read); padding: 4px 8px 4px; border-radius: 0; background: var(--pearl); box-shadow: inset 0 0 0 2px var(--side, var(--ink)); margin-right: 6px; }
-  .tag.swing { background: none; box-shadow: inset 0 0 0 1px var(--ink); }
+  .event { display: grid; gap: 2px; }
+  .event + .event { margin-top: 6px; }
+  .event .note { color: var(--dim); }
 
-  .key { display: grid; grid-template-columns: 42px 1fr; gap: 9px 8px; align-items: start; }
-  .key .sw { width: 15px; height: 15px; }
-  .key > span:nth-child(odd) { padding-top: 2px; }
+  .key { display: grid; grid-template-columns: 34px 1fr; gap: 7px 8px; align-items: baseline; }
+  .key > span:nth-child(odd) { white-space: nowrap; }
 
-  details summary { cursor: pointer; font: 700 15px var(--figure); list-style: none; display: flex; justify-content: space-between; }
+  details summary { cursor: pointer; font: 400 14px var(--mono); color: var(--dim); list-style: none; display: flex; justify-content: space-between; }
   details summary::-webkit-details-marker { display: none; }
-  details summary::after { content: "+"; font-weight: 600; }
+  details summary::after { content: "+"; }
   details[open] summary::after { content: "–"; }
-  dl { margin: 12px 0 0; display: grid; gap: 2px; }
-  dd + dt { margin-top: 10px; }
-  dt { font-weight: 600; }
+  dl { margin: 10px 0 0; display: grid; gap: 1px; }
+  dd + dt { margin-top: 9px; }
   dd { margin: 0; color: var(--dim); }
-  section.gloss { padding-top: 12px; }
 
-  .foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 2px; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--rule); padding-top: 12px; }
   #status { color: var(--dim); font-size: 14px; }
 
-  button { font: 700 15px var(--read); cursor: pointer; border-radius: 0; }
-  .lang { display: flex; gap: 4px; flex: none; }
-  .lang button { color: var(--ink); background: none; border: 1px solid var(--frame); padding: 3px 10px; }
+  button { font: 400 14px var(--mono); cursor: pointer; border-radius: 0; }
+  .lang { display: flex; gap: 0; flex: none; }
+  .lang button { color: var(--dim); background: none; border: 1px solid var(--rule); padding: 2px 8px; }
+  .lang button + button { border-left: 0; }
   .lang button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
-  #close { color: var(--ink); background: none; border: 1px solid var(--frame); padding: 6px 14px; flex: none; }
-  #toggle { position: fixed; right: 16px; top: 16px; z-index: 2; color: var(--ink); background: var(--paper); border: 0; padding: 10px 18px;  }
-  button:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  #close { color: var(--ink); background: none; border: 1px solid var(--rule); padding: 4px 12px; flex: none; }
+  #toggle { position: fixed; right: 16px; top: 16px; z-index: 2; color: var(--ink); background: var(--paper); border: 0; padding: 8px 14px; }
+  button:focus-visible, summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { #panel { transition: none; } }
 </style>
 
@@ -153,14 +151,14 @@
       <div class="key">
         <span><span class="sw" style="background:var(--red)"></span></span><span data-i18n="k_red">Red: bets on Lula</span>
         <span><span class="sw" style="background:var(--amarelo)"></span><span class="sw" style="background:var(--verde)"></span></span><span data-i18n="k_yg">Yellow and green: bets on Flávio Bolsonaro</span>
-        <span><span class="sw" style="background:var(--pearl);box-shadow:inset 0 0 0 3px var(--red)"></span><span class="sw" style="background:var(--pearl);box-shadow:inset 0 0 0 3px var(--verde)"></span></span><span data-i18n="k_pearl">White: unusual bets</span>
-        <span><span class="sw" style="background:#18091a"></span></span><span data-i18n="k_specks">Black dots: every transaction leaves one or two</span>
+        <span><span class="ring" style="--side:var(--red)"></span><span class="ring" style="--side:var(--verde);margin-left:-4px"></span></span><span data-i18n="k_pearl">White: unusual bets</span>
+        <span><span class="sw" style="background:#18091a;box-shadow:0 0 0 1px var(--speck-edge)"></span></span><span data-i18n="k_specks">Black dots: every transaction leaves one or two</span>
       </div>
       <div class="muted" data-i18n="how">Every bet is a drop of paint.</div>
       <div class="muted" data-i18n="ground">The dark background of the image comes from pUSD.</div>
     </section>
 
-    <section class="gloss">
+    <section>
       <details id="glossary">
         <summary data-i18n="glossary">Glossary</summary>
         <dl id="gl"></dl>
@@ -320,13 +318,12 @@
     for (const a of list) {
       const d = el("div", "event " + a.kind);
       const head = el("div", "row"), left = el("span");
-      const tag = el("span", "tag " + a.kind, a.kind === "fresh" ? T().fresh : a.kind === "whale" ? T().whale : T().swing);
-      if (a.kind !== "swing") tag.style.setProperty("--side", sideColor[a.backs] || "var(--ink)");
-      left.append(tag);
-      if (a.wallet) left.append(el("span", "addr small", short(a.wallet)));
+      if (a.kind !== "swing") { const r = el("span", "ring"); r.style.setProperty("--side", sideColor[a.backs] || "var(--ink)"); left.append(r); }
+      left.append(a.kind === "fresh" ? T().fresh : a.kind === "whale" ? T().whale : T().swing);
+      if (a.wallet) left.append(el("span", "muted small", "  " + short(a.wallet)));
       head.append(left, el("span", "muted small", when(a.ts)));
       const note = noteFor(a, label);
-      d.append(head, el("div", null, note.charAt(0).toUpperCase() + note.slice(1) + "."));
+      d.append(head, el("div", "note", note.charAt(0).toUpperCase() + note.slice(1) + "."));
       ev.append(d);
     }
     document.getElementById("status").textContent = snap.final
