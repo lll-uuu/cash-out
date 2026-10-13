@@ -594,15 +594,15 @@
  },
  {
   "id": "2026-10-13T02Z",
-  "ts": 1791856860,
-  "share": 0.1253,
+  "ts": 1791857956,
+  "share": 0.1249,
   "prices": {
    "lula": 0.125,
-   "flavio": 0.8725
+   "flavio": 0.8755
   },
   "wallets": {
-   "lula": 150,
-   "flavio": 169
+   "lula": 153,
+   "flavio": 171
   },
   "newAnomalies": []
  }
