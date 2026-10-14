@@ -1,8 +1,8 @@
 {
- "generatedAt": 1791910774,
- "hoursRecorded": 52,
+ "generatedAt": 1791988418,
+ "hoursRecorded": 74,
  "from": "2026-10-10T13Z",
- "to": "2026-10-13T15Z",
+ "to": "2026-10-14T13Z",
  "thresholds": {
   "bigWalletUsd": 5000,
   "baselineSample": 150,
@@ -16,201 +16,210 @@
  "groups": [
   {
    "label": "Todas as carteiras",
-   "wallets": 886,
-   "usd": 376101.01,
-   "lulaPct": 64.9,
-   "flavioPct": 35.1
+   "wallets": 1267,
+   "usd": 682029.37,
+   "lulaPct": 69.2,
+   "flavioPct": 30.8
   },
   {
    "label": "Grandes apostadores",
-   "wallets": 19,
-   "usd": 228128.02,
-   "lulaPct": 70.1,
-   "flavioPct": 29.9
+   "wallets": 32,
+   "usd": 459720.02,
+   "lulaPct": 73.6,
+   "flavioPct": 26.4
   },
   {
    "label": "…baleias",
-   "wallets": 12,
-   "usd": 191630.89,
-   "lulaPct": 77.7,
-   "flavioPct": 22.3
+   "wallets": 19,
+   "usd": 386670.94,
+   "lulaPct": 81.3,
+   "flavioPct": 18.7
   },
   {
    "label": "…carteiras novas sinalizadas",
-   "wallets": 5,
-   "usd": 19870.07,
-   "lulaPct": 32.7,
-   "flavioPct": 67.3
+   "wallets": 6,
+   "usd": 23411.8,
+   "lulaPct": 36.4,
+   "flavioPct": 63.6
   }
  ],
  "concentration": {
-  "bigWalletsPct": 2.1,
-  "bigUsdPct": 60.7
+  "bigWalletsPct": 2.5,
+  "bigUsdPct": 67.4
  },
  "hourOfDay": {
   "big": [
-   4.3,
+   4,
    0.6,
-   0,
-   0,
-   0,
-   12.2,
-   0,
-   0.2,
-   0,
-   3.2,
-   1.7,
+   0.1,
    0.4,
-   12.1,
-   4.5,
-   0,
-   0,
-   8.6,
-   22.7,
-   1,
-   7.7,
-   14.4,
    2.9,
-   0,
-   3.3
+   6.5,
+   3.6,
+   0.1,
+   2.5,
+   4.4,
+   1.4,
+   0.2,
+   6,
+   3.4,
+   1.7,
+   1.1,
+   9.7,
+   11.3,
+   2.7,
+   3.9,
+   7.5,
+   4,
+   20.1,
+   1.9
   ],
   "rest": [
-   2.7,
-   2,
-   3.3,
-   2.2,
-   0.9,
-   5,
-   2.5,
-   1.8,
-   6.3,
-   7,
-   8.4,
-   9.4,
-   6.5,
-   6.4,
-   2.5,
-   2.9,
-   6.5,
-   5,
-   4.4,
-   2.5,
    5.7,
-   1.8,
-   1.7,
-   2.3
+   3.6,
+   5.2,
+   2.7,
+   0.7,
+   3.6,
+   4,
+   1.6,
+   6.2,
+   5.6,
+   7.9,
+   6.3,
+   4.7,
+   3.9,
+   2.8,
+   3.5,
+   6.8,
+   4.5,
+   5.4,
+   2,
+   6.2,
+   1.9,
+   3.2,
+   1.8
   ]
  },
  "sides": [
   {
    "label": "Todos os grandes apostadores",
    "lula": {
-    "wallets": 13,
-    "usd": 153930.72
+    "wallets": 20,
+    "usd": 329963.57
    },
    "flavio": {
-    "wallets": 4,
-    "usd": 58778.11
+    "wallets": 8,
+    "usd": 100188.88
    },
    "both": {
-    "wallets": 2,
-    "usd": 15419.19
+    "wallets": 4,
+    "usd": 29567.57
    },
-   "lulaUsd": 160024.74,
-   "flavioUsd": 68103.28,
-   "lulaPct": 70.1
+   "lulaUsd": 338304.19,
+   "flavioUsd": 121415.83,
+   "lulaPct": 73.6
   },
   {
    "label": "Baleias",
    "lula": {
-    "wallets": 10,
-    "usd": 148828.81
+    "wallets": 16,
+    "usd": 317678.8
    },
    "flavio": {
-    "wallets": 2,
-    "usd": 42802.08
+    "wallets": 3,
+    "usd": 68992.14
    },
    "both": {
     "wallets": 0,
     "usd": 0
    },
-   "lulaUsd": 148826.78,
-   "flavioUsd": 42804.11,
-   "lulaPct": 77.7
+   "lulaUsd": 314244.82,
+   "flavioUsd": 72426.12,
+   "lulaPct": 81.3
   },
   {
    "label": "Carteiras novas sinalizadas",
    "lula": {
     "wallets": 3,
-    "usd": 5101.91
+    "usd": 7143.64
    },
    "flavio": {
-    "wallets": 1,
-    "usd": 8353.36
+    "wallets": 2,
+    "usd": 9853.36
    },
    "both": {
     "wallets": 1,
     "usd": 6414.8
    },
-   "lulaUsd": 6489.59,
-   "flavioUsd": 13380.48,
-   "lulaPct": 32.7
+   "lulaUsd": 8531.32,
+   "flavioUsd": 14880.48,
+   "lulaPct": 36.4
   },
   {
    "label": "Demais carteiras",
    "lula": {
-    "wallets": 412,
-    "usd": 70022.97
+    "wallets": 593,
+    "usd": 114566.5
    },
    "flavio": {
-    "wallets": 375,
-    "usd": 54870.57
+    "wallets": 514,
+    "usd": 76634.88
    },
    "both": {
-    "wallets": 80,
-    "usd": 23079.45
+    "wallets": 128,
+    "usd": 31107.97
    },
-   "lulaUsd": 84216.27,
-   "flavioUsd": 63756.72,
-   "lulaPct": 56.9
+   "lulaUsd": 133656.31,
+   "flavioUsd": 88653.04,
+   "lulaPct": 60.1
   }
  ],
  "daily": [
   {
    "day": "2026-10-10",
-   "bigWallets": 8,
-   "bigLula": 26380.19,
+   "bigWallets": 9,
+   "bigLula": 29032.19,
    "bigFlavio": 28893.83,
-   "bigLulaPct": 47.7,
-   "restLulaPct": 66.6,
-   "lulaOdds": 13.5
+   "bigLulaPct": 50.1,
+   "restLulaPct": 63.9,
+   "lulaOdds": 14.5
   },
   {
    "day": "2026-10-11",
-   "bigWallets": 9,
+   "bigWallets": 11,
    "bigLula": 45913.98,
-   "bigFlavio": 26764.56,
-   "bigLulaPct": 63.2,
-   "restLulaPct": 43,
+   "bigFlavio": 28497.58,
+   "bigLulaPct": 61.7,
+   "restLulaPct": 44.8,
    "lulaOdds": 12.7
   },
   {
    "day": "2026-10-12",
-   "bigWallets": 9,
+   "bigWallets": 10,
    "bigLula": 54023.52,
-   "bigFlavio": 10464.71,
-   "bigLulaPct": 83.8,
-   "restLulaPct": 53.3,
+   "bigFlavio": 12615.78,
+   "bigLulaPct": 81.1,
+   "restLulaPct": 56.7,
    "lulaOdds": 12.5
   },
   {
    "day": "2026-10-13",
-   "bigWallets": 5,
-   "bigLula": 33707.05,
-   "bigFlavio": 1980.18,
-   "bigLulaPct": 94.5,
-   "restLulaPct": 67.7,
-   "lulaOdds": 13.5
+   "bigWallets": 15,
+   "bigLula": 166780.1,
+   "bigFlavio": 25152.73,
+   "bigLulaPct": 86.9,
+   "restLulaPct": 70.9,
+   "lulaOdds": 14.4
+  },
+  {
+   "day": "2026-10-14",
+   "bigWallets": 10,
+   "bigLula": 42554.4,
+   "bigFlavio": 26255.91,
+   "bigLulaPct": 61.8,
+   "restLulaPct": 56.4,
+   "lulaOdds": 14.4
   }
  ],
  "aheadOfSwings": {
@@ -221,49 +230,54 @@
  },
  "timezones": {
   "big": {
-   "estimated": 9,
-   "unclear": 10,
+   "estimated": 15,
+   "unclear": 17,
    "regions": [
     {
      "region": "UTC−5 a −2 (leste dos EUA, Canadá, Brasil, resto da América do Sul)",
+     "wallets": 7,
+     "pct": 46.7
+    },
+    {
+     "region": "UTC−1 a +3 (Europa, África)",
      "wallets": 4,
-     "pct": 44.4
+     "pct": 26.7
     },
     {
      "region": "UTC−8 a −6 (costa oeste e centro dos EUA, México)",
      "wallets": 3,
-     "pct": 33.3
+     "pct": 20
     }
    ]
   },
   "baseline": {
-   "estimated": 88,
-   "unclear": 62,
+   "estimated": 89,
+   "unclear": 61,
    "regions": [
     {
      "region": "UTC−1 a +3 (Europa, África)",
      "wallets": 34,
-     "pct": 38.6
+     "pct": 38.2
     },
     {
      "region": "UTC−5 a −2 (leste dos EUA, Canadá, Brasil, resto da América do Sul)",
-     "wallets": 32,
-     "pct": 36.4
-    },
-    {
-     "region": "UTC−8 a −6 (costa oeste e centro dos EUA, México)",
-     "wallets": 9,
-     "pct": 10.2
+     "wallets": 28,
+     "pct": 31.5
     },
     {
      "region": "UTC+4 a +6 (Golfo, Ásia Central, Índia)",
-     "wallets": 9,
-     "pct": 10.2
+     "wallets": 13,
+     "pct": 14.6
     },
     {
      "region": "UTC+7 a +10 (Sudeste e Leste Asiático, Austrália)",
-     "wallets": 3,
-     "pct": 3.4
+     "wallets": 9,
+     "pct": 10.1
+    },
+    {
+     "region": "UTC−8 a −6 (costa oeste e centro dos EUA, México)",
+     "wallets": 4,
+     "pct": 4.5
     }
    ]
   }
@@ -271,246 +285,246 @@
  "walletAge": [
   {
    "age": "menos de 1 dia",
-   "wallets": 3,
-   "pct": 15.8,
-   "usd": 18547.96
+   "wallets": 5,
+   "pct": 15.6,
+   "usd": 26963.16
   },
   {
    "age": "1 a 7 dias",
    "wallets": 4,
-   "pct": 21.1,
-   "usd": 17949.17
+   "pct": 12.5,
+   "usd": 21230.12
   },
   {
    "age": "1 a 4 semanas",
-   "wallets": 0,
-   "pct": 0,
+   "wallets": "<3",
+   "pct": "–",
    "usd": null
   },
   {
    "age": "1 a 6 meses",
-   "wallets": 6,
-   "pct": 31.6,
-   "usd": 111313.09
+   "wallets": 11,
+   "pct": 34.4,
+   "usd": 287900.36
   },
   {
    "age": "mais de 6 meses",
-   "wallets": 6,
-   "pct": 31.6,
-   "usd": 80317.8
+   "wallets": 11,
+   "pct": 34.4,
+   "usd": 118060.09
   }
  ],
  "otherMarkets": {
   "big": {
-   "withHistory": 19,
-   "onlyThisMarket": 5,
-   "onlyThisMarketPct": 26.3,
+   "withHistory": 32,
+   "onlyThisMarket": 6,
+   "onlyThisMarketPct": 18.8,
    "areas": [
     {
-     "area": "Esporte",
-     "wallets": 12,
-     "walletsPct": 63.2,
-     "usd": 4088149.95
-    },
-    {
      "area": "Brasil",
-     "wallets": 11,
-     "walletsPct": 57.9,
-     "usd": 475389.82
+     "wallets": 20,
+     "walletsPct": 62.5,
+     "usd": 874290.4
     },
     {
-     "area": "Política dos EUA",
-     "wallets": 11,
-     "walletsPct": 57.9,
-     "usd": 1636662.79
-    },
-    {
-     "area": "Outros",
-     "wallets": 10,
-     "walletsPct": 52.6,
-     "usd": 2091983.69
+     "area": "Esporte",
+     "wallets": 20,
+     "walletsPct": 62.5,
+     "usd": 4349561.05
     },
     {
      "area": "Guerra e geopolítica",
-     "wallets": 9,
-     "walletsPct": 47.4,
-     "usd": 4065820.86
+     "wallets": 19,
+     "walletsPct": 59.4,
+     "usd": 7397886.17
+    },
+    {
+     "area": "Outros",
+     "wallets": 19,
+     "walletsPct": 59.4,
+     "usd": 3101695.32
+    },
+    {
+     "area": "Política dos EUA",
+     "wallets": 19,
+     "walletsPct": 59.4,
+     "usd": 3243184.36
     },
     {
      "area": "Economia",
-     "wallets": 9,
-     "walletsPct": 47.4,
-     "usd": 781191.38
+     "wallets": 17,
+     "walletsPct": 53.1,
+     "usd": 2415099.73
     },
     {
      "area": "Outras eleições",
-     "wallets": 9,
-     "walletsPct": 47.4,
-     "usd": 540326.54
+     "wallets": 17,
+     "walletsPct": 53.1,
+     "usd": 895209.28
     },
     {
      "area": "Cripto",
-     "wallets": 7,
-     "walletsPct": 36.8,
-     "usd": 46956.51
+     "wallets": 13,
+     "walletsPct": 40.6,
+     "usd": 61994.35
     },
     {
      "area": "Cultura e tecnologia",
-     "wallets": 6,
-     "walletsPct": 31.6,
-     "usd": 376564.28
+     "wallets": 10,
+     "walletsPct": 31.3,
+     "usd": 390746.12
     }
    ],
    "events": [
     {
+     "title": "Will Luiz Inácio Lula da Silva finish in second place in the first round of the 2026 Brazilian presidential election?",
+     "area": "Brasil",
+     "wallets": 12,
+     "usd": 181728.55
+    },
+    {
      "title": "Will Brazil win the 2026 FIFA World Cup?",
      "area": "Brasil",
-     "wallets": 5,
-     "usd": 300270.92
+     "wallets": 9,
+     "usd": 308319.75
     },
     {
      "title": "2026 Balance of Power: R Senate, R House",
      "area": "Política dos EUA",
-     "wallets": 5,
-     "usd": 107075.57
+     "wallets": 8,
+     "usd": 257243.68
     },
     {
      "title": "Will Flavio Bolsonaro win the most votes in the first round of the 2026 Brazil presidential election?",
      "area": "Brasil",
-     "wallets": 5,
-     "usd": 105344.58
-    },
-    {
-     "title": "Will Luiz Inácio Lula da Silva finish in second place in the first round of the 2026 Brazilian presidential election?",
-     "area": "Brasil",
-     "wallets": 5,
-     "usd": 84791.1
+     "wallets": 8,
+     "usd": 133660.77
     },
     {
      "title": "Will the Democratic Party control the House after the 2026 Midterm elections?",
      "area": "Política dos EUA",
-     "wallets": 5,
-     "usd": 20797.58
-    },
-    {
-     "title": "Will the U.S. invade Iran before 2027?",
-     "area": "Guerra e geopolítica",
-     "wallets": 4,
-     "usd": 861424.12
-    },
-    {
-     "title": "US announces end of Iranian blockade by October 31, 2026?",
-     "area": "Guerra e geopolítica",
-     "wallets": 4,
-     "usd": 76407.85
-    },
-    {
-     "title": "Will Magdalena Andersson be the next Prime Minister of Sweden?",
-     "area": "Outras eleições",
-     "wallets": 4,
-     "usd": 58423.35
+     "wallets": 7,
+     "usd": 965193.93
     },
     {
      "title": "Will Flávio Bolsonaro win the first round of the 2026 Brazilian presidential election by less than 5%?",
      "area": "Brasil",
-     "wallets": 4,
-     "usd": 52277.48
+     "wallets": 7,
+     "usd": 76132.31
     },
     {
      "title": "Antigua GFC vs. CSD Cobán Imperial: O/U 1.5 AND Pumas de la UNAM vs. CF Cruz Azul: O/U 1.5 AND Will América de Cali win on 2026-10-11?",
      "area": "Esporte",
-     "wallets": 4,
-     "usd": 48413.16
+     "wallets": 7,
+     "usd": 55314.2
     },
     {
-     "title": "Will Douglas Ruas win the Governor of Rio de Janeiro election?",
-     "area": "Política dos EUA",
-     "wallets": 4,
-     "usd": 16944.83
+     "title": "Will Lionel Messi win the 2026 Ballon d'Or?",
+     "area": "Outros",
+     "wallets": 7,
+     "usd": 34434.49
     },
     {
-     "title": "Will Marine Le Pen win the 2027 French presidential election?",
-     "area": "Outras eleições",
-     "wallets": 4,
-     "usd": 16779.65
-    },
-    {
-     "title": "Ravens vs. Falcons",
-     "area": "Esporte",
-     "wallets": 4,
-     "usd": 14913.06
-    },
-    {
-     "title": "Bills vs. Rams",
-     "area": "Esporte",
-     "wallets": 4,
-     "usd": 3277.21
-    },
-    {
-     "title": "Will Flavio Bolsonaro win the most votes in the next Brazil presidential election from Minas Gerais?",
+     "title": "Will Flávio Bolsonaro win the second round of the 2026 Brazilian presidential election by 4–8%?",
      "area": "Brasil",
-     "wallets": 4,
-     "usd": 1071.94
+     "wallets": 6,
+     "usd": 77637.34
     },
     {
-     "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
-     "area": "Economia",
-     "wallets": 3,
-     "usd": 316208.95
+     "title": "Will Magdalena Andersson be the next Prime Minister of Sweden?",
+     "area": "Outras eleições",
+     "wallets": 6,
+     "usd": 73364.07
+    },
+    {
+     "title": "Will Renan Santos finish in third place in the first round of the 2026 Brazilian presidential election?",
+     "area": "Brasil",
+     "wallets": 6,
+     "usd": 24452.33
+    },
+    {
+     "title": "Will the U.S. invade Iran before 2027?",
+     "area": "Guerra e geopolítica",
+     "wallets": 5,
+     "usd": 2153205.36
     },
     {
      "title": "US x Iran Effective Ceasefire by July 31?",
      "area": "Guerra e geopolítica",
-     "wallets": 3,
-     "usd": 184004.87
+     "wallets": 5,
+     "usd": 257797.7
     },
     {
-     "title": "Bab el-Mandeb Strait effectively closed by October 31?",
-     "area": "Outros",
-     "wallets": 3,
-     "usd": 83000.08
-    },
-    {
-     "title": "Kharg Island no longer under Iranian control by June 30?",
+     "title": "US announces end of Iranian blockade by October 31, 2026?",
      "area": "Guerra e geopolítica",
-     "wallets": 3,
-     "usd": 56151.71
+     "wallets": 5,
+     "usd": 79007.9
     },
     {
-     "title": "Will Crude Oil reach a new all-time high by December 31?",
-     "area": "Outros",
-     "wallets": 3,
-     "usd": 52013.92
+     "title": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+     "area": "Economia",
+     "wallets": 5,
+     "usd": 73772.53
     },
     {
-     "title": "US x Yemen ceasefire continues through October 15?",
+     "title": "US x Iran ceasefire continues through October 12?",
      "area": "Guerra e geopolítica",
-     "wallets": 3,
-     "usd": 50942.02
+     "wallets": 5,
+     "usd": 65168.78
     },
     {
-     "title": "Iran full airspace closure by August 31?",
-     "area": "Guerra e geopolítica",
-     "wallets": 3,
-     "usd": 46085.05
-    },
-    {
-     "title": "LoL: KT Rolster vs Team Vitality (BO5) - Demacia Cup Global Invitational Playoffs",
-     "area": "Esporte",
-     "wallets": 3,
-     "usd": 35070.66
-    },
-    {
-     "title": "Will Guilherme Derrite win the most votes in the 2026 São Paulo Senate election?",
+     "title": "Will Bia Kicis win the second-most votes in the 2026 Federal District Senate election?",
      "area": "Política dos EUA",
-     "wallets": 3,
-     "usd": 29574.41
+     "wallets": 5,
+     "usd": 53258.41
     },
     {
      "title": "Will Luiz Inácio Lula da Silva qualify for Brazil's presidential runoff?",
      "area": "Brasil",
-     "wallets": 3,
-     "usd": 25292.89
+     "wallets": 5,
+     "usd": 32269.01
+    },
+    {
+     "title": "Will André do Prado win the second-most votes in the 2026 São Paulo Senate election?",
+     "area": "Política dos EUA",
+     "wallets": 5,
+     "usd": 28800.74
+    },
+    {
+     "title": "Will Douglas Ruas win the Governor of Rio de Janeiro election?",
+     "area": "Política dos EUA",
+     "wallets": 5,
+     "usd": 22456.91
+    },
+    {
+     "title": "Will Anthropic IPO by October 31, 2026?",
+     "area": "Economia",
+     "wallets": 5,
+     "usd": 21901.02
+    },
+    {
+     "title": "Will the Los Angeles Dodgers win the 2026 World Series?",
+     "area": "Esporte",
+     "wallets": 5,
+     "usd": 20198.92
+    },
+    {
+     "title": "Will Marine Le Pen win the 2027 French presidential election?",
+     "area": "Outras eleições",
+     "wallets": 5,
+     "usd": 16843.88
+    },
+    {
+     "title": "Will Carlos Jordy win the most votes in the 2026 Rio de Janeiro Senate election?",
+     "area": "Política dos EUA",
+     "wallets": 5,
+     "usd": 4122.31
+    },
+    {
+     "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+     "area": "Economia",
+     "wallets": 4,
+     "usd": 1564957.95
     }
    ]
   },
@@ -520,253 +534,256 @@
    "onlyThisMarketPct": 6.7,
    "areas": [
     {
-     "area": "Esporte",
-     "wallets": 120,
-     "walletsPct": 80,
-     "usd": 1026619.68
+     "area": "Outros",
+     "wallets": 112,
+     "walletsPct": 74.7,
+     "usd": 2961248.79
     },
     {
-     "area": "Outros",
-     "wallets": 116,
-     "walletsPct": 77.3,
-     "usd": 2480025.39
+     "area": "Esporte",
+     "wallets": 107,
+     "walletsPct": 71.3,
+     "usd": 815605.17
     },
     {
      "area": "Guerra e geopolítica",
-     "wallets": 102,
-     "walletsPct": 68,
-     "usd": 2150179.82
+     "wallets": 106,
+     "walletsPct": 70.7,
+     "usd": 5968598.78
     },
     {
      "area": "Política dos EUA",
-     "wallets": 100,
-     "walletsPct": 66.7,
-     "usd": 919796.84
+     "wallets": 104,
+     "walletsPct": 69.3,
+     "usd": 1448573.78
     },
     {
      "area": "Cripto",
-     "wallets": 89,
-     "walletsPct": 59.3,
-     "usd": 331482.23
-    },
-    {
-     "area": "Economia",
-     "wallets": 72,
-     "walletsPct": 48,
-     "usd": 876157.58
+     "wallets": 97,
+     "walletsPct": 64.7,
+     "usd": 1591228.32
     },
     {
      "area": "Outras eleições",
-     "wallets": 71,
-     "walletsPct": 47.3,
-     "usd": 200678.1
+     "wallets": 78,
+     "walletsPct": 52,
+     "usd": 250188.91
+    },
+    {
+     "area": "Economia",
+     "wallets": 70,
+     "walletsPct": 46.7,
+     "usd": 617608.99
     },
     {
      "area": "Brasil",
-     "wallets": 66,
-     "walletsPct": 44,
-     "usd": 305293.08
+     "wallets": 67,
+     "walletsPct": 44.7,
+     "usd": 356434.69
     },
     {
      "area": "Cultura e tecnologia",
-     "wallets": 53,
-     "walletsPct": 35.3,
-     "usd": 129783.48
+     "wallets": 56,
+     "walletsPct": 37.3,
+     "usd": 60534.6
     }
    ],
    "events": [
     {
      "title": "Will Spain win the 2026 FIFA World Cup?",
      "area": "Esporte",
-     "wallets": 40,
-     "usd": 18989.24
-    },
-    {
-     "title": "Will FC Internazionale Milano win on 2026-08-22? AND Will Udinese Calcio win on 2026-08-22?",
-     "area": "Esporte",
-     "wallets": 26,
-     "usd": 50593.59
-    },
-    {
-     "title": "Will Lamine Yamal win the 2026 Ballon d'Or?",
-     "area": "Outros",
-     "wallets": 26,
-     "usd": 25829.07
-    },
-    {
-     "title": "Will Gadi Eizenkot be the next Prime Minister of Israel?",
-     "area": "Guerra e geopolítica",
-     "wallets": 25,
-     "usd": 23237.84
-    },
-    {
-     "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
-     "area": "Economia",
-     "wallets": 24,
-     "usd": 388853.88
-    },
-    {
-     "title": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-     "area": "Economia",
-     "wallets": 22,
-     "usd": 225883.1
-    },
-    {
-     "title": "2026 Balance of Power: R Senate, R House",
-     "area": "Política dos EUA",
-     "wallets": 22,
-     "usd": 101370.4
-    },
-    {
-     "title": "US announces end of Iranian blockade by December 31, 2026?",
-     "area": "Guerra e geopolítica",
-     "wallets": 21,
-     "usd": 267607.76
-    },
-    {
-     "title": "Will Sudan's Emergency Response Rooms win the Nobel Peace Prize in 2026?",
-     "area": "Outros",
-     "wallets": 20,
-     "usd": 85562.42
+     "wallets": 38,
+     "usd": 45328.79
     },
     {
      "title": "US x Iran permanent peace deal by June 15, 2026?",
      "area": "Guerra e geopolítica",
-     "wallets": 20,
-     "usd": 70863.89
+     "wallets": 31,
+     "usd": 42804.43
     },
     {
-     "title": "Will Marine Le Pen win the 2027 French presidential election?",
-     "area": "Outras eleições",
-     "wallets": 20,
-     "usd": 22706.76
+     "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+     "area": "Economia",
+     "wallets": 28,
+     "usd": 397548.94
     },
     {
-     "title": "Will the U.S. invade Iran before 2027?",
+     "title": "US announces end of Iranian blockade by October 15, 2026?",
      "area": "Guerra e geopolítica",
-     "wallets": 19,
-     "usd": 135674.25
+     "wallets": 26,
+     "usd": 500951.38
+    },
+    {
+     "title": "US x Iran ceasefire continues through October 31?",
+     "area": "Guerra e geopolítica",
+     "wallets": 26,
+     "usd": 117744.92
+    },
+    {
+     "title": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+     "area": "Economia",
+     "wallets": 26,
+     "usd": 74862.34
+    },
+    {
+     "title": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
+     "area": "Guerra e geopolítica",
+     "wallets": 24,
+     "usd": 36499.62
+    },
+    {
+     "title": "2026 Balance of Power: D Senate, D House",
+     "area": "Política dos EUA",
+     "wallets": 23,
+     "usd": 216469.15
+    },
+    {
+     "title": "Israel closes its airspace by July 31?",
+     "area": "Guerra e geopolítica",
+     "wallets": 23,
+     "usd": 175087.32
+    },
+    {
+     "title": "Israel x Iran ceasefire continues through October 31?",
+     "area": "Guerra e geopolítica",
+     "wallets": 21,
+     "usd": 692696.19
+    },
+    {
+     "title": "Will Mykola Kuleba win the Nobel Peace Prize in 2026?",
+     "area": "Outros",
+     "wallets": 21,
+     "usd": 141228.08
     },
     {
      "title": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
      "area": "Guerra e geopolítica",
-     "wallets": 18,
-     "usd": 43645.83
+     "wallets": 21,
+     "usd": 20462.2
     },
     {
-     "title": "Will the Democrats win the Texas Senate race in 2026?",
-     "area": "Política dos EUA",
-     "wallets": 18,
-     "usd": 35055.64
-    },
-    {
-     "title": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
-     "area": "Política dos EUA",
-     "wallets": 18,
-     "usd": 2902.07
-    },
-    {
-     "title": "Will any presidential candidate win outright in the first round of the Brazil election?",
-     "area": "Brasil",
-     "wallets": 17,
-     "usd": 22515.67
-    },
-    {
-     "title": "Will Lula win the most votes in the first round of the 2026 Brazil presidential election?",
-     "area": "Brasil",
-     "wallets": 16,
-     "usd": 73978.28
-    },
-    {
-     "title": "Will the Democratic Party control the House after the 2026 Midterm elections?",
-     "area": "Política dos EUA",
-     "wallets": 16,
-     "usd": 50191.37
-    },
-    {
-     "title": "Will Jorge Nieto win the 2026 Peruvian presidential election?",
-     "area": "Outras eleições",
-     "wallets": 16,
-     "usd": 10917.49
-    },
-    {
-     "title": "Will Renan Santos finish in third place in the first round of the 2026 Brazilian presidential election?",
-     "area": "Brasil",
-     "wallets": 16,
-     "usd": 3538.15
-    },
-    {
-     "title": "Will Spain win on 2026-07-10?",
-     "area": "Outros",
-     "wallets": 16,
-     "usd": 2036.43
-    },
-    {
-     "title": "US x Iran ceasefire continues through October 12?",
+     "title": "Will the U.S. invade Iran before 2027?",
      "area": "Guerra e geopolítica",
-     "wallets": 15,
-     "usd": 345018.17
+     "wallets": 20,
+     "usd": 1244200.73
+    },
+    {
+     "title": "Strait of Hormuz traffic returns to normal by July 31?",
+     "area": "Outros",
+     "wallets": 20,
+     "usd": 25277.88
+    },
+    {
+     "title": "Will FC Bayern München win on 2026-10-13? AND Will FC Internazionale Milano win on 2026-10-13? AND Will FC Barcelona win on 2026-10-13? AND Will RB Leipzig win on 2026-10-13?",
+     "area": "Esporte",
+     "wallets": 19,
+     "usd": 22735.18
+    },
+    {
+     "title": "Will the Republican Party control the House after the 2026 Midterm elections?",
+     "area": "Política dos EUA",
+     "wallets": 18,
+     "usd": 272082.61
     },
     {
      "title": "Will Luiz Inácio Lula da Silva finish in second place in the first round of the 2026 Brazilian presidential election?",
      "area": "Brasil",
-     "wallets": 15,
-     "usd": 44181.69
+     "wallets": 18,
+     "usd": 131491.54
     },
     {
-     "title": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
-     "area": "Política dos EUA",
-     "wallets": 15,
-     "usd": 19851.2
-    },
-    {
-     "title": "US forces enter Iran by December 31?",
+     "title": "NATO x Russia military clash by December 31, 2026?",
      "area": "Guerra e geopolítica",
-     "wallets": 15,
-     "usd": 14411.48
+     "wallets": 18,
+     "usd": 39878.03
+    },
+    {
+     "title": "Will Lula win the most votes in the first round of the 2026 Brazil presidential election?",
+     "area": "Brasil",
+     "wallets": 17,
+     "usd": 48093.11
+    },
+    {
+     "title": "Strait of Hormuz traffic returns to normal by end of June?",
+     "area": "Outros",
+     "wallets": 17,
+     "usd": 40084.86
+    },
+    {
+     "title": "Will Renan Santos finish in third place in the first round of the 2026 Brazilian presidential election?",
+     "area": "Brasil",
+     "wallets": 17,
+     "usd": 3775.68
+    },
+    {
+     "title": "Will Marco Rubio win the 2028 US Presidential Election?",
+     "area": "Outras eleições",
+     "wallets": 17,
+     "usd": 1513.08
+    },
+    {
+     "title": "Iran leadership change by December 31?",
+     "area": "Guerra e geopolítica",
+     "wallets": 16,
+     "usd": 44527.34
+    },
+    {
+     "title": "US x Iran ceasefire by April 7?",
+     "area": "Guerra e geopolítica",
+     "wallets": 16,
+     "usd": 34171.38
+    },
+    {
+     "title": "Will the Republicans win the Texas Senate race in 2026?",
+     "area": "Política dos EUA",
+     "wallets": 16,
+     "usd": 25136.13
     }
    ]
   }
  },
  "funding": {
-  "walletsChecked": 19,
-  "walletsNoOutsideInflow": 4,
-  "inflowUsd": 1405973.26,
+  "walletsChecked": 32,
+  "walletsNoOutsideInflow": 5,
+  "inflowUsd": 1636125.53,
   "tokens": {
-   "USDC.e": 1079488.44,
-   "pUSD": 72123.39,
-   "USDC": 254361.43
+   "USDC.e": 1292982,
+   "pUSD": 84993.03,
+   "USDC": 258130.6,
+   "USDT0": 19.9
   },
   "byFunderType": {
    "viaHub": {
-    "wallets": 10,
-    "betUsd": 159315.79
+    "wallets": 25,
+    "betUsd": 422515.57
    },
    "viaSharedFunder": {
-    "wallets": 5,
-    "betUsd": 50721.21
+    "wallets": 1,
+    "betUsd": 9014.49
    },
    "ownFunder": {
-    "wallets": 0,
-    "betUsd": 0
+    "wallets": 1,
+    "betUsd": 8446.34
    }
   },
-  "sharedFunderGroups": 13,
+  "sharedFunderGroups": 15,
   "sharedFunderGroupSizes": [
    4,
    4,
    4,
-   4,
    3,
-   3,
-   3,
-   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
    2,
    2,
    2,
    2,
    2
   ],
-  "walletsThatFundedOtherStudiedWallets": 0
+  "walletsThatFundedOtherStudiedWallets": "<3"
  }
 }
