@@ -1,14 +1,14 @@
 {
  "v": 2,
- "id": "2026-10-14T06Z",
- "ts": 1791960932,
- "at": "2026-10-14T06:55:32.000Z",
+ "id": "2026-10-14T07Z",
+ "ts": 1791961263,
+ "at": "2026-10-14T07:01:03.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 803774.55917
+  "volume24hr": 805047.5493340001
  },
  "palette": "brasil",
  "candidates": [
@@ -29,10 +29,6 @@
  ],
  "share": 0.1354062186559679,
  "shareHistory": [
-  [
-   497743,
-   0.1252
-  ],
   [
    497744,
    0.1251
@@ -124,17 +120,21 @@
   [
    497766,
    0.1354
+  ],
+  [
+   497767,
+   0.1354
   ]
  ],
  "totals": {
   "lula": {
-   "wallets": 279,
-   "usd": 226681.85,
-   "trades": 364
+   "wallets": 280,
+   "usd": 226682.85,
+   "trades": 365
   },
   "flavio": {
    "wallets": 218,
-   "usd": 61312.07,
+   "usd": 61312.44,
    "trades": 326
   }
  },
@@ -265,13 +265,6 @@
   }
  },
  "trades": [
-  [
-   1791874636,
-   "0x89c89fbb75ae80257e734335cba73f7a092fbc9b",
-   0.63,
-   "flavio",
-   "0xf852cfbdf65e2d6c00994278a0c01eb324a4fbd3118537ff6e08961ef0e57992"
-  ],
   [
    1791875065,
    "0x03507f6f33e86dc8a57f8fae2b6a57c6eefd14ef",
@@ -5094,6 +5087,20 @@
    288.46,
    "flavio",
    "0x714c22c20cc764fc10b56ed5fadb61d0cb19872b397fd312be6d465f4b13a933"
+  ],
+  [
+   1791961064,
+   "0xeae990e1bbd22fe002045eb367958659a100d1c4",
+   1,
+   "flavio",
+   "0x630abbc98173851232798482e333edf9e3a88f248067ab5bb9e762cf152f9b4f"
+  ],
+  [
+   1791961066,
+   "0x1bc55ac4df7406c7b8bbed69abe4bc88f55ae623",
+   1,
+   "lula",
+   "0xe5c7de0d7b27ef1d591a6d5e2bab2a95bf7d9f9bb666467c86ee1c41434d771a"
   ]
  ]
 }
