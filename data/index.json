@@ -1816,5 +1816,26 @@
     "note": "$7,040 backing Lula within an hour"
    }
   ]
+ },
+ {
+  "id": "2026-10-15T20Z",
+  "ts": 1792094465,
+  "share": 0.2149,
+  "prices": {
+   "lula": 0.215,
+   "flavio": 0.7855
+  },
+  "wallets": {
+   "lula": 475,
+   "flavio": 394
+  },
+  "newAnomalies": [
+   {
+    "kind": "fresh",
+    "wallet": "0xcb4c9a52c20d6b3efafdd27adfa8023e01a79e55",
+    "usd": 9391.36,
+    "note": "wallet first active 6 h ago, staked $9,391 on Lula"
+   }
+  ]
  }
 ]
