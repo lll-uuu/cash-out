@@ -1576,5 +1576,32 @@
     "note": "$8,524 backing Flávio Bolsonaro within an hour"
    }
   ]
+ },
+ {
+  "id": "2026-10-15T12Z",
+  "ts": 1792065668,
+  "share": 0.205,
+  "prices": {
+   "lula": 0.205,
+   "flavio": 0.795
+  },
+  "wallets": {
+   "lula": 378,
+   "flavio": 240
+  },
+  "newAnomalies": [
+   {
+    "kind": "whale",
+    "wallet": "0x160df84695ed42f620a1b2fa4cb69a5f69986f25",
+    "usd": 10191.45,
+    "note": "$10,191 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0x88c4919de76e526d55a32c1f8afb439dd1f1129a",
+    "usd": 19828.8,
+    "note": "$19,829 backing Lula within an hour"
+   }
+  ]
  }
 ]
