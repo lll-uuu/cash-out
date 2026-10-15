@@ -1484,5 +1484,19 @@
     "note": "$8,500 backing Lula within an hour"
    }
   ]
+ },
+ {
+  "id": "2026-10-15T09Z",
+  "ts": 1792054864,
+  "share": 0.1663,
+  "prices": {
+   "lula": 0.165,
+   "flavio": 0.827
+  },
+  "wallets": {
+   "lula": 314,
+   "flavio": 208
+  },
+  "newAnomalies": []
  }
 ]
