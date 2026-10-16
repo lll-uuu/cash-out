@@ -1,14 +1,14 @@
 {
  "v": 2,
- "id": "2026-10-16T21Z",
- "ts": 1792184478,
- "at": "2026-10-16T21:01:18.000Z",
+ "id": "2026-10-16T22Z",
+ "ts": 1792188079,
+ "at": "2026-10-16T22:01:19.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 956548.3659719999
+  "volume24hr": 901080.296961
  },
  "palette": "brasil",
  "candidates": [
@@ -22,12 +22,12 @@
   {
    "key": "flavio",
    "label": "Flávio Bolsonaro",
-   "price": 0.7635,
+   "price": 0.7675,
    "conditionId": "0x1a01bf78f56a507fcb666d564d8c8b91b0750679163ed6e96746102c9b7d285d",
    "closed": false
   }
  ],
- "share": 0.23535302954431647,
+ "share": 0.2344139650872818,
  "shareHistory": [
   [
    497806,
@@ -124,49 +124,25 @@
   [
    497829,
    0.2354
+  ],
+  [
+   497830,
+   0.2344
   ]
  ],
  "totals": {
   "lula": {
-   "wallets": 325,
-   "usd": 166012.41,
-   "trades": 547
+   "wallets": 295,
+   "usd": 154482.88,
+   "trades": 509
   },
   "flavio": {
-   "wallets": 334,
-   "usd": 271977.3,
-   "trades": 572
+   "wallets": 311,
+   "usd": 241788.59,
+   "trades": 520
   }
  },
  "anomalies": [
-  {
-   "kind": "whale",
-   "wallet": "0x88c4919de76e526d55a32c1f8afb439dd1f1129a",
-   "backs": "flavio",
-   "usd": 9033.45,
-   "ts": 1792101006,
-   "tx": "0x1a9b98b1988c8b594e9c0f1ee67a6e813204c0797ab3d4ff26f70072e4991334",
-   "note": "$9,033 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "whale",
-   "wallet": "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   "backs": "flavio",
-   "usd": 19934.21,
-   "ts": 1792101204,
-   "tx": "0x2b8b917130aecf000bd46115fa28aa02711f9332c30a492e8d140ebd79900b1a",
-   "note": "$19,934 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "fresh",
-   "wallet": "0xcb4c9a52c20d6b3efafdd27adfa8023e01a79e55",
-   "backs": "lula",
-   "usd": 3799.82,
-   "ts": 1792101338,
-   "tx": "0x544f0ac630f9851ece34d89a6de7625ac05fa1d6514309f42751786ad2ff5829",
-   "ageDays": 0.32,
-   "note": "wallet first active 8 h ago, staked $3,800 on Lula"
-  },
   {
    "kind": "whale",
    "wallet": "0x7f9e2d1df78614564a70becc7fa14aa9a6623a0e",
@@ -391,6 +367,16 @@
    "tx": "0x2a84b079bc8c518a226c10e466848a1a88042a05d1a74ef3595629a34c095890",
    "ageDays": 0.11,
    "note": "wallet first active 3 h ago, staked $1,855 on Lula"
+  },
+  {
+   "kind": "fresh",
+   "wallet": "0xc301c1e034e71e1a6ce9684f029c4674a00466aa",
+   "backs": "flavio",
+   "usd": 2669.71,
+   "ts": 1792186917,
+   "tx": "0x4b2f4749356f6bab51310a065fa9ae0b4b4d1463d54fe99b249f675eaf3457bb",
+   "ageDays": 0.19,
+   "note": "wallet first active 5 h ago, staked $2,670 on Flávio Bolsonaro"
   }
  ],
  "newAnomalies": 1,
@@ -409,776 +395,6 @@
   }
  },
  "trades": [
-  [
-   1792098128,
-   "0xac2ed12993310f0d838aa560098e3c1cb3c22e34",
-   8,
-   "lula",
-   "0xd9b1f3dc10e379e19f1488b78626c70b44b67703d53719a43549898a64c11735"
-  ],
-  [
-   1792098134,
-   "0x01e607d27875e10bb09fcf3309c899a664313641",
-   0.54,
-   "lula",
-   "0x21ffd34c4964d0eea6a6c4d9a27e20732e293bb4a3c5fad88e0b6e82b783645f"
-  ],
-  [
-   1792098167,
-   "0x9fc16281e04b5a8c1d41930b39b650298b620c67",
-   92.92,
-   "lula",
-   "0x8acc12e50973d7bbcf4941c6abd861c713f57eea038906222dd2e452890fd33e"
-  ],
-  [
-   1792098170,
-   "0x7b7b62a3e84aa36241ff8cae66be6e5488826a5f",
-   2.97,
-   "flavio",
-   "0xa160bca8b19a09d00c7107c00cc1606bdbbacf2130f1bcec00036ddbd96a9e6a"
-  ],
-  [
-   1792098201,
-   "0xb66c2855ecdf8d41d6028b749fe7970f291ba0f5",
-   10,
-   "flavio",
-   "0x7e2cfd3e1a316ad1a6db6adf4ed812e796f3a40cccc7e2fc8645d65e780b3459"
-  ],
-  [
-   1792098467,
-   "0x236bb1dbd4498866ccdb7ba64a2cacba5cd8a126",
-   10,
-   "flavio",
-   "0xecb548d9b20f0cbfb2649d8cbed42f426337603e870435b2293c5ec5e6eef8c4"
-  ],
-  [
-   1792098470,
-   "0x13f9ea0f076b1f469286e1edf9dff56cb0103b20",
-   17.88,
-   "lula",
-   "0xa60b491651995c1ca13261a1f91e200e78dfa5663f69f21c8e182c1b63edb21c"
-  ],
-  [
-   1792098528,
-   "0x13f9ea0f076b1f469286e1edf9dff56cb0103b20",
-   17.8,
-   "flavio",
-   "0x7ae13906e2e3899d1cf8d60e43793ecdba2c7bd5b723d3c01be9e3b9737dd493"
-  ],
-  [
-   1792098531,
-   "0xe16754a32f4e97ea26d36119aac7f64b58b45bdd",
-   1.3,
-   "flavio",
-   "0xb5682b5c36016140eadbe63ad516bd2cdd874e330a95cf23e0cff9e9341a70d6"
-  ],
-  [
-   1792098584,
-   "0x13f9ea0f076b1f469286e1edf9dff56cb0103b20",
-   16.75,
-   "lula",
-   "0x9d66c85b30b807851c1c02ecc9784436b9137121093568f078483af8fc20f4ea"
-  ],
-  [
-   1792098600,
-   "0xae2a545c068389c5aab3466cecef33259e55384d",
-   2.32,
-   "lula",
-   "0xebd6604064f494f7474efaeb22603a2927e55f12ff0ef38aee122a57fafc783e"
-  ],
-  [
-   1792098600,
-   "0x16c7337106a0b3a06ff863a1c06d8e2cbf7322cd",
-   18.8,
-   "lula",
-   "0xfa2383a53262dbf735782f614416ff8d89457af1b1fde30616ff7940cc0e8bc3"
-  ],
-  [
-   1792098602,
-   "0xd1f7a5d62e2a1d76897bcc45295c70bc4899f101",
-   3600,
-   "lula",
-   "0x0436590a05b0abaeb2fe5f8df589cd1eebdaaab4035bb5aee7fb4d02d781310a"
-  ],
-  [
-   1792098602,
-   "0xc1b5f266564e6d4907cf84bdf5a8f91621ef5d85",
-   320.82,
-   "lula",
-   "0x28602e02d07366c4e14755ef60bef1d75ecc4ec97a4acb187d5965af7dbd7e51"
-  ],
-  [
-   1792098602,
-   "0xdebbe89ceb32828a99648bca497684f5209ceedb",
-   60.36,
-   "flavio",
-   "0x4d5f7ae107e1205d3d39f047c285efbf471ec93a135071718b0e2b9bb89b1654"
-  ],
-  [
-   1792098603,
-   "0xa58f84122535fbe42cec75d70e24ba0dd7e7cec8",
-   2.78,
-   "flavio",
-   "0x45e5173072841ff1dd8d0266695562bc3a598464674e840feb2aba36ce77a076"
-  ],
-  [
-   1792098605,
-   "0x7b7b62a3e84aa36241ff8cae66be6e5488826a5f",
-   73.21,
-   "flavio",
-   "0xa9beb15227ea1f5c41f1acaa9b55fec7a698d9385b0969100a287bd23d72de70"
-  ],
-  [
-   1792098605,
-   "0xdebbe89ceb32828a99648bca497684f5209ceedb",
-   186.36,
-   "flavio",
-   "0xb89fc405d62ae5f151d1bab37d8aeaa82cf093a8ac52226d58caa4b1e7d4eacb"
-  ],
-  [
-   1792098611,
-   "0xc13e11671ebd5e0b125f8ec8e0a70b42d0421af9",
-   989.09,
-   "flavio",
-   "0x20d577f2a0b629a29ce7000d6e5cf05d111184d7ab74fe11b0b0d1a2bc470c67"
-  ],
-  [
-   1792098623,
-   "0x7e2335b4712279db9ca0eba6065d244b2f027896",
-   4.3,
-   "flavio",
-   "0xf27613d170e46031fee83e35d80f2a30bbbbf0406cd71401fbb746d2faa46c92"
-  ],
-  [
-   1792098626,
-   "0x8ff89407079e5636f72e2633019d3369cac16d24",
-   7.75,
-   "lula",
-   "0xf87011c942bbc9293c270e1ab2515d668275780ed469017105eb28ee421b7717"
-  ],
-  [
-   1792098629,
-   "0xb66c2855ecdf8d41d6028b749fe7970f291ba0f5",
-   5,
-   "flavio",
-   "0x3f26e2d21e78b16126ee0ac42db53103b5a7050c2d51c320a8524e1b15139b22"
-  ],
-  [
-   1792098678,
-   "0xd1f88271b70c6d63908f8407e2dad956a83413f7",
-   7.8,
-   "lula",
-   "0x835ae5e39c98eb5478535f333ca3ae0fbad3239f6c113ab08aa038a1d10966a5"
-  ],
-  [
-   1792098681,
-   "0x97f60450a1f7c4bd1a4e6cc1fb20615785f0f738",
-   1.72,
-   "lula",
-   "0xc448a32d2ef2d8b33a8fe1ff373c517520c29300214e799cbac1451b4c3f1510"
-  ],
-  [
-   1792098705,
-   "0x5d64ed54426fbe95bf5e01bacedcd347a19c3c50",
-   0.92,
-   "lula",
-   "0xd1798ebbed2e5225bd0f0b7afb86bddf183fee6377a4f99dc2707c962d08ac72"
-  ],
-  [
-   1792098770,
-   "0x1ec2d4bcbf7bba353aad7b7390151e0954caee6d",
-   14.36,
-   "flavio",
-   "0x147d7fddd44d51181131f21b10f4724d7ab11676caeb3528e3e7f2a4c979fd16"
-  ],
-  [
-   1792098896,
-   "0xe2271fc81a16c045787876ed8947fde6f4a212d8",
-   5.94,
-   "lula",
-   "0x62f82fabf7a2c987d7ebc8060e06df282b085c1f1bb7bd9b4e1877ea59c97d38"
-  ],
-  [
-   1792098929,
-   "0x01e607d27875e10bb09fcf3309c899a664313641",
-   7.5,
-   "flavio",
-   "0x449e4bc08c89e6e6d2cdb6d9adebd76d8ffbcb2c6111a08106818f013de8eb66"
-  ],
-  [
-   1792098933,
-   "0xedcd0a46c993217bee212b32ad37205c22062507",
-   104.58,
-   "flavio",
-   "0xc642c4b35c0a5e34eac70393a38680ee82f60c8da3996ed870b3b01269a39d92"
-  ],
-  [
-   1792098935,
-   "0x472e2b8750d568e99f593bc05b9786e6f3ee0fd7",
-   5.3,
-   "lula",
-   "0x6d210a3e6560c14c82486cf59fd5ed235959cde5e32138bf410ff658c20c5d1e"
-  ],
-  [
-   1792099049,
-   "0x7b51954fd0c9c3e922f20808317561344fbc3302",
-   200.56,
-   "flavio",
-   "0x312af99d7985a651bf8c94143d387149377127529d6a61cba98539bd9719d0b3"
-  ],
-  [
-   1792099076,
-   "0x4d956add2619a1eb454ec458bf28e02e864ccdb2",
-   1,
-   "flavio",
-   "0xeeb3138022a913d25f2ebc65095e39d326b6c31d4909ce86641d33e6bc43d07e"
-  ],
-  [
-   1792099125,
-   "0xedcd0a46c993217bee212b32ad37205c22062507",
-   96.89,
-   "flavio",
-   "0xe69e24e59de0576f36499272d9a81a319f5dbb9733403c4e9cd2d78a793fc6f9"
-  ],
-  [
-   1792099284,
-   "0xd3cde3afa47be74bd3a8f12a94fcbda28f9a9f3e",
-   39.67,
-   "lula",
-   "0x0ee98e52c3fe5a02a0e8c954417a760f124a2604f048a53a55bca8f2ed433e91"
-  ],
-  [
-   1792099313,
-   "0xd3cde3afa47be74bd3a8f12a94fcbda28f9a9f3e",
-   385.62,
-   "lula",
-   "0x53c20a14a588cca8aef108dabdb759bc670037dd0491eadaf92efeba5ef82117"
-  ],
-  [
-   1792099367,
-   "0x4d956add2619a1eb454ec458bf28e02e864ccdb2",
-   1,
-   "flavio",
-   "0x5f02dccd08afe7ef5b655b5ce2f2c371cdebe419d1ab3b7279b4a43e0be7b60f"
-  ],
-  [
-   1792099409,
-   "0x49845e7e1ff458520986cbd3b0375b74f0f3ab48",
-   1,
-   "lula",
-   "0xe7140a01398df7394a030f21d0b5be3cd7e8be8082632e8c6fafc0d13ab8030b"
-  ],
-  [
-   1792099422,
-   "0x32c81b6aa38164e2eaa4912287a48a051cde2786",
-   1929.09,
-   "lula",
-   "0xda1f7aabd45870034ca24de830e974a9753f810da7c47bc081d5c4380901c38a"
-  ],
-  [
-   1792099422,
-   "0xeed8c2be411025120fb511ea2332dd0a1f6135f0",
-   75.26,
-   "lula",
-   "0x915412613abb210c6928275d70604ad389c0364d4360e1d2644539867765ec06"
-  ],
-  [
-   1792099478,
-   "0x69ecd37b679b3fda17d24d0b0aaf8cf3f033aa5d",
-   10,
-   "lula",
-   "0x780a8f50f99096f87c7109eca279d9d418b36af79ca92abeb5b04dbb353c4650"
-  ],
-  [
-   1792099487,
-   "0x39029400be4f1bf76c34e67286fab9c986df36f4",
-   2.77,
-   "lula",
-   "0xb1279cbb03e0bf2b59362b3320af3a6f6e78bdf483cb2f361f604eba65bb4410"
-  ],
-  [
-   1792099512,
-   "0x42f84890324dbaca5525fd34fd9071db175ebff0",
-   113.83,
-   "flavio",
-   "0xc075623e83abb6b248be6eed84b6e1c10c7f4356999f0d58f9ed06228facd816"
-  ],
-  [
-   1792099575,
-   "0xdad0fa0164b09616ffbcae4e4a4b6210d151b384",
-   3.4,
-   "flavio",
-   "0x6c93e149e401440b3cee9728f2d90a764e08545f435fe8ab00e5b80ce65dd95b"
-  ],
-  [
-   1792099683,
-   "0x39029400be4f1bf76c34e67286fab9c986df36f4",
-   12.5,
-   "lula",
-   "0xb44c6cd2f468262bce6ad1654e96e18a1ec75c0fe08daf9e13ef6c00898606cf"
-  ],
-  [
-   1792099715,
-   "0x6359c6166737be02eb0103d938c893493818f32f",
-   15,
-   "lula",
-   "0xb7949866864b221759489aeddaff8863c79405a72860cc64d91a47642420ac17"
-  ],
-  [
-   1792099748,
-   "0x4b47a7e1050c1284cadf4e59396c63f669156090",
-   50,
-   "flavio",
-   "0x10526ea9555bf34b7d7dcfbf8ace776d93f5f3e8b192aec398c8f154a4e3e9aa"
-  ],
-  [
-   1792099758,
-   "0xa00b9a3d429cd76fbd6fc3251d145af89191499a",
-   19.03,
-   "lula",
-   "0x4df1176b2413d0668c625e111b4ab32fb17c849be4c4b0432b19e39ad74bfba9"
-  ],
-  [
-   1792099772,
-   "0xdebbe89ceb32828a99648bca497684f5209ceedb",
-   78.25,
-   "flavio",
-   "0x95ec442aa604076fd6a97a1323b57b6e7220d1643cbdc0f63dcb81a368145af4"
-  ],
-  [
-   1792099778,
-   "0xa5bdc54373499759a90e1ec2c867b0f4fe916f22",
-   1,
-   "lula",
-   "0xefa716f4ee54e10031d041e8f5b95897c874b659355cc13142ead562c5796c54"
-  ],
-  [
-   1792099790,
-   "0xede8c098193741fe71bbb701e1388ba22f4e38a1",
-   240,
-   "flavio",
-   "0x0b0aad347b920fd4f06717b612c81a8b144664435e8f56ac32ac79eb69eaf93f"
-  ],
-  [
-   1792099884,
-   "0x122cb94c437ea5e6f088c6c0c143c592ab8efbed",
-   26.43,
-   "flavio",
-   "0x375d0b15109c57b3871545b312c4dc3ece6661f59fed9534cf84af8d2dd58749"
-  ],
-  [
-   1792099886,
-   "0xede8c098193741fe71bbb701e1388ba22f4e38a1",
-   235.47,
-   "flavio",
-   "0xf9af61cdf3ea0f94b11ea67a27cd547093565440dab7b7d9161944ed184a9c99"
-  ],
-  [
-   1792099920,
-   "0xbe2aeb9edf1d49a70294155b483431630ead08d0",
-   182.26,
-   "lula",
-   "0x45eb6ad0cca495c2b94d67fa151e6f2b2d46c3cf15ca9e741bc36fc8c20ad792"
-  ],
-  [
-   1792099970,
-   "0x6bf8f5893ef4334a2aaef41dfb8df0e81a77ce3e",
-   96,
-   "lula",
-   "0x79aa1ac8748dea6ed351fe97ec0d63a8b09788f2fd1b2df768a73b3c68595674"
-  ],
-  [
-   1792100009,
-   "0x0aa090f0c48f90a16b26badf4945db0fd95a51db",
-   286.15,
-   "lula",
-   "0x840b6a9691eb7dadee43bd1baba5ba717f39c6f0364414fc96817b7ea12526c1"
-  ],
-  [
-   1792100028,
-   "0x6bf8f5893ef4334a2aaef41dfb8df0e81a77ce3e",
-   85.71,
-   "lula",
-   "0x6658d104098a438533769ab7f0f95c1211edaa2f0956105e076bd326e93aaad8"
-  ],
-  [
-   1792100040,
-   "0x72bb2e1bb6215e13e3d9c253d8d00ddf21eee85e",
-   23,
-   "flavio",
-   "0x3859bd00109c1cff7d80c1ba934b0175844a2ea50e22b629f6bbd796bc14cc8d"
-  ],
-  [
-   1792100138,
-   "0x88c4919de76e526d55a32c1f8afb439dd1f1129a",
-   1804.9,
-   "flavio",
-   "0x6ce45c1461c550683c5b4548c90b279cd622d74793ba7a797128a9af173eaf59"
-  ],
-  [
-   1792100138,
-   "0x11eaaf41ec9bf94cc33e3936242f17b7aa9e1676",
-   9,
-   "flavio",
-   "0xc9d0e97e7a590deca4894649d9ab5b37d0b8c7d58e6b52292abe8357c44b97c5"
-  ],
-  [
-   1792100139,
-   "0x3340d23de3275300f88abfd8803b2f9ea15f13c8",
-   3.82,
-   "flavio",
-   "0x09d987148eaccc8fd4c8c8e97199f2b7a05d64d5d149ad04139db15d8751f9d2"
-  ],
-  [
-   1792100139,
-   "0xa53cae3e86fc47a197d367eea035a12799ca44aa",
-   1.8,
-   "flavio",
-   "0x7280912fa7af74de0763edaabf4709f4ba951a3d6ecc77acf62d2cb358a71ddc"
-  ],
-  [
-   1792100139,
-   "0xb2295e7d83d594c8322e750aabcd58f000cfdbad",
-   50,
-   "flavio",
-   "0xb58845e7f0cd6e55595691f958a4b9a5ba3889ee4edfce51baa83f292673593a"
-  ],
-  [
-   1792100139,
-   "0xbfdbae59fa54d4616db71cda0a0d538518bc3585",
-   2,
-   "flavio",
-   "0xd7ad24768ec2e03b7cc4dfef03d152911ee29948f6cd1dbb83a25aa6ec065f6c"
-  ],
-  [
-   1792100142,
-   "0x08990e75764863d80585f160de87ae686a4885d4",
-   5,
-   "lula",
-   "0x4b2481788f5aefd2dd24678e7f19b1c35b7aed71abe90ca74392a976bbce6219"
-  ],
-  [
-   1792100154,
-   "0xb70b4a01a3bb819026ba7933744d35940e4bc652",
-   25,
-   "lula",
-   "0x98892c16fda0ebd5af66467c5a24a5e752c0e890e9fb4e088782479b902cd59c"
-  ],
-  [
-   1792100160,
-   "0x67533b88868315248a18b3d54359f217bafdb37d",
-   5,
-   "flavio",
-   "0xc6400ed0be02d0d565b60caad95fdb261ff1144ac6aeabe01486c5fbff6e65e5"
-  ],
-  [
-   1792100267,
-   "0xd9bab7debc6faf9b9742fda39149a64924f53874",
-   4.5,
-   "lula",
-   "0x930f1a5d1fb93e5d21d88d5193a84389e6756ecf42e7a65c17057307c19cfcb8"
-  ],
-  [
-   1792100294,
-   "0x3afef976a5d031b351da42c0ad0ff1f13c1d01d4",
-   60.14,
-   "flavio",
-   "0xa64e21c22a67f10b8a2ca88a0bf5d6f5c2e7e699e194786efb06b8a40130f10c"
-  ],
-  [
-   1792100324,
-   "0x3afef976a5d031b351da42c0ad0ff1f13c1d01d4",
-   233.73,
-   "flavio",
-   "0x53062b7f0e58ed959996c946ae0411787ef2a8cceedcf43654fdb2ac10b11ba5"
-  ],
-  [
-   1792100328,
-   "0xd3cde3afa47be74bd3a8f12a94fcbda28f9a9f3e",
-   1009.01,
-   "flavio",
-   "0xbea1252435ccb69920848e301c16a803eb6d61be734c39c99505bd4692b8025b"
-  ],
-  [
-   1792100343,
-   "0xe3fca04b0cdb7ba99d596c30b5735fc80b84e300",
-   300,
-   "flavio",
-   "0xc96be15f451eae17eedc449ccec21e6eb0d2e5e911513bd3312cc832d583dcb9"
-  ],
-  [
-   1792100430,
-   "0xd47e7b93736349b09bc6f39236456d85f58a4e60",
-   646.02,
-   "lula",
-   "0x097f7ce8b4bf0c3b39aa85c402384e34507c45cdd1c63ca504fc4b2e67893353"
-  ],
-  [
-   1792100435,
-   "0x0d149c750ca93631fea63d509244d109d4bfc176",
-   1967.39,
-   "flavio",
-   "0x85b04141cf159057f2fd52d54b8cf531ada031cffcda58c4bbfa26190788400c"
-  ],
-  [
-   1792100505,
-   "0x36901eb0f21519cc9055662a6d2483e96da1e16f",
-   7.69,
-   "flavio",
-   "0xcdf0102e36ba07977b53d53fe40935ab41f8c940d3b2a4bb3578b4bb68a5bc35"
-  ],
-  [
-   1792100522,
-   "0x712f1fc225776cb58bd974a53c749adedcca0e7a",
-   200,
-   "lula",
-   "0xe16a94cbea313e02018c3ed141cb70447d5fa96279334955c71028ae430ca682"
-  ],
-  [
-   1792100561,
-   "0xbd027736f0f460f4747a2ad11f34dfd70c5260e0",
-   1279.59,
-   "flavio",
-   "0x947bc8f3fe54e34fd2b90dc62ba593778dd2ecbefc7dd8466625b11f93be7913"
-  ],
-  [
-   1792100582,
-   "0xbd027736f0f460f4747a2ad11f34dfd70c5260e0",
-   385,
-   "flavio",
-   "0xa67de5cfb1b9d0ccd814f4bd25619b8fe22d0d4ca075c0961cff4f4ac8ea788e"
-  ],
-  [
-   1792100615,
-   "0xbd027736f0f460f4747a2ad11f34dfd70c5260e0",
-   385,
-   "flavio",
-   "0x8d331af627364c2e503bbc1bf92aba13ea221bd52e530e52e32123d1cbb10842"
-  ],
-  [
-   1792100624,
-   "0x3acf586a4e2815dd7107a9544eb6fbe5a0797af1",
-   12.16,
-   "lula",
-   "0xd18b96ab9855995e16296dcb1228bfd3a31abb40c7a26b2a50d1bb566e637582"
-  ],
-  [
-   1792100640,
-   "0xbd027736f0f460f4747a2ad11f34dfd70c5260e0",
-   138.6,
-   "flavio",
-   "0x80d6f41a9b8a08a3d9bf5066c9302a04e6c51b3d9d2a5e6104c2958ddb3c777b"
-  ],
-  [
-   1792100690,
-   "0x3acf586a4e2815dd7107a9544eb6fbe5a0797af1",
-   3.03,
-   "lula",
-   "0x4e32db7b2165a0670454ba9dd7070da756a68fde53490db68db06bf65fe2a93d"
-  ],
-  [
-   1792100697,
-   "0xd5a61951e34204cb0cdefde635ab65f96914f76d",
-   99.29,
-   "flavio",
-   "0x3dc27e460808107bd9bd6ce6b762ffea27c8135335852d4a3e25cfb34070e29a"
-  ],
-  [
-   1792100802,
-   "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   88.55,
-   "flavio",
-   "0xb61766a6fb208b66aee2775dea294501421344356ef23d05c6ac94d614ecdc9e"
-  ],
-  [
-   1792100963,
-   "0x890030e12228435185237d977541b63b52a04d52",
-   141.6,
-   "lula",
-   "0xd69fd2ecd3f26c74da01ec4b9a4322676f8069d137a770b358306ba706458315"
-  ],
-  [
-   1792100966,
-   "0xaa8e0e7711289d6bcfd23e2b104e7ad5713b27f9",
-   368.45,
-   "flavio",
-   "0xb249b225b314eee91cf63c6713a8d60422c0073939c28ba3acffe7179e67ceff"
-  ],
-  [
-   1792101006,
-   "0x88c4919de76e526d55a32c1f8afb439dd1f1129a",
-   7228.55,
-   "flavio",
-   "0x1a9b98b1988c8b594e9c0f1ee67a6e813204c0797ab3d4ff26f70072e4991334"
-  ],
-  [
-   1792101006,
-   "0x9129619d97c7c9bbb8c5b6a997dc30dcc275dd8e",
-   172.7,
-   "flavio",
-   "0xe1fa73be9e8120ea0bfaae59008bfcd7e5c251d5ed0f78994b89519d39af9ee8"
-  ],
-  [
-   1792101008,
-   "0xb2295e7d83d594c8322e750aabcd58f000cfdbad",
-   50,
-   "flavio",
-   "0x4de80bf1d565789eadecff33ce88efce1ab6ec3263cefbabbe2dd139adc692ee"
-  ],
-  [
-   1792101008,
-   "0x3acf586a4e2815dd7107a9544eb6fbe5a0797af1",
-   1,
-   "flavio",
-   "0x8bfe05ab2e58b3cb90a64c2e4ddeee8f75a1e4f272770be78f05a5faefa6bb94"
-  ],
-  [
-   1792101008,
-   "0x11eaaf41ec9bf94cc33e3936242f17b7aa9e1676",
-   9,
-   "flavio",
-   "0xc44f974869ea0d721d512dacbed21ae4ad642078fd6e812346748080c5f44002"
-  ],
-  [
-   1792101009,
-   "0x3340d23de3275300f88abfd8803b2f9ea15f13c8",
-   3.86,
-   "flavio",
-   "0x8c73ea4dc7a2a2ce5d6bf4b8fb2753fa7b4c2fa089fc9bb9ddec3bac891536bd"
-  ],
-  [
-   1792101009,
-   "0xa53cae3e86fc47a197d367eea035a12799ca44aa",
-   7.22,
-   "flavio",
-   "0x73dd4b1db01eb79c9186e765163415ccd5f58b2e969d37d59c8af592ad182f35"
-  ],
-  [
-   1792101033,
-   "0x94bbb8f7632d11dead6b8970646ad5655a5fc320",
-   56.12,
-   "lula",
-   "0x4246f99526206d02377de46a94b63c2d7af7705f19fde137431195cf0b1a14b7"
-  ],
-  [
-   1792101065,
-   "0x5d529adcc94e94da4e319f22ddf0f6a5eea2f840",
-   64.8,
-   "flavio",
-   "0x54294854b08447648c321bcfd44bd85bd45f820808a58b89906de6743c344943"
-  ],
-  [
-   1792101081,
-   "0xea2de3cb36aec722802c593ff6aaad726679d8ba",
-   7.69,
-   "lula",
-   "0x42dc4c6ce096ad47e11d18027af6cbffcfb1e7b0fa0331cf787546402ebd7178"
-  ],
-  [
-   1792101200,
-   "0x122cb94c437ea5e6f088c6c0c143c592ab8efbed",
-   427.99,
-   "flavio",
-   "0x0817514a6d11ee1605cb2f74f8addeae670fc538ba663d39995b249b8025f05e"
-  ],
-  [
-   1792101200,
-   "0x8e618e5791398296c0979dab13f9172847eacfa3",
-   3650.68,
-   "flavio",
-   "0x2d5207082a4a3079fa76e152ba135e3bb3cfec7f971a72ec2740153c67fdd50d"
-  ],
-  [
-   1792101204,
-   "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   16048.05,
-   "flavio",
-   "0x2b8b917130aecf000bd46115fa28aa02711f9332c30a492e8d140ebd79900b1a"
-  ],
-  [
-   1792101204,
-   "0xa169f83d28ad1ce5a14cc1c49796b547ece21b73",
-   34,
-   "flavio",
-   "0x2caf88eefab60e1cdcbcfe0b4d4de85dd849ada226d4b43cbfe96075c3785942"
-  ],
-  [
-   1792101216,
-   "0x94bbb8f7632d11dead6b8970646ad5655a5fc320",
-   11.8,
-   "lula",
-   "0xba05ed59f75baa446d4c5606aaaafe61f45703379b9feb815cbce85a8fcb2e22"
-  ],
-  [
-   1792101240,
-   "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   207.06,
-   "flavio",
-   "0x05fb36f7271441206fcbf7f6f0b55bb5395d1325cf140f0f186a6b8fd50a02b8"
-  ],
-  [
-   1792101249,
-   "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   422.41,
-   "flavio",
-   "0x29a1fe1b7c45ec2ba5f19ca01be67c7bba76aae68793dc52d46c98b5284f8707"
-  ],
-  [
-   1792101263,
-   "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   7.75,
-   "flavio",
-   "0x8cf52b23b1800ee98aa2b2b31dea9389e720860c23134bdcdad09e4abe1c3279"
-  ],
-  [
-   1792101290,
-   "0x9edbee4d43562d90b29a19ce7e2244456127f57a",
-   100,
-   "flavio",
-   "0xe3c483a0f7f06679c210125198374ed88529faad7cec23b6b7756aae56c82b17"
-  ],
-  [
-   1792101338,
-   "0xcb4c9a52c20d6b3efafdd27adfa8023e01a79e55",
-   3799.82,
-   "lula",
-   "0x544f0ac630f9851ece34d89a6de7625ac05fa1d6514309f42751786ad2ff5829"
-  ],
-  [
-   1792101405,
-   "0x5727698e1b16b9551294b333f6f3d73bdb68a37c",
-   42,
-   "flavio",
-   "0xc069582e5ffa78b61acbe5d85287baff2071634ffc01d1af877049af5dfc5eaf"
-  ],
-  [
-   1792101411,
-   "0x36901eb0f21519cc9055662a6d2483e96da1e16f",
-   128.33,
-   "flavio",
-   "0x0cafcd42bc7db812ba7ebf574f018771a36e6194ad170a99f0d121d5ffb86e35"
-  ],
-  [
-   1792101414,
-   "0x2f9da73ca8430dc4bdbd75f9c76d91592ca5deb3",
-   3160.38,
-   "flavio",
-   "0x70379454eb059927e6ebb74b857c23617e28b29736af8390252b0ed6a6442b0f"
-  ],
-  [
-   1792101417,
-   "0x17fcc21babe7785148121f48175fcb1326fccaf4",
-   24.37,
-   "flavio",
-   "0xc6e65067a4cadc720304b8bc349eaf2964ec2056b1fbc9c998ca281d5bbf6fee"
-  ],
-  [
-   1792101459,
-   "0xe21abcad6be07604e6a4957f71e381a75ab66a4c",
-   2,
-   "flavio",
-   "0x4ee2af5277b7797cbdcdbba095a5477182caa6f0b1271b66ed857cbcb78ca376"
-  ],
   [
    1792101717,
    "0x17fcc21babe7785148121f48175fcb1326fccaf4",
@@ -2314,6 +1530,20 @@
    "0x0927669ad58e75a16031cfa36e946e0198ba97b575ed2982648a874d4d58e96b"
   ],
   [
+   1792110118,
+   "0xbe82510ed5f138138f87e7da6350fb0f1243176c",
+   100,
+   "flavio",
+   "0x0927669ad58e75a16031cfa36e946e0198ba97b575ed2982648a874d4d58e96b"
+  ],
+  [
+   1792110184,
+   "0xb2295e7d83d594c8322e750aabcd58f000cfdbad",
+   432.94,
+   "lula",
+   "0xba1e3ca3b4ffa7232954ed81ab9d58a6e8fa63e6296a85602c2750aaf3e49532"
+  ],
+  [
    1792110184,
    "0xb2295e7d83d594c8322e750aabcd58f000cfdbad",
    432.94,
@@ -2354,6 +1584,13 @@
    134.4,
    "flavio",
    "0xf73f925c5c4fcd1568f84df25dd925ae52735309bf80f3b1bb35906b36f4b45d"
+  ],
+  [
+   1792110474,
+   "0x70e87784152397820cd51a24e1be23ab6c6e36b2",
+   7545.24,
+   "flavio",
+   "0x7a2ac8eb131c7243532dbc20f4e4c830fa3176cacfa3e2fed0f896f345fb6e7a"
   ],
   [
    1792110474,
@@ -8241,6 +7478,125 @@
    6,
    "lula",
    "0x6574b57eb166d3adaec0d86fd8b36bf2928f2bd8110bfa1dd5a8828c0b1640c8"
+  ],
+  [
+   1792185021,
+   "0xa8e5b03c2dadb24eb06a6a3849270c638afc0ccd",
+   186.6,
+   "lula",
+   "0x571d4752cc29e8eff91699571a41e1fa5ee8173d0ea5a05fb36c0b2d8c1f796a"
+  ],
+  [
+   1792185023,
+   "0xa2246ff4b451b849b0a82c4139b50b7cb2c1aa61",
+   0.02,
+   "flavio",
+   "0xf96a9fa8ad84bba0bac0e81489d752fc5a74069746a8d9f2316dc6766ad0cfa8"
+  ],
+  [
+   1792185023,
+   "0x22c7eb0ba307792dc7638a6f9637c7a3b90ff910",
+   0.01,
+   "flavio",
+   "0xaad1919a2bf2526e82a28d173f11c0f0b67c9b79d44a3abcedd1f78e47bc3c59"
+  ],
+  [
+   1792185023,
+   "0xded7887f1fdfa1c907dfdc8f36fd70f886bbd983",
+   0.08,
+   "flavio",
+   "0xad5dd8363174dd37d422a28543ffc72839230ed97e05f81b379856fb04f3808c"
+  ],
+  [
+   1792185111,
+   "0xf9e7261afbd971e73d7061b9ae6117752a47edff",
+   56.24,
+   "flavio",
+   "0x824e3195b3f3500495f2ec96a3270d1a0018dac458df27dd4280f0645f70fe09"
+  ],
+  [
+   1792185282,
+   "0xb4d16f0346538fccee67ffcec5c233a35d1d4c60",
+   11.8,
+   "flavio",
+   "0xc29c417be61c5f6af630240377d45a17e510840865e4969e9641481709db847a"
+  ],
+  [
+   1792185312,
+   "0xded7887f1fdfa1c907dfdc8f36fd70f886bbd983",
+   0,
+   "flavio",
+   "0x5414d69cc3de7a21b12d6cb77ffd2342424d6a84cac71179d1a2fe676fb6fa5c"
+  ],
+  [
+   1792185312,
+   "0xd0c8c6552d949d3d2534fd1d9f61f422365b6bf3",
+   11.19,
+   "lula",
+   "0x694c9ecc9a5f468697cade7a5d7ce2d25c707fcecd244c5b63489fea27897922"
+  ],
+  [
+   1792185942,
+   "0xa8e5b03c2dadb24eb06a6a3849270c638afc0ccd",
+   1,
+   "lula",
+   "0xfa1b2be4edd1dafe01a3de42d6568ce7a7ac0733f18a659029bbb993083eefa9"
+  ],
+  [
+   1792186064,
+   "0xe3fca04b0cdb7ba99d596c30b5735fc80b84e300",
+   76.4,
+   "flavio",
+   "0x0194bb4225920e6bbb23f9f35e350febf703f065f4e0b0d4170d711e72679952"
+  ],
+  [
+   1792186917,
+   "0xeed8c2be411025120fb511ea2332dd0a1f6135f0",
+   127.82,
+   "flavio",
+   "0xc560295f68e0c5ecc211ea6c71b766dcc98a9d6ed051eaa666cbb7048a4746db"
+  ],
+  [
+   1792186917,
+   "0xc301c1e034e71e1a6ce9684f029c4674a00466aa",
+   2669.71,
+   "flavio",
+   "0x4b2f4749356f6bab51310a065fa9ae0b4b4d1463d54fe99b249f675eaf3457bb"
+  ],
+  [
+   1792187010,
+   "0x1229233bad2fd7462955c6383448904b5432df38",
+   30.64,
+   "flavio",
+   "0xd518cc4f34fe2fe0f7c27710e7106bad96116bf78e92469e63204887a1fdfc77"
+  ],
+  [
+   1792187343,
+   "0xa278b41b5afda5d18da683eb7f851a7b2dc13369",
+   690.3,
+   "flavio",
+   "0x3a5220e0031ca78afb72e2122afdb3dbf1c9f1e520d9e70e892eedb71bbf6b41"
+  ],
+  [
+   1792187549,
+   "0x9cfc66173755601ac591aff9d9d79a0c31273671",
+   30.68,
+   "flavio",
+   "0xf21a334adaddad0a29b440df205a7646f0c998316aa203460824fae8889b49a8"
+  ],
+  [
+   1792187564,
+   "0x6c7cf99fd8e7b1256bfffa85e7156412d9949dc9",
+   1000,
+   "flavio",
+   "0x6e04b3b384349ae75c2d041669ccf5622041d141a87f3e76c41ce01c308f2c04"
+  ],
+  [
+   1792187651,
+   "0x4a1f6ef3e171e5172f52730b5e2869bca74a84c4",
+   22.9,
+   "flavio",
+   "0x14db39600fc5ac07c23f15538d007d1fc272baee7eb7fa9eb9154319dbc86d22"
   ]
  ]
 }
