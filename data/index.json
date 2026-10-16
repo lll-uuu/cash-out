@@ -2326,5 +2326,26 @@
    "flavio": 345
   },
   "newAnomalies": []
+ },
+ {
+  "id": "2026-10-16T21Z",
+  "ts": 1792184478,
+  "share": 0.2354,
+  "prices": {
+   "lula": 0.235,
+   "flavio": 0.7635
+  },
+  "wallets": {
+   "lula": 325,
+   "flavio": 334
+  },
+  "newAnomalies": [
+   {
+    "kind": "fresh",
+    "wallet": "0x91d986336505b591cfe79830dce4d100a60b799c",
+    "usd": 1855.27,
+    "note": "wallet first active 3 h ago, staked $1,855 on Lula"
+   }
+  ]
  }
 ]
