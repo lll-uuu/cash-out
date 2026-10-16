@@ -2368,5 +2368,26 @@
     "note": "$55,214 backing Flávio Bolsonaro within an hour"
    }
   ]
+ },
+ {
+  "id": "2026-10-16T23Z",
+  "ts": 1792191677,
+  "share": 0.2247,
+  "prices": {
+   "lula": 0.225,
+   "flavio": 0.7765
+  },
+  "wallets": {
+   "lula": 297,
+   "flavio": 310
+  },
+  "newAnomalies": [
+   {
+    "kind": "fresh",
+    "wallet": "0x7b75701f04b67dbfe008e73d8fe5c0fac5eaf17f",
+    "usd": 1891.64,
+    "note": "wallet first active 0 h ago, staked $1,892 on Lula"
+   }
+  ]
  }
 ]
