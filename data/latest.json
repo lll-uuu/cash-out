@@ -1,8 +1,8 @@
 {
  "v": 2,
  "id": "2026-10-17T05Z",
- "ts": 1792213275,
- "at": "2026-10-17T05:01:15.000Z",
+ "ts": 1792213978,
+ "at": "2026-10-17T05:12:58.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
@@ -132,14 +132,14 @@
  ],
  "totals": {
   "lula": {
-   "wallets": 280,
-   "usd": 210963.97,
-   "trades": 446
+   "wallets": 278,
+   "usd": 210948.1,
+   "trades": 444
   },
   "flavio": {
-   "wallets": 296,
-   "usd": 208001.39,
-   "trades": 540
+   "wallets": 297,
+   "usd": 208776.82,
+   "trades": 544
   }
  },
  "anomalies": [
@@ -417,20 +417,6 @@
   }
  },
  "trades": [
-  [
-   1792126956,
-   "0xdf56a96abe65dc00992a4b58fda76d0333744610",
-   8,
-   "lula",
-   "0xc3f5f6f3360ab23d2d29dda6f26b52accea1e373267c120e1d6d7a040b7f0d5d"
-  ],
-  [
-   1792127233,
-   "0xd2e083449b11213f62aff4b2608a7c1dd9281a48",
-   7.87,
-   "lula",
-   "0x69794f1b3883086ffc2fb6e2c3913655fb9bcc727857b6ec550c12bbaf88444b"
-  ],
   [
    1792127617,
    "0xd69d50472826496fc20ebb7d727ab0d762516bd3",
@@ -7318,6 +7304,34 @@
    20.37,
    "flavio",
    "0x7390b65b279c6fee710c88af746b74bb359ca61f47b1a7b6d3da2f1e4c92cd08"
+  ],
+  [
+   1792212985,
+   "0x36901eb0f21519cc9055662a6d2483e96da1e16f",
+   671.01,
+   "flavio",
+   "0x04ec46d0332bbbe3c6b3a5d0427285abc6af03f2acf182056e054ae1f60dcd76"
+  ],
+  [
+   1792213195,
+   "0xd6eeb31dbdee1c044eda2fc4e739f2cb69fc6908",
+   20.84,
+   "flavio",
+   "0xde3290ccc1b8cb44fbfafd7ff99b1de9467db3cb38979a611e3621ada514ca12"
+  ],
+  [
+   1792213226,
+   "0x460a20d648c4601abfcd0c71ec37eb6dfd26d738",
+   1.05,
+   "flavio",
+   "0xd17d809793322bdf308f3bc0b86be1051ee9fd9505162d0aa43bfc5b43a24d38"
+  ],
+  [
+   1792213348,
+   "0xb0108cc6231c79b62ea2d5d7ae3af6852118efbd",
+   82.53,
+   "flavio",
+   "0x7354819d807247d5b77c8fe3fa4efeb2a85e3354d81dd36e028d37140623e083"
   ]
  ]
 }
