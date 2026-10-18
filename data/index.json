@@ -2940,46 +2940,46 @@
  },
  {
   "id": "2026-10-18T02Z",
-  "ts": 1792288864,
-  "share": 0.1858,
+  "ts": 1792289780,
+  "share": 0.1853,
   "prices": {
    "lula": 0.185,
-   "flavio": 0.8105
+   "flavio": 0.8135
   },
   "wallets": {
-   "lula": 221,
-   "flavio": 306
+   "lula": 228,
+   "flavio": 317
   },
   "newAnomalies": [
    {
-    "kind": "fresh",
-    "wallet": "0xc1b5f266564e6d4907cf84bdf5a8f91621ef5d85",
-    "usd": 1098.22,
-    "note": "wallet first active 4.7 days ago, staked $1,098 on Lula"
+    "kind": "whale",
+    "wallet": "0x330f19a76ec7f2aacee7a3edd0841a13caf834f4",
+    "usd": 41937.41,
+    "note": "$41,937 backing Flávio Bolsonaro within an hour"
    },
    {
     "kind": "fresh",
-    "wallet": "0xf5c5a704812f00a9e18d841ded2c2f915b0f717f",
-    "usd": 14496.57,
-    "note": "wallet first active 0 h ago, staked $14,497 on Lula"
+    "wallet": "0x227f7ba7fcc35b7f8fc08aa6b075f5220da2a574",
+    "usd": 1648.8,
+    "note": "wallet first active 5.7 days ago, staked $1,649 on Flávio Bolsonaro"
    },
    {
     "kind": "fresh",
-    "wallet": "0xe37e7a658daba84b2e7961f79b2569dea896fa30",
-    "usd": 98937.16,
-    "note": "wallet first active 3 h ago, staked $98,937 on Flávio Bolsonaro"
+    "wallet": "0x8bac34bb7b51b4d63b128eb711d76706efdc35ca",
+    "usd": 1289.32,
+    "note": "wallet first active 5.6 days ago, staked $1,289 on Flávio Bolsonaro"
    },
    {
     "kind": "whale",
-    "wallet": "0xe172d9e17386f9b4298e2e6eaf8c66d8a8b4e8e0",
-    "usd": 16288.36,
-    "note": "$16,288 backing Flávio Bolsonaro within an hour"
+    "wallet": "0x12d6cccfc7470a3f4bafc53599a4779cbf2cf2a8",
+    "usd": 7113.77,
+    "note": "$7,114 backing Flávio Bolsonaro within an hour"
    },
    {
-    "kind": "whale",
-    "wallet": "0x479d647a0b3a55b87883ee7189ebb4f165b2d469",
-    "usd": 30596.29,
-    "note": "$30,596 backing Flávio Bolsonaro within an hour"
+    "kind": "fresh",
+    "wallet": "0x2b18b0b279e0c1901870d63b863ed5f2bba41f02",
+    "usd": 4590.77,
+    "note": "wallet first active 1.2 days ago, staked $4,591 on Lula"
    }
   ]
  }
