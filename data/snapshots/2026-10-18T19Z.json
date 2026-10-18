@@ -1,8 +1,8 @@
 {
  "v": 2,
  "id": "2026-10-18T19Z",
- "ts": 1792350072,
- "at": "2026-10-18T19:01:12.000Z",
+ "ts": 1792350408,
+ "at": "2026-10-18T19:06:48.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
@@ -128,14 +128,14 @@
  ],
  "totals": {
   "lula": {
-   "wallets": 274,
-   "usd": 264345.79,
-   "trades": 561
+   "wallets": 275,
+   "usd": 264370.6,
+   "trades": 562
   },
   "flavio": {
-   "wallets": 346,
-   "usd": 664440.43,
-   "trades": 577
+   "wallets": 345,
+   "usd": 664450.74,
+   "trades": 578
   }
  },
  "anomalies": [
@@ -567,7 +567,7 @@
    "note": "$16,683 backing Lula within an hour"
   }
  ],
- "newAnomalies": 1,
+ "newAnomalies": 0,
  "contracts": {
   "collateral": {
    "name": "pUSD collateral token",
@@ -583,13 +583,6 @@
   }
  },
  "trades": [
-  [
-   1792263837,
-   "0x22fbf7a3cfe5c65ea4a375db9742463986cb06dd",
-   20,
-   "flavio",
-   "0xeabc4d2f6ee8465e7d1729c50bcbd4229421bc1b477cde100db8516cbebea28f"
-  ],
   [
    1792264388,
    "0xfda1b96040d2d051793a27014dc08b34aedc06a4",
@@ -3543,6 +3536,13 @@
    541.61,
    "flavio",
    "0x4ad3ebb8f93152e06c7404dfe760c590c6d39ed671d01e730bba7c14d19bc74c"
+  ],
+  [
+   1792285485,
+   "0x2b4a27cfef5364a9d56b3d47cab76897c78f7bd0",
+   0.31,
+   "flavio",
+   "0x81601177575e9768bf61cb1702836362f127ab24140db37e632eb3f35bf8dd89"
   ],
   [
    1792285485,
@@ -8548,6 +8548,20 @@
    2.05,
    "flavio",
    "0x79213cb11b96aeb2ac86a32405af047a7a8bdcd6832220525a3ca1ea41e938df"
+  ],
+  [
+   1792349855,
+   "0x0e47cdc5a033338ec28f6b467c08ef15f9455492",
+   24.81,
+   "lula",
+   "0x1d49211979e5285a35bc1eea8e6d6011f366d00963e591a38920f1b2b9ef2b44"
+  ],
+  [
+   1792349880,
+   "0x17abecae5e0da369fd0e8269bf3294304aea81bb",
+   30,
+   "flavio",
+   "0xfd6139dbd7796f28ab4f5dfc3554b464ba2932c5d1b767279ac18c098ddcd661"
   ]
  ]
 }
