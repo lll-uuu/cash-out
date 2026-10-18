@@ -1,8 +1,8 @@
 {
  "v": 2,
  "id": "2026-10-18T22Z",
- "ts": 1792360872,
- "at": "2026-10-18T22:01:12.000Z",
+ "ts": 1792361153,
+ "at": "2026-10-18T22:05:53.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
@@ -128,14 +128,14 @@
  ],
  "totals": {
   "lula": {
-   "wallets": 302,
-   "usd": 293051.42,
-   "trades": 656
+   "wallets": 303,
+   "usd": 293097.98,
+   "trades": 657
   },
   "flavio": {
    "wallets": 351,
-   "usd": 698519.5,
-   "trades": 632
+   "usd": 697529.51,
+   "trades": 631
   }
  },
  "anomalies": [
@@ -601,7 +601,7 @@
    "note": "$7,376 backing Flávio Bolsonaro within an hour"
   }
  ],
- "newAnomalies": 3,
+ "newAnomalies": 0,
  "contracts": {
   "collateral": {
    "name": "pUSD collateral token",
@@ -617,27 +617,6 @@
   }
  },
  "trades": [
-  [
-   1792274627,
-   "0xe37e7a658daba84b2e7961f79b2569dea896fa30",
-   46.73,
-   "flavio",
-   "0xf2c2886e6f5a7640d47325914fdfacc0a59dfc73b09ae05b837bdf308e93fb56"
-  ],
-  [
-   1792274646,
-   "0x1bc55ac4df7406c7b8bbed69abe4bc88f55ae623",
-   1,
-   "lula",
-   "0x5d6dba4e7ad5a02e9e434f5f2219c6bca4396a3e4ac541c723500fa86c84f628"
-  ],
-  [
-   1792274646,
-   "0x4c30ea2db6ac638fbfe34124c96fe2ed44aa038b",
-   1000,
-   "flavio",
-   "0x9e1278fff4e624245c29b77ffb340ea910b1e28fe534005baaa638a4238ff1a6"
-  ],
   [
    1792274964,
    "0xa4e380c8e86477cf3918826aab29ada08a46b39e",
@@ -9627,11 +9606,32 @@
    "0xab626648a83ee418ad9800523c1a87c4c17adff060cb2b4bb137367647badb37"
   ],
   [
+   1792360610,
+   "0xe98d72b7195887f697dcfaad82008170180b1ea3",
+   56.74,
+   "flavio",
+   "0xc23ab17e7f06e5808a333068bd009a26edd61f4ee434975314d95d510cb8508c"
+  ],
+  [
    1792360643,
    "0x59319becc88128ce2f1e678307c548192a000321",
    1.05,
    "lula",
    "0x7b3cedf0a7b17f93696aa165bff18e745c2cc982cd781b0775fc843c6974d881"
+  ],
+  [
+   1792360712,
+   "0xd3cac85155ce9f8642bc91fd4440897624c13ce5",
+   1,
+   "lula",
+   "0xdf45e7cb59d7f227ef50fa72af3ebf20a5cfc04cc16d6e2d59bc158b386332bf"
+  ],
+  [
+   1792360815,
+   "0x27f164f10963d8b36f7ea99172aa0c63ed82f107",
+   46.56,
+   "lula",
+   "0x2a6636bd4eb06d1838fbe569a957226d444e8ffa736f889918ac888f297c40b3"
   ]
  ]
 }
