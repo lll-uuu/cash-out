@@ -3653,5 +3653,26 @@
    "flavio": 288
   },
   "newAnomalies": []
+ },
+ {
+  "id": "2026-10-19T15Z",
+  "ts": 1792422087,
+  "share": 0.2368,
+  "prices": {
+   "lula": 0.235,
+   "flavio": 0.7575
+  },
+  "wallets": {
+   "lula": 315,
+   "flavio": 298
+  },
+  "newAnomalies": [
+   {
+    "kind": "whale",
+    "wallet": "0x2e7bf3e7b8ba0351b737897197fd5cc34fbfbd8c",
+    "usd": 12915.11,
+    "note": "$12,915 backing Lula within an hour"
+   }
+  ]
  }
 ]
