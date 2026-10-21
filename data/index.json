@@ -4848,35 +4848,16 @@
  },
  {
   "id": "2026-10-21T22Z",
-  "ts": 1792620073,
-  "share": 0.1962,
+  "ts": 1792623323,
+  "share": 0.1951,
   "prices": {
    "lula": 0.195,
-   "flavio": 0.799
+   "flavio": 0.8045
   },
   "wallets": {
-   "lula": 330,
-   "flavio": 403
+   "lula": 300,
+   "flavio": 392
   },
-  "newAnomalies": [
-   {
-    "kind": "fresh",
-    "wallet": "0x73d04955fb554aba05451f57598812b8f2e0239c",
-    "usd": 18139,
-    "note": "wallet first active 1 h ago, staked $18,139 on Flávio Bolsonaro"
-   },
-   {
-    "kind": "whale",
-    "wallet": "0xbace5a5a9e309d69164dc81788d353fed8d43429",
-    "usd": 6438.7,
-    "note": "$6,439 backing Flávio Bolsonaro within an hour"
-   },
-   {
-    "kind": "fresh",
-    "wallet": "0x105792df21a1dcffc83f0b6509cd922b5b5adb10",
-    "usd": 1999.19,
-    "note": "wallet first active 0 h ago, staked $1,999 on Flávio Bolsonaro"
-   }
-  ]
+  "newAnomalies": []
  }
 ]
