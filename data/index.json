@@ -4755,5 +4755,26 @@
     "note": "wallet first active 0 h ago, staked $8,479 on Flávio Bolsonaro"
    }
   ]
+ },
+ {
+  "id": "2026-10-21T18Z",
+  "ts": 1792605670,
+  "share": 0.2148,
+  "prices": {
+   "lula": 0.215,
+   "flavio": 0.786
+  },
+  "wallets": {
+   "lula": 320,
+   "flavio": 442
+  },
+  "newAnomalies": [
+   {
+    "kind": "fresh",
+    "wallet": "0xbc012eaac09445537a09f48f3764ff36ee60614a",
+    "usd": 49922,
+    "note": "wallet first active 0 h ago, staked $49,922 on Flávio Bolsonaro"
+   }
+  ]
  }
 ]
