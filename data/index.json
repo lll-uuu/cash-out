@@ -4433,5 +4433,32 @@
    "flavio": 362
   },
   "newAnomalies": []
+ },
+ {
+  "id": "2026-10-21T04Z",
+  "ts": 1792555289,
+  "share": 0.2044,
+  "prices": {
+   "lula": 0.205,
+   "flavio": 0.798
+  },
+  "wallets": {
+   "lula": 273,
+   "flavio": 361
+  },
+  "newAnomalies": [
+   {
+    "kind": "whale",
+    "wallet": "0x33e27ac64a453337cfcea8345c705a407c573a1b",
+    "usd": 5497.11,
+    "note": "$5,497 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x4d07c0cf4e878cbb0f4b8d635af1d78cfbd09fa8",
+    "usd": 1473,
+    "note": "wallet first active 21 h ago, staked $1,473 on Lula"
+   }
+  ]
  }
 ]
