@@ -5031,5 +5031,19 @@
    "flavio": 365
   },
   "newAnomalies": []
+ },
+ {
+  "id": "2026-10-22T07Z",
+  "ts": 1792652473,
+  "share": 0.2144,
+  "prices": {
+   "lula": 0.215,
+   "flavio": 0.788
+  },
+  "wallets": {
+   "lula": 309,
+   "flavio": 366
+  },
+  "newAnomalies": []
  }
 ]
