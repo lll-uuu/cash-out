@@ -5225,5 +5225,26 @@
    "flavio": 298
   },
   "newAnomalies": []
+ },
+ {
+  "id": "2026-10-22T18Z",
+  "ts": 1792692082,
+  "share": 0.2155,
+  "prices": {
+   "lula": 0.215,
+   "flavio": 0.7825
+  },
+  "wallets": {
+   "lula": 295,
+   "flavio": 298
+  },
+  "newAnomalies": [
+   {
+    "kind": "fresh",
+    "wallet": "0xbd2e3b2f7a7c2ce2f345a7714a2a22b5d2af615c",
+    "usd": 2000.2,
+    "note": "wallet first active 0 h ago, staked $2,000 on Flávio Bolsonaro"
+   }
+  ]
  }
 ]
