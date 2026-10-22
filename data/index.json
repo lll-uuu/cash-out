@@ -5111,15 +5111,15 @@
  },
  {
   "id": "2026-10-22T12Z",
-  "ts": 1792670493,
-  "share": 0.2156,
+  "ts": 1792672788,
+  "share": 0.2158,
   "prices": {
    "lula": 0.215,
-   "flavio": 0.782
+   "flavio": 0.7815
   },
   "wallets": {
-   "lula": 312,
-   "flavio": 355
+   "lula": 306,
+   "flavio": 346
   },
   "newAnomalies": []
  }
