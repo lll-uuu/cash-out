@@ -5517,14 +5517,14 @@
  },
  {
   "id": "2026-10-23T08Z",
-  "ts": 1792742486,
+  "ts": 1792742852,
   "share": 0.2258,
   "prices": {
    "lula": 0.225,
    "flavio": 0.7715
   },
   "wallets": {
-   "lula": 322,
+   "lula": 321,
    "flavio": 317
   },
   "newAnomalies": []
