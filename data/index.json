@@ -7175,5 +7175,80 @@
     "note": "$6,108 backing Flávio Bolsonaro within an hour"
    }
   ]
+ },
+ {
+  "id": "2026-10-25T18Z",
+  "ts": 1792951230,
+  "share": 0.1843,
+  "prices": {
+   "lula": 0.185,
+   "flavio": 0.819
+  },
+  "wallets": {
+   "lula": 889,
+   "flavio": 1178
+  },
+  "newAnomalies": [
+   {
+    "kind": "whale",
+    "wallet": "0xbace5a5a9e309d69164dc81788d353fed8d43429",
+    "usd": 8329.56,
+    "note": "$8,330 backing Lula within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x694a83d53b32ad7adb03786f7cae8e3a8d7ed59f",
+    "usd": 4342,
+    "note": "wallet first active 0 h ago, staked $4,342 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xc1a9273b15a17d21af09dddb42b9239b93d4e2db",
+    "usd": 42989,
+    "note": "$42,989 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xa2836cd31c36fabe54df526595b1b47fd55461e5",
+    "usd": 12165.46,
+    "note": "$12,165 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xc6b13482e72f656519705d792a1f25587a6c78fd",
+    "usd": 19833,
+    "note": "$19,833 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xe5714557d7e870942af0eaed188f1620fa33f17b",
+    "usd": 1711.49,
+    "note": "wallet first active 3.9 days ago, staked $1,711 on Lula"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xdaffadeb825c1eb36ca58db08f0ce0b31ba36ef6",
+    "usd": 2829,
+    "note": "wallet first active 0 h ago, staked $2,829 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0x700a306c6dd9c87db2f5519b1bfae0340e83a239",
+    "usd": 18300,
+    "note": "$18,300 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0x12d6cccfc7470a3f4bafc53599a4779cbf2cf2a8",
+    "usd": 7455.58,
+    "note": "$7,456 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xda66ddc4529eb7ac68add4eca06c37cdcde03f38",
+    "usd": 12273.77,
+    "note": "$12,274 backing Flávio Bolsonaro within an hour"
+   }
+  ]
  }
 ]
