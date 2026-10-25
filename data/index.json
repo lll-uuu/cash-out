@@ -6851,5 +6851,74 @@
    "flavio": 805
   },
   "newAnomalies": []
+ },
+ {
+  "id": "2026-10-25T12Z",
+  "ts": 1792929700,
+  "share": 0.2146,
+  "prices": {
+   "lula": 0.215,
+   "flavio": 0.787
+  },
+  "wallets": {
+   "lula": 753,
+   "flavio": 852
+  },
+  "newAnomalies": [
+   {
+    "kind": "whale",
+    "wallet": "0xbace5a5a9e309d69164dc81788d353fed8d43429",
+    "usd": 23153.73,
+    "note": "$23,154 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x711739cb157eb7bc36cb4e9d50238fb166dd65e8",
+    "usd": 1003,
+    "note": "wallet first active 0 h ago, staked $1,003 on Lula"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0x696176a2d7fc7c19229291a819900bdc4cb282ee",
+    "usd": 10028.87,
+    "note": "$10,029 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x5a1c3e76aa7466f77453c1f30c18e294ebda7f07",
+    "usd": 3413,
+    "note": "wallet first active 0 h ago, staked $3,413 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0x22d3f8a94992261392eed316429b466d72895e3a",
+    "usd": 10294,
+    "note": "$10,294 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x65678eb62978be0a39b4c624754d53ba370ca39a",
+    "usd": 1341,
+    "note": "wallet first active 1.9 days ago, staked $1,341 on Lula"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x222271175b3ccfb481998f192f2fadc03b581fdd",
+    "usd": 4381,
+    "note": "wallet first active 0 h ago, staked $4,381 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xbb82806343e8fc1d9f2cd3707ae3d75a30e29f37",
+    "usd": 16121.29,
+    "note": "$16,121 backing Lula within an hour"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x1691c5c584bd61fa7a8d4c850c52b046ce8116a1",
+    "usd": 2519.15,
+    "note": "wallet first active 1.1 days ago, staked $2,519 on Flávio Bolsonaro"
+   }
+  ]
  }
 ]
