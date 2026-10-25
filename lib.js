@@ -17,9 +17,8 @@ const CONFIG = {
   anomalyMemoryHours: 24,   // anomalies stay in the bath for this long
   // The last frame: 17:00 Brasília time on 25 October (20:00 UTC), when polls close everywhere
   // (voting runs on Brasília time nationwide, so Acre closes at 15:00 local).
-    finalAt: "2026-10-25T22:00:00Z",
+      finalAt: "2026-10-26T11:00:00Z",
 };
-
 // Contracts the bets settle through. Their addresses double as colours.
 const CONTRACTS = {
   collateral: { name: "pUSD collateral token", address: "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB" },
