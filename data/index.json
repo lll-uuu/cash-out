@@ -6725,5 +6725,19 @@
     "note": "wallet first active 0 h ago, staked $1,050 on Lula"
    }
   ]
+ },
+ {
+  "id": "2026-10-25T06Z",
+  "ts": 1792908094,
+  "share": 0.2041,
+  "prices": {
+   "lula": 0.205,
+   "flavio": 0.7995
+  },
+  "wallets": {
+   "lula": 672,
+   "flavio": 754
+  },
+  "newAnomalies": []
  }
 ]
