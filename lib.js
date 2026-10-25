@@ -17,7 +17,7 @@ const CONFIG = {
   anomalyMemoryHours: 24,   // anomalies stay in the bath for this long
   // The last frame: 17:00 Brasília time on 25 October (20:00 UTC), when polls close everywhere
   // (voting runs on Brasília time nationwide, so Acre closes at 15:00 local).
-  finalAt: "2026-10-25T20:00:00Z",
+    finalAt: "2026-10-25T22:00:00Z",
 };
 
 // Contracts the bets settle through. Their addresses double as colours.
