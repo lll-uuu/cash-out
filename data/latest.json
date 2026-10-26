@@ -1,14 +1,14 @@
 {
  "v": 2,
- "id": "2026-10-26T07Z",
- "ts": 1792998107,
- "at": "2026-10-26T07:01:47.000Z",
+ "id": "2026-10-26T08Z",
+ "ts": 1793001705,
+ "at": "2026-10-26T08:01:45.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 52118336.71839895
+  "volume24hr": 52087902.00965997
  },
  "palette": "brasil",
  "candidates": [
@@ -29,10 +29,6 @@
  ],
  "share": 1,
  "shareHistory": [
-  [
-   498032,
-   0.2002
-  ],
   [
    498033,
    0.2045
@@ -108,6 +104,10 @@
   [
    498055,
    1
+  ],
+  [
+   498056,
+   1
   ]
  ],
  "totals": {
@@ -123,15 +123,6 @@
   }
  },
  "anomalies": [
-  {
-   "kind": "whale",
-   "wallet": "0xbace5a5a9e309d69164dc81788d353fed8d43429",
-   "backs": "lula",
-   "usd": 8329.56,
-   "ts": 1792914213,
-   "tx": "0x3a02b9b57f9f6aee2f28167dd4302423ca1669cfc49be927ed086aadef3f3505",
-   "note": "$8,330 backing Lula within an hour"
-  },
   {
    "kind": "fresh",
    "wallet": "0xa2b45a59c36d9f36311c6be4c5745fed8a327cc1",
@@ -7544,7 +7535,7 @@
    "note": "$14,641 backing Flávio Bolsonaro within an hour"
   }
  ],
- "newAnomalies": 7,
+ "newAnomalies": 0,
  "contracts": {
   "collateral": {
    "name": "pUSD collateral token",
