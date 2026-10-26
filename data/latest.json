@@ -1,14 +1,14 @@
 {
  "v": 2,
- "id": "2026-10-26T10Z",
- "ts": 1793008914,
- "at": "2026-10-26T10:01:54.000Z",
- "final": false,
+ "id": "2026-10-26T11Z",
+ "ts": 1793012400,
+ "at": "2026-10-26T11:00:00.000Z",
+ "final": true,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 51913637.18300495
+  "volume24hr": 51817254.028752975
  },
  "palette": "brasil",
  "candidates": [
@@ -29,10 +29,6 @@
  ],
  "share": 1,
  "shareHistory": [
-  [
-   498034,
-   0.2144
-  ],
   [
    498036,
    0.2146
@@ -112,6 +108,10 @@
   [
    498058,
    1
+  ],
+  [
+   498059,
+   1
   ]
  ],
  "totals": {
@@ -127,44 +127,6 @@
   }
  },
  "anomalies": [
-  {
-   "kind": "whale",
-   "wallet": "0xbace5a5a9e309d69164dc81788d353fed8d43429",
-   "backs": "flavio",
-   "usd": 23153.73,
-   "ts": 1792924461,
-   "tx": "0x77a5ada2739b408ec9ec87a3752d4e714d32939b9779201c66ca7a27aa16d4dc",
-   "note": "$23,154 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "fresh",
-   "wallet": "0x711739cb157eb7bc36cb4e9d50238fb166dd65e8",
-   "backs": "lula",
-   "usd": 1003,
-   "ts": 1792924700,
-   "tx": "0x0dfa587c9e67d2f7a535cc0a102da8bd162a52e8b2914e307e28aa1f4388a1ca",
-   "ageDays": 0,
-   "note": "wallet first active 0 h ago, staked $1,003 on Lula"
-  },
-  {
-   "kind": "whale",
-   "wallet": "0x696176a2d7fc7c19229291a819900bdc4cb282ee",
-   "backs": "flavio",
-   "usd": 10028.87,
-   "ts": 1792925267,
-   "tx": "0x8eac070fe751d0e4ded36d49c4360c73217c1e05b870b583e953dcb419be0f04",
-   "note": "$10,029 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "fresh",
-   "wallet": "0x5a1c3e76aa7466f77453c1f30c18e294ebda7f07",
-   "backs": "flavio",
-   "usd": 3413,
-   "ts": 1792925877,
-   "tx": "0xeaf9205584fa0a294868fee91f01e7889289256ade3e26f2faae6b5736b75015",
-   "ageDays": 0,
-   "note": "wallet first active 0 h ago, staked $3,413 on Flávio Bolsonaro"
-  },
   {
    "kind": "whale",
    "wallet": "0x22d3f8a94992261392eed316429b466d72895e3a",
