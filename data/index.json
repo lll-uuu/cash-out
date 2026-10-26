@@ -9713,5 +9713,176 @@
     "note": "$60,755 backing Flávio Bolsonaro within an hour"
    }
   ]
+ },
+ {
+  "id": "2026-10-26T04Z",
+  "ts": 1792987277,
+  "share": 1,
+  "prices": {
+   "lula": 1,
+   "flavio": 0
+  },
+  "wallets": {
+   "lula": 2297,
+   "flavio": 4305
+  },
+  "newAnomalies": [
+   {
+    "kind": "fresh",
+    "wallet": "0x3988ce90b5570837de9d060e6fdd8e6c1fb43e1c",
+    "usd": 1906.9,
+    "note": "wallet first active 0 h ago, staked $1,907 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x667e6b17f0e7c4ce96dc8209f58ac129633f4c51",
+    "usd": 1958,
+    "note": "wallet first active 0 h ago, staked $1,958 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x0ecbd95fefe672bb61fa274d5a36d29a3e0c6f46",
+    "usd": 2226.67,
+    "note": "wallet first active 0 h ago, staked $2,227 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x01b399e77a66ef385c8ddf9aaa5a341e1c20dce7",
+    "usd": 2219,
+    "note": "wallet first active 0 h ago, staked $2,219 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xee1a84342ded2c3ff3ce20628c772625f8cd485c",
+    "usd": 1903,
+    "note": "wallet first active 0 h ago, staked $1,903 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x8127f8f37fe16f5b53e0322e3786eb2a5cd4121f",
+    "usd": 2300,
+    "note": "wallet first active 0 h ago, staked $2,300 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x2a71280a71bbd7f0e7701aa73b3717f7b82cdec9",
+    "usd": 2000,
+    "note": "wallet first active 0 h ago, staked $2,000 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x384ccc16babf2b9e1d79bd00139d518678e68c31",
+    "usd": 2045,
+    "note": "wallet first active 0 h ago, staked $2,045 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x3988ce90b5570837de9d060e6fdd8e6c1fb43e1c",
+    "usd": 1907.32,
+    "note": "wallet first active 1 h ago, staked $1,907 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xaf1f5a29254ccaf8bf1f7fd1ce94143d12c6be41",
+    "usd": 2000,
+    "note": "wallet first active 1 h ago, staked $2,000 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x0b90606c1403140069a2d799090ae7c6cbfbbdbf",
+    "usd": 1889,
+    "note": "wallet first active 1 h ago, staked $1,889 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xbda8a4ad18848ff98a6e4278402679a7725138a1",
+    "usd": 1752.55,
+    "note": "wallet first active 8 h ago, staked $1,753 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x874bc9a14c091988895125ba3f204dcdbc49fbcc",
+    "usd": 1928,
+    "note": "wallet first active 0 h ago, staked $1,928 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xd252903199903e9b8fd15356012e5511a1ed68aa",
+    "usd": 1960,
+    "note": "wallet first active 0 h ago, staked $1,960 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x675816535f32122e24b1943f51a654d282b9e8cb",
+    "usd": 1971,
+    "note": "wallet first active 1 h ago, staked $1,971 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x179c1fcf1fc270df80ab9c2358c30244b8cadb83",
+    "usd": 2100,
+    "note": "wallet first active 0 h ago, staked $2,100 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x612e8cbd4b7fa12a34cf42e009a92f1e32751767",
+    "usd": 1999.9,
+    "note": "wallet first active 1 h ago, staked $2,000 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xa06da2ab79575bcf15e040e913cd6ef77a61a56a",
+    "usd": 2045.28,
+    "note": "wallet first active 1.3 days ago, staked $2,045 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x91ad7f1d7bbd906ceaa6bba842ba5db108df3c93",
+    "usd": 1928,
+    "note": "wallet first active 0 h ago, staked $1,928 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xcd2cd3a844858138ac1a4c81cda2616e44bd4b4a",
+    "usd": 2087.05,
+    "note": "wallet first active 4.1 days ago, staked $2,087 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0xcb9b0f25e8b5b8468bd8b62840c74a22905a31a6",
+    "usd": 2285.35,
+    "note": "wallet first active 3.2 days ago, staked $2,285 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "fresh",
+    "wallet": "0x377d60da3d8a2d81d14351ef8426278cfee0f6bd",
+    "usd": 2051.45,
+    "note": "wallet first active 5.3 days ago, staked $2,051 on Flávio Bolsonaro"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xeb490d0534bb68b4c2ce139b219a728cd2c3693e",
+    "usd": 59940,
+    "note": "$59,940 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xc785252b25901a591e9d962e09f4342468444ef2",
+    "usd": 21978.17,
+    "note": "$21,978 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0xdf804b17329a461425116c9e0f599e248b443259",
+    "usd": 193959.43,
+    "note": "$193,959 backing Flávio Bolsonaro within an hour"
+   },
+   {
+    "kind": "whale",
+    "wallet": "0x8747449f95d38521c2b14a0a2ed4c2417fde71ab",
+    "usd": 14640.6,
+    "note": "$14,641 backing Flávio Bolsonaro within an hour"
+   }
+  ]
  }
 ]
