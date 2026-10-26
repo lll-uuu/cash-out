@@ -1,14 +1,14 @@
 {
  "v": 2,
- "id": "2026-10-26T08Z",
- "ts": 1793001705,
- "at": "2026-10-26T08:01:45.000Z",
+ "id": "2026-10-26T09Z",
+ "ts": 1793005309,
+ "at": "2026-10-26T09:01:49.000Z",
  "final": false,
  "event": {
   "slug": "brazil-presidential-election",
   "id": "45915",
   "title": "Brazil Presidential Election",
-  "volume24hr": 52087902.00965997
+  "volume24hr": 52011996.826580994
  },
  "palette": "brasil",
  "candidates": [
@@ -29,10 +29,6 @@
  ],
  "share": 1,
  "shareHistory": [
-  [
-   498033,
-   0.2045
-  ],
   [
    498034,
    0.2144
@@ -108,6 +104,10 @@
   [
    498056,
    1
+  ],
+  [
+   498057,
+   1
   ]
  ],
  "totals": {
@@ -123,52 +123,6 @@
   }
  },
  "anomalies": [
-  {
-   "kind": "fresh",
-   "wallet": "0xa2b45a59c36d9f36311c6be4c5745fed8a327cc1",
-   "backs": "flavio",
-   "usd": 11347,
-   "ts": 1792916564,
-   "tx": "0x52cac2401fb19d5db158743d9a4e097548ab39d46e4e332f3daaff7d08bad7d0",
-   "ageDays": 0,
-   "note": "wallet first active 0 h ago, staked $11,347 on Flávio Bolsonaro"
-  },
-  {
-   "kind": "whale",
-   "wallet": "0x2e53759c0de92b0ae1e422ffdfa1a4f34e41bfcf",
-   "backs": "flavio",
-   "usd": 9505.93,
-   "ts": 1792918307,
-   "tx": "0x58ca74c1149720555e71bb5071007c88491e210600fb8f9f0c9ff7aa780f6db0",
-   "note": "$9,506 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "whale",
-   "wallet": "0xdebbe89ceb32828a99648bca497684f5209ceedb",
-   "backs": "flavio",
-   "usd": 8956.54,
-   "ts": 1792918371,
-   "tx": "0xf855d55fa1bb02b1f32fd50941c2f97c607939527d57176c909f79e78edd097e",
-   "note": "$8,957 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "whale",
-   "wallet": "0xdebbe89ceb32828a99648bca497684f5209ceedb",
-   "backs": "flavio",
-   "usd": 10013.08,
-   "ts": 1792918560,
-   "tx": "0x1483c4c7555b216c92b0d1b62c968699517c5e7d50b6c4b54953559127edf623",
-   "note": "$10,013 backing Flávio Bolsonaro within an hour"
-  },
-  {
-   "kind": "whale",
-   "wallet": "0x63bcf78f77cef62b4a9b8d101a14247bf90292c5",
-   "backs": "lula",
-   "usd": 5195.66,
-   "ts": 1792918604,
-   "tx": "0x97fdbb12e42fd415f83e48aff980f33423b7495c15ad7804467bc27623bac142",
-   "note": "$5,196 backing Lula within an hour"
-  },
   {
    "kind": "fresh",
    "wallet": "0xa2b45a59c36d9f36311c6be4c5745fed8a327cc1",
