@@ -19,7 +19,7 @@ const A = {
   bigWalletUsd: 5000,     // a wallet whose total stake on the runoff reaches this counts as a big bettor
   baselineSample: 150,    // ordinary wallets sampled for comparison
   maxActivity: 3000,      // history items read per wallet
-  refreshDays: 3,         // re-read a wallet's history after this long
+  refreshDays: 60,         // re-read a wallet's history after this long
   minGroup: 3,            // suppress any figure that describes fewer wallets than this
   beforeSwingHours: 2,    // how far back to look for money placed ahead of a swing
 };
