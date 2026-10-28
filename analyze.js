@@ -96,6 +96,7 @@ function groupWallets(trades, anomalies) {
     p.usd += t.u; p[t.backs] += t.u; p.n++;
     per.set(t.w, p);
   }
+  anomalies = anomalies.filter(a => per.has(a.wallet)); // ignore flags whose trades never reached a snapshot
   const whale = new Set(anomalies.filter(a => a.kind === "whale").map(a => a.wallet));
   const fresh = new Set(anomalies.filter(a => a.kind === "fresh").map(a => a.wallet));
   const big = new Set([...per].filter(([, p]) => p.usd >= A.bigWalletUsd).map(([w]) => w));
