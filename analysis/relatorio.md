@@ -1,6 +1,6 @@
 # Cash Out: análise agregada
 
-Atualizado em 2026-10-25 10:45 (Brasília). 336 horas registradas, de 2026-10-10T13Z a 2026-10-25T12Z (UTC).
+Atualizado em 2026-10-28 18:51 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
 
 Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de um grupo, e grupos com menos de 3 carteiras são omitidos.
 
@@ -8,12 +8,12 @@ Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de u
 
 | | Carteiras | Apostado | Em Lula | Em Flávio |
 |---|---:|---:|---:|---:|
-| Todas as carteiras | 5568 | US$ 7.532.935 | 40,5% | 59,5% |
-| Grandes apostadores | 321 | US$ 6.186.286 | 40,4% | 59,6% |
-| …baleias | 137 | US$ 4.439.360 | 43,4% | 56,6% |
-| …carteiras novas sinalizadas | 112 | US$ 1.073.086 | 34,4% | 65,6% |
+| Todas as carteiras | 11156 | US$ 27.021.128 | 47,5% | 52,5% |
+| Grandes apostadores | 784 | US$ 23.984.143 | 49,5% | 50,5% |
+| …baleias | 407 | US$ 20.925.775 | 52,5% | 47,5% |
+| …carteiras novas sinalizadas | 232 | US$ 3.084.946 | 22,2% | 77,8% |
 
-Grandes apostadores = baleias (US$ 5.000+ em menos de uma hora), carteiras novas sinalizadas, ou quem somou US$ 5.000+ no período. Eles são 5,8% das carteiras e põem 82,1% do dinheiro.
+Grandes apostadores = baleias (US$ 5.000+ em menos de uma hora), carteiras novas sinalizadas, ou quem somou US$ 5.000+ no período. Eles são 7% das carteiras e põem 88,8% do dinheiro.
 
 ## Em quem apostam os grandes apostadores
 
@@ -21,31 +21,32 @@ Uma carteira conta como apostando em um candidato quando 90% ou mais do dinheiro
 
 | Grupo | Só Lula | Só Flávio | Nos dois | Dinheiro em Lula | Dinheiro em Flávio |
 |---|---:|---:|---:|---:|---:|
-| Todos os grandes apostadores | 76 (US$ 1.004.832) | 131 (US$ 2.053.884) | 114 (US$ 3.127.571) | 40,4% | 59,6% |
-| Baleias | 29 (US$ 758.904) | 60 (US$ 1.255.117) | 48 (US$ 2.425.340) | 43,4% | 56,6% |
-| Carteiras novas sinalizadas | 42 (US$ 284.479) | 52 (US$ 594.602) | 18 (US$ 194.005) | 34,4% | 65,6% |
-| Demais carteiras | 1904 (US$ 359.151) | 2243 (US$ 588.436) | 1100 (US$ 399.062) | 40,7% | 59,3% |
+| Todos os grandes apostadores | 141 (US$ 4.401.174) | 248 (US$ 3.253.323) | 395 (US$ 16.329.647) | 49,5% | 50,5% |
+| Baleias | 106 (US$ 4.236.745) | 122 (US$ 2.100.880) | 179 (US$ 14.588.150) | 52,5% | 47,5% |
+| Carteiras novas sinalizadas | 25 (US$ 172.484) | 108 (US$ 993.313) | 99 (US$ 1.919.149) | 22,2% | 77,8% |
+| Demais carteiras | 2000 (US$ 472.231) | 5445 (US$ 1.302.772) | 2924 (US$ 1.261.982) | 32,2% | 67,8% |
 
 Dia a dia (datas de Brasília). Compare a parcela do dinheiro dos grandes que foi para Lula com a das demais carteiras e com as odds de Lula no fim do dia:
 
 | Dia | Grandes ativos | Grandes em Lula | Grandes em Flávio | % dos grandes em Lula | % dos demais em Lula | Odds de Lula |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-10-10 | 19 | US$ 37.500 | US$ 30.223 | 55,4% | 54,5% | 21,4% |
-| 2026-10-11 | 25 | US$ 50.008 | US$ 33.727 | 59,7% | 45,1% | 12,7% |
-| 2026-10-12 | 23 | US$ 56.911 | US$ 18.097 | 75,9% | 64% | 12,5% |
-| 2026-10-13 | 38 | US$ 179.432 | US$ 31.383 | 85,1% | 72,3% | 14,4% |
-| 2026-10-14 | 51 | US$ 165.789 | US$ 57.566 | 74,2% | 66,2% | 15,6% |
-| 2026-10-15 | 94 | US$ 383.657 | US$ 327.938 | 53,9% | 47,7% | 20,6% |
-| 2026-10-16 | 70 | US$ 168.795 | US$ 174.010 | 49,2% | 57,2% | 22,4% |
-| 2026-10-17 | 70 | US$ 187.937 | US$ 560.483 | 25,1% | 26,1% | 18,5% |
-| 2026-10-18 | 71 | US$ 155.619 | US$ 249.991 | 38,4% | 53,6% | 20,7% |
-| 2026-10-19 | 68 | US$ 111.138 | US$ 160.841 | 40,9% | 40,9% | 22,7% |
-| 2026-10-20 | 91 | US$ 126.739 | US$ 291.349 | 30,3% | 29,6% | 19,6% |
-| 2026-10-21 | 92 | US$ 185.040 | US$ 302.469 | 38% | 33% | 21,5% |
-| 2026-10-22 | 87 | US$ 192.747 | US$ 141.601 | 57,6% | 48,7% | 23,5% |
-| 2026-10-23 | 101 | US$ 152.290 | US$ 304.405 | 33,3% | 34,7% | 22,5% |
-| 2026-10-24 | 135 | US$ 250.278 | US$ 651.189 | 27,8% | 29,9% | 17,6% |
-| 2026-10-25 | 78 | US$ 97.187 | US$ 349.946 | 21,7% | 25,1% | 21,4% |
+| 2026-10-10 | 23 | US$ 37.500 | US$ 32.794 | 53,3% | 61,2% | 100% |
+| 2026-10-11 | 36 | US$ 54.580 | US$ 33.728 | 61,8% | 35,6% | 12,7% |
+| 2026-10-12 | 30 | US$ 58.451 | US$ 18.270 | 76,2% | 62,1% | 12,5% |
+| 2026-10-13 | 54 | US$ 187.475 | US$ 34.826 | 84,3% | 72,9% | 14,4% |
+| 2026-10-14 | 71 | US$ 177.717 | US$ 61.221 | 74,4% | 62,6% | 15,6% |
+| 2026-10-15 | 134 | US$ 401.464 | US$ 344.202 | 53,8% | 46,3% | 20,6% |
+| 2026-10-16 | 90 | US$ 179.923 | US$ 179.143 | 50,1% | 53,6% | 22,4% |
+| 2026-10-17 | 84 | US$ 190.774 | US$ 565.882 | 25,2% | 25% | 18,5% |
+| 2026-10-18 | 100 | US$ 163.936 | US$ 253.809 | 39,2% | 50,2% | 20,7% |
+| 2026-10-19 | 93 | US$ 116.928 | US$ 165.010 | 41,5% | 37,3% | 22,7% |
+| 2026-10-20 | 124 | US$ 131.054 | US$ 310.039 | 29,7% | 33,2% | 19,6% |
+| 2026-10-21 | 128 | US$ 187.764 | US$ 314.521 | 37,4% | 36,2% | 21,5% |
+| 2026-10-22 | 118 | US$ 201.480 | US$ 146.044 | 58% | 45,5% | 23,5% |
+| 2026-10-23 | 146 | US$ 161.162 | US$ 325.195 | 33,1% | 35,9% | 22,5% |
+| 2026-10-24 | 215 | US$ 279.619 | US$ 700.579 | 28,5% | 26,3% | 17,6% |
+| 2026-10-25 | 678 | US$ 9.332.242 | US$ 8.330.066 | 52,8% | 28,2% | 99,8% |
+| 2026-10-26 | 8 | US$ 0 | US$ 306.743 | 0% | 0% | 100% |
 
 ## Horários (hora de Brasília)
 
@@ -53,115 +54,115 @@ Parcela do dinheiro apostado em cada hora do dia. A linha do tempo completa, hor
 
 | Hora | Grandes | Demais |
 |---|---:|---:|
-| 00h | 3,7% | 4,3% |
-| 01h | 3% | 3,1% |
-| 02h | 1,8% | 2,1% |
-| 03h | 1,4% | 2% |
-| 04h | 1,2% | 2% |
-| 05h | 2,6% | 2,6% |
-| 06h | 2,5% | 2,7% |
-| 07h | 4,2% | 4,1% |
-| 08h | 2,3% | 4,1% |
-| 09h | 3,6% | 4% |
-| 10h | 3,5% | 4,6% |
-| 11h | 3,1% | 4,2% |
-| 12h | 5,6% | 5,8% |
-| 13h | 5% | 5,3% |
-| 14h | 3,5% | 4,5% |
-| 15h | 2,5% | 4,3% |
-| 16h | 3,9% | 5,4% |
-| 17h | 4% | 4,9% |
-| 18h | 6,1% | 5% |
-| 19h | 8,9% | 5,5% |
-| 20h | 5,9% | 4,9% |
-| 21h | 10% | 4,9% |
-| 22h | 8,7% | 5,6% |
-| 23h | 3,1% | 4,3% |
+| 00h | 2,3% | 1,7% |
+| 01h | 0,8% | 1,2% |
+| 02h | 0,5% | 0,8% |
+| 03h | 0,4% | 0,7% |
+| 04h | 0,3% | 0,7% |
+| 05h | 0,7% | 0,9% |
+| 06h | 0,7% | 0,9% |
+| 07h | 1,1% | 1,4% |
+| 08h | 0,6% | 1,5% |
+| 09h | 1% | 1,4% |
+| 10h | 1,5% | 1,9% |
+| 11h | 1% | 2% |
+| 12h | 1,8% | 2,7% |
+| 13h | 2,1% | 2,5% |
+| 14h | 1,6% | 2,4% |
+| 15h | 1,7% | 2,7% |
+| 16h | 2,1% | 3,4% |
+| 17h | 3,2% | 6,2% |
+| 18h | 2,1% | 2,4% |
+| 19h | 16,3% | 24,7% |
+| 20h | 28,6% | 24,4% |
+| 21h | 19% | 7% |
+| 22h | 6,3% | 3,1% |
+| 23h | 4,3% | 3,3% |
 
-**Antes das viradas.** Houve 1 viradas de 3+ pontos em uma hora. Em 1 delas, grandes apostadores tinham posto dinheiro nas 2 horas anteriores: US$ 52.099 no lado para onde as odds foram, US$ 56.136 no outro. Isso mostra coincidência no tempo, não prova que alguém sabia antes; também pode ser o próprio dinheiro deles movendo as odds.
+**Antes das viradas.** Houve 5 viradas de 3+ pontos em uma hora. Em 5 delas, grandes apostadores tinham posto dinheiro nas 2 horas anteriores: US$ 7.303.613 no lado para onde as odds foram, US$ 3.974.248 no outro. Isso mostra coincidência no tempo, não prova que alguém sabia antes; também pode ser o próprio dinheiro deles movendo as odds.
 
 ## Fusos horários (estimativa)
 
-Para cada carteira com histórico suficiente, as seis horas mais quietas do dia são tratadas como noite. 159 grandes apostadores tiveram um padrão claro; 162 não (robôs, várias pessoas ou pouca atividade). O método não separa o Brasil (UTC−3) do leste dos EUA (UTC−4 em outubro).
+Para cada carteira com histórico suficiente, as seis horas mais quietas do dia são tratadas como noite. 405 grandes apostadores tiveram um padrão claro; 379 não (robôs, várias pessoas ou pouca atividade). O método não separa o Brasil (UTC−3) do leste dos EUA (UTC−4 em outubro).
 
 | Faixa | Grandes | Comparação |
 |---|---:|---:|
-| UTC−5 a −2 (leste dos EUA, Canadá, Brasil, resto da América do Sul) | 42,1% | 41,9% |
-| UTC−1 a +3 (Europa, África) | 28,9% | 31,2% |
-| UTC−8 a −6 (costa oeste e centro dos EUA, México) | 10,7% | 8,6% |
-| outros fusos | 8,2% | 4,3% |
-| UTC+7 a +10 (Sudeste e Leste Asiático, Austrália) | 7,5% | 6,5% |
-| UTC+4 a +6 (Golfo, Ásia Central, Índia) | 2,5% | 7,5% |
+| UTC−5 a −2 (leste dos EUA, Canadá, Brasil, resto da América do Sul) | 41,7% | 48,9% |
+| UTC−1 a +3 (Europa, África) | 34,8% | 33% |
+| UTC−8 a −6 (costa oeste e centro dos EUA, México) | 11,4% | 10,2% |
+| outros fusos | 5,9% | – |
+| UTC+7 a +10 (Sudeste e Leste Asiático, Austrália) | 4,2% | – |
+| UTC+4 a +6 (Golfo, Ásia Central, Índia) | 2% | 3,4% |
 
 ## Idade das carteiras na primeira aposta na eleição
 
 | Idade | Grandes | % | Apostado |
 |---|---:|---:|---:|
-| menos de 1 dia | 134 | 41,7% | US$ 1.920.876 |
-| 1 a 7 dias | 18 | 5,6% | US$ 191.224 |
-| 1 a 4 semanas | 35 | 10,9% | US$ 770.276 |
-| 1 a 6 meses | 65 | 20,2% | US$ 1.794.154 |
-| mais de 6 meses | 69 | 21,5% | US$ 1.509.757 |
+| menos de 1 dia | 287 | 36,6% | US$ 6.536.071 |
+| 1 a 7 dias | 42 | 5,4% | US$ 1.906.629 |
+| 1 a 4 semanas | 110 | 14% | US$ 4.867.597 |
+| 1 a 6 meses | 167 | 21,3% | US$ 6.155.511 |
+| mais de 6 meses | 178 | 22,7% | US$ 4.518.336 |
 
 ## Em que mais eles apostam
 
-29% dos grandes apostadores nunca apostaram em outra coisa no Polymarket (na comparação: 12%). Carteiras de uso único são um dos sinais clássicos de aposta com informação privilegiada, mas também de quem só se interessa pelo Brasil.
+28,4% dos grandes apostadores nunca apostaram em outra coisa no Polymarket (na comparação: 14,7%). Carteiras de uso único são um dos sinais clássicos de aposta com informação privilegiada, mas também de quem só se interessa pelo Brasil.
 
 | Área | Grandes | Comparação |
 |---|---:|---:|
-| Outros | 53,9% | 74% |
-| Guerra e geopolítica | 52,6% | 72% |
-| Esporte | 52,6% | 66,7% |
-| Política dos EUA | 50,8% | 60% |
-| Brasil | 48% | 40% |
-| Outras eleições | 40,5% | 43,3% |
-| Economia | 40,2% | 40,7% |
-| Cripto | 34,6% | 55,3% |
-| Cultura e tecnologia | 28% | 36,7% |
+| Outros | 57,4% | 70% |
+| Guerra e geopolítica | 56% | 65,3% |
+| Esporte | 55,1% | 68,7% |
+| Política dos EUA | 51,4% | 52% |
+| Brasil | 46% | 39,3% |
+| Outras eleições | 40,2% | 34,7% |
+| Economia | 39,5% | 34% |
+| Cripto | 38% | 46% |
+| Cultura e tecnologia | 29,5% | 30% |
 
 Mercados em comum entre os grandes apostadores (3+ carteiras):
 
 | Mercado | Área | Carteiras | Apostado |
 |---|---|---:|---:|
-| Will the Fed increase interest rates by 25 bps after the October 2026 meeting? | Economia | 79 | US$ 4.453.309 |
-| Will Flávio Bolsonaro win the second round of the 2026 Brazilian presidential election by less than 4%? | Brasil | 73 | US$ 1.050.105 |
-| 2026 Balance of Power: R Senate, R House | Política dos EUA | 67 | US$ 2.112.776 |
-| Will the Republicans win the Texas Senate race in 2026? | Política dos EUA | 67 | US$ 846.033 |
-| Will Harry Kane win the 2026 Ballon d'Or? | Outros | 62 | US$ 1.163.804 |
-| Will Benjamin Netanyahu be the next Prime Minister of Israel? | Guerra e geopolítica | 60 | US$ 1.224.223 |
-| US x Iran ceasefire continues through October 28? | Guerra e geopolítica | 58 | US$ 2.810.871 |
-| Will Student List – Students Win win the most seats in the 2026 Serbian parliamentary election? | Outras eleições | 53 | US$ 1.003.906 |
-| Will Brazil win the 2026 FIFA World Cup? | Brasil | 48 | US$ 536.333 |
-| Will Luiz Inácio Lula da Silva finish in second place in the first round of the 2026 Brazilian presidential election? | Brasil | 46 | US$ 751.577 |
-| US announces end of Iranian blockade by October 31, 2026? | Guerra e geopolítica | 43 | US$ 761.732 |
-| Will the Democratic Party control the Senate after the 2026 Midterm elections? | Política dos EUA | 42 | US$ 478.351 |
-| Will Nithya Raman win the 2026 Los Angeles mayoral election? | Política dos EUA | 41 | US$ 230.174 |
-| Will Flavio Bolsonaro win the most votes in the first round of the 2026 Brazil presidential election? | Brasil | 40 | US$ 476.453 |
-| Will there be no change in Fed interest rates after the December 2026 meeting? | Economia | 39 | US$ 200.575 |
-| Will the Fed increase interest rates by 50+ bps after the September 2026 meeting? | Economia | 38 | US$ 3.544.274 |
-| Will Lula win the most votes in the second round of the Brazil presidential election from Amapá? | Brasil | 36 | US$ 363.319 |
-| Will Аndrey Gyurov win the next Bulgarian presidential election? | Outras eleições | 36 | US$ 77.570 |
-| Will Google have the best AI model at the end of October 2026? | Cultura e tecnologia | 36 | US$ 66.169 |
-| Israel x Iran ceasefire continues through October 31? | Guerra e geopolítica | 35 | US$ 3.850.535 |
-| Will there be a Hormuz agreement and the Democrats win the Senate? | Política dos EUA | 35 | US$ 228.636 |
-| Will the Republicans win the Michigan Senate race in 2026? | Política dos EUA | 35 | US$ 118.396 |
-| Will the U.S. invade Iran before 2027? | Guerra e geopolítica | 32 | US$ 4.141.310 |
-| Will Marine Le Pen win the 2027 French presidential election? | Outras eleições | 32 | US$ 333.242 |
-| Will Yashar win the most seats in the 2026 Israeli legislative election? | Guerra e geopolítica | 32 | US$ 212.681 |
+| Will the Fed increase interest rates by 25 bps after the October 2026 meeting? | Economia | 169 | US$ 9.467.398 |
+| Will Benjamin Netanyahu be the next Prime Minister of Israel? | Guerra e geopolítica | 169 | US$ 6.537.220 |
+| Will Harry Kane win the 2026 Ballon d'Or? | Outros | 162 | US$ 5.116.957 |
+| Will Flávio Bolsonaro win the second round of the 2026 Brazilian presidential election by less than 4%? | Brasil | 152 | US$ 1.637.953 |
+| Will the Republicans win the Texas Senate race in 2026? | Política dos EUA | 131 | US$ 1.686.413 |
+| Will Yashar win the most seats in the 2026 Israeli legislative election? | Guerra e geopolítica | 130 | US$ 2.399.428 |
+| 2026 Balance of Power: R Senate, R House | Política dos EUA | 124 | US$ 2.944.029 |
+| Will Student List – Students Win win the most seats in the 2026 Serbian parliamentary election? | Outras eleições | 115 | US$ 1.933.027 |
+| US x Iran ceasefire continues through October 28? | Guerra e geopolítica | 114 | US$ 5.543.845 |
+| Will Nithya Raman win the 2026 Los Angeles mayoral election? | Política dos EUA | 111 | US$ 953.058 |
+| Will Flavio Bolsonaro win the most votes in the first round of the 2026 Brazil presidential election? | Brasil | 108 | US$ 1.563.665 |
+| Will Brazil win the 2026 FIFA World Cup? | Brasil | 106 | US$ 1.752.490 |
+| Will Likud win fewer than 20 seats in the 2026 Israeli legislative election? | Guerra e geopolítica | 103 | US$ 1.508.413 |
+| Will the Fed increase interest rates by 50+ bps after the September 2026 meeting? | Economia | 99 | US$ 10.235.295 |
+| Will Luiz Inácio Lula da Silva finish in second place in the first round of the 2026 Brazilian presidential election? | Brasil | 95 | US$ 1.168.263 |
+| US announces end of Iranian blockade by October 31, 2026? | Guerra e geopolítica | 94 | US$ 3.336.661 |
+| Will the U.S. invade Iran before 2027? | Guerra e geopolítica | 85 | US$ 7.366.449 |
+| Israel x Iran ceasefire continues through October 31? | Guerra e geopolítica | 85 | US$ 5.778.793 |
+| Will the Democratic Party control the Senate after the 2026 Midterm elections? | Política dos EUA | 83 | US$ 729.629 |
+| Will there be no change in Fed interest rates after the December 2026 meeting? | Economia | 83 | US$ 349.867 |
+| Will the Democratic Party control the House after the 2026 Midterm elections? | Política dos EUA | 81 | US$ 3.431.368 |
+| Will Volodymyr Zelenskyy win the Nobel Peace Prize in 2026? | Guerra e geopolítica | 79 | US$ 2.492.785 |
+| Will United Russia (ER) gain the most seats in the next Russian parliamentary election? | Guerra e geopolítica | 76 | US$ 3.825.001 |
+| Will Аndrey Gyurov win the next Bulgarian presidential election? | Outras eleições | 76 | US$ 267.570 |
+| Will Magdalena Andersson be the next Prime Minister of Sweden? | Outras eleições | 75 | US$ 666.147 |
 
 ## De onde vem o dinheiro
 
-Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 321 grandes apostadores verificados, na rede Polygon. Contratos do próprio Polymarket não contam como origem.
+Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 784 grandes apostadores verificados, na rede Polygon. Contratos do próprio Polymarket não contam como origem.
 
 | Origem | Carteiras | Apostado na eleição |
 |---|---:|---:|
-| Endereço que também abasteceu 5+ das carteiras estudadas (provável corretora, ponte ou serviço de depósito) | 226 | US$ 5.485.291 |
-| Endereço que abasteceu 2 a 4 das carteiras estudadas (possível mesmo dono) | 5 | US$ 62.621 |
-| Endereço exclusivo | 6 | US$ 53.843 |
-| Sem entrada visível (dinheiro chegou por dentro do Polymarket) | 84 | – |
+| Endereço que também abasteceu 5+ das carteiras estudadas (provável corretora, ponte ou serviço de depósito) | 600 | US$ 21.303.092 |
+| Endereço que abasteceu 2 a 4 das carteiras estudadas (possível mesmo dono) | 7 | US$ 77.187 |
+| Endereço exclusivo | 17 | US$ 782.460 |
+| Sem entrada visível (dinheiro chegou por dentro do Polymarket) | 160 | – |
 
-30 grupos de carteiras dividem uma mesma origem (tamanhos: 4, 4, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2). Carteiras estudadas que abasteceram outras carteiras estudadas: 20.
+104 grupos de carteiras dividem uma mesma origem (tamanhos: 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2). Carteiras estudadas que abasteceram outras carteiras estudadas: 76.
 
-Moedas de entrada: USDC.e US$ 5.766.173, pUSD US$ 1.225.163, USDC US$ 1.061.255, USDT0 US$ 20.
+Moedas de entrada: USDC.e US$ 21.671.108, pUSD US$ 2.441.444, USDC US$ 5.285.403, USDT0 US$ 6.716.
 
 A blockchain mostra o endereço de origem, não a pessoa. Quase todo dinheiro chega por corretoras e pontes, que misturam milhares de clientes; a partir daí o rastro só continua com dados das próprias corretoras.
