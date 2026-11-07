@@ -1,6 +1,6 @@
 # Cash Out: análise agregada
 
-Atualizado em 2026-11-06 13:50 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
+Atualizado em 2026-11-07 12:44 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
 
 Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de um grupo, e grupos com menos de 3 carteiras são omitidos.
 
