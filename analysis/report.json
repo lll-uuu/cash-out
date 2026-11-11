@@ -1,5 +1,5 @@
 {
- "generatedAt": 1794315264,
+ "generatedAt": 1794417307,
  "hoursRecorded": 355,
  "from": "2026-10-10T13Z",
  "to": "2026-10-26T03Z",
@@ -862,8 +862,8 @@
  },
  "funding": {
   "walletsChecked": 784,
-  "walletsNoOutsideInflow": 234,
-  "betUsdNoOutsideInflow": 3601633.73,
+  "walletsNoOutsideInflow": 248,
+  "betUsdNoOutsideInflow": 3841657.27,
   "inflowUsd": 29404670.94,
   "tokens": {
    "USDC.e": 21671107.71,
@@ -882,16 +882,16 @@
    {
     "key": "conta de usuário do Polymarket",
     "label": "Outra conta do Polymarket (transferência entre contas)",
-    "inflowUsd": 4775741.39,
-    "pct": 16.2,
-    "wallets": 73
+    "inflowUsd": 4921496.46,
+    "pct": 16.7,
+    "wallets": 180
    },
    {
     "key": "troca descentralizada",
     "label": "Troca descentralizada (outra cripto convertida em dólar digital)",
-    "inflowUsd": 5338871.28,
+    "inflowUsd": 5339081.96,
     "pct": 18.2,
-    "wallets": 110
+    "wallets": 111
    },
    {
     "key": "ponte entre redes",
@@ -931,29 +931,29 @@
    {
     "key": "carteira sem rótulo",
     "label": "Carteira pessoal sem rótulo",
-    "inflowUsd": 4472672.42,
-    "pct": 15.2,
-    "wallets": 40
+    "inflowUsd": 4538746.02,
+    "pct": 15.4,
+    "wallets": 256
    },
    {
     "key": "outro contrato",
     "label": "Outro contrato",
-    "inflowUsd": 21602.28,
-    "pct": 0.1,
-    "wallets": 3
-   },
-   {
-    "key": "não verificado",
-    "label": "Ainda não verificado",
-    "inflowUsd": 370740.78,
-    "pct": 1.3,
-    "wallets": 479
+    "inflowUsd": 180303.71,
+    "pct": 0.6,
+    "wallets": 384
    }
   ],
-  "funderAddresses": 130,
-  "personalFunderGroups": 1,
+  "funderAddresses": 1310,
+  "personalFunderGroups": 8,
   "personalFunderGroupSizes": [
-   6
+   147,
+   60,
+   15,
+   13,
+   11,
+   6,
+   4,
+   4
   ],
   "walletsThatFundedOtherStudiedWallets": 76
  }

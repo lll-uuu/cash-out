@@ -1,6 +1,6 @@
 # Cash Out: análise agregada
 
-Atualizado em 2026-11-10 09:54 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
+Atualizado em 2026-11-11 14:15 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
 
 Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de um grupo, e grupos com menos de 3 carteiras são omitidos.
 
@@ -157,22 +157,21 @@ Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 784 grandes a
 | Origem | Entradas | % | Carteiras |
 |---|---:|---:|---:|
 | Contratos do próprio Polymarket (prêmios, trocas, depósitos) | US$ 7.629.069 | 25,9% | 476 |
-| Outra conta do Polymarket (transferência entre contas) | US$ 4.775.741 | 16,2% | 73 |
-| Troca descentralizada (outra cripto convertida em dólar digital) | US$ 5.338.871 | 18,2% | 110 |
+| Outra conta do Polymarket (transferência entre contas) | US$ 4.921.496 | 16,7% | 180 |
+| Troca descentralizada (outra cripto convertida em dólar digital) | US$ 5.339.082 | 18,2% | 111 |
 | Ponte entre blockchains | US$ 4.280.586 | 14,6% | 224 |
 | Corretora com rótulo público | US$ 1.802.619 | 6,1% | 68 |
 | Carteira pessoal abastecida por corretora | US$ 451.090 | 1,5% | 16 |
 | Carteira pessoal abastecida pela ChangeNOW (troca sem cadastro) | US$ 247.025 | 0,8% | 3 |
 | MoonPay (compra com cartão) | US$ 14.654 | 0% | 12 |
-| Carteira pessoal sem rótulo | US$ 4.472.672 | 15,2% | 40 |
-| Outro contrato | US$ 21.602 | 0,1% | 3 |
-| Ainda não verificado | US$ 370.741 | 1,3% | 479 |
+| Carteira pessoal sem rótulo | US$ 4.538.746 | 15,4% | 256 |
+| Outro contrato | US$ 180.304 | 0,6% | 384 |
 
 Nenhum endereço com rótulo de casa de apostas ou cassino aparece entre as origens. Isso não prova que esse dinheiro não exista: a blockchain só mostra o último passo, e dinheiro de cassino pode passar por corretora, ponte ou troca antes de chegar; casas que operam por Pix nem passam pela blockchain.
 
-**Sem entrada de fora do Polymarket:** 234 carteiras (US$ 3.601.634 apostados na eleição) só receberam dinheiro de contratos ou de outras contas do próprio Polymarket, ou nenhuma entrada visível. Para elas, só o Polymarket sabe de onde veio o dinheiro.
+**Sem entrada de fora do Polymarket:** 248 carteiras (US$ 3.841.657 apostados na eleição) só receberam dinheiro de contratos ou de outras contas do próprio Polymarket, ou nenhuma entrada visível. Para elas, só o Polymarket sabe de onde veio o dinheiro.
 
-1 grupos de 3 ou mais carteiras estudadas foram abastecidos por uma mesma carteira pessoal sem rótulo (possível mesmo dono; tamanhos: 6). Carteiras estudadas que abasteceram outras carteiras estudadas: 76.
+8 grupos de 3 ou mais carteiras estudadas foram abastecidos por uma mesma carteira pessoal sem rótulo (possível mesmo dono; tamanhos: 147, 60, 15, 13, 11, 6, 4, 4). Carteiras estudadas que abasteceram outras carteiras estudadas: 76.
 
 Moedas de entrada: USDC.e US$ 21.671.108, pUSD US$ 2.441.444, USDC US$ 5.285.403, USDT0 US$ 6.716.
 
