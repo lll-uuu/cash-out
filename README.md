@@ -65,10 +65,12 @@ Para gerar uma imagem maior a partir de qualquer hora, num computador com Node 2
 - `relatorio.md`: um relatório para ler, em português: quem aposta, horários, dinheiro apostado antes das viradas, fusos horários estimados, idade das carteiras, outros mercados e de onde veio o dinheiro.
 - `hourly.csv`: todas as horas registradas, com o dinheiro de cada lado, o dos grandes apostadores, o das carteiras novas, as odds e as viradas. Pronto para cruzar com a agenda de campanha.
 - `report.json`: os mesmos números, para outras ferramentas.
+- `funders.json`: o tipo de cada endereço que abasteceu um grande apostador (contrato do Polymarket, outra conta do Polymarket, corretora, ponte, troca, carteira pessoal). Só a categoria, sem nomes de pessoas.
+- `labels.json`: rótulos públicos de serviços (contratos do Polymarket, corretoras, pontes, trocas), conferidos à mão no Polygonscan. Só serviços entram aqui, nunca carteiras pessoais.
 
 A análise estuda os grandes apostadores (baleias, carteiras novas sinalizadas e quem somou US$ 5.000 ou mais) em comparação com uma amostra de carteiras comuns, usando o histórico público delas no Polymarket. Nenhum endereço de carteira ou de origem aparece nos resultados, e qualquer número que descreva menos de 3 carteiras fica escondido. `analysis/cache.json` guarda resumos por carteira entre uma execução e outra, para fazer menos consultas; essas carteiras já são públicas nos snapshots.
 
-A seção sobre a origem do dinheiro precisa de uma chave gratuita do Etherscan (etherscan.io → API Keys), salva como secret do repositório com o nome `ETHERSCAN_API_KEY` (Settings → Secrets and variables → Actions). Sem a chave, o resto do relatório funciona normalmente.
+A seção sobre a origem do dinheiro precisa de uma chave gratuita do Etherscan (etherscan.io → API Keys), salva como secret do repositório com o nome `ETHERSCAN_API_KEY` (Settings → Secrets and variables → Actions). Sem a chave, o resto do relatório funciona normalmente. Para refazer o relatório só com os dados já guardados, sem nenhuma consulta: `CASHOUT_OFFLINE=1 node analyze.js`.
 
 ### Arquivos
 

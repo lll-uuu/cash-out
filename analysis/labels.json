@@ -1,0 +1,126 @@
+{
+ "0xd36ec33c8bed5a9f7b6630855f1533455b98a418": {
+  "cat": "troca descentralizada",
+  "name": "Uniswap V3 Pool"
+ },
+ "0xf70da97812cb96acdf810712aa562db8dfa3dbef": {
+  "cat": "ponte entre redes",
+  "name": "Relay: Solver"
+ },
+ "0x3a3bd7bb9528e159577f7c2e685cc81a765002e2": {
+  "cat": "contrato do Polymarket",
+  "name": "Polymarket: Wrapped Collateral"
+ },
+ "0xc5d563a36ae78145c45a50134d48a1215220f80a": {
+  "cat": "contrato do Polymarket",
+  "name": "Polymarket: Neg Risk CTF Exchange"
+ },
+ "0xc417fd8e9661c0d2120b64a04bb3278c17e99db1": {
+  "cat": "contrato do Polymarket",
+  "name": "Polymarket: depósito/wrap (proxy, métodos Wrap e Add Deposit)"
+ },
+ "0xe111180000d2663c0091e4f400237545b87b996b": {
+  "cat": "contrato do Polymarket",
+  "name": "Polymarket: CTF Exchange V2"
+ },
+ "0x1929347e025d4f5f8d6b2bd2261e2f4efcacd215": {
+  "cat": "ponte entre redes",
+  "name": "CheckoutPool (pagamentos entre redes)"
+ },
+ "0x4b6f17856215eab57c29ebfa18b0a0f74a3627bb": {
+  "cat": "corretora",
+  "name": "Kraken 72"
+ },
+ "0xf5042e6ffac5a625d4e7848e0b01373d8eb9e222": {
+  "cat": "ponte entre redes",
+  "name": "Relay: RelayRouter"
+ },
+ "0xe7804c37c13166ff0b37f5ae0bb07a3aebb6e245": {
+  "cat": "corretora",
+  "name": "Binance 48"
+ },
+ "0xcb39c5b0db9c5b6bd1d9273dccc2f98f532a8bc6": {
+  "cat": "corretora",
+  "name": "Coinbase 6"
+ },
+ "0x760dce7ea6e8ba224bffbeb8a7ff4dd1ef122bff": {
+  "cat": "corretora",
+  "name": "Coinbase 46"
+ },
+ "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f": {
+  "cat": "ponte entre redes",
+  "name": "Relay: Router V3"
+ },
+ "0x9810762578accf1f314320cca5b72506ae7d7630": {
+  "cat": "corretora",
+  "name": "Coinbase 16"
+ },
+ "0x13cedf588f3c4acc373c54a9931ac5829593ae8d": {
+  "cat": "troca descentralizada",
+  "name": "0x: Exchange Proxy Flash Wallet"
+ },
+ "0xc9aaa6ca0e05b87d53a3e51edbc44b406eeaf299": {
+  "cat": "corretora",
+  "name": "Coinbase 30"
+ },
+ "0x8f5bbb2bb8c2ee94639e55d5f41de9b4839c1280": {
+  "cat": "ponte entre redes"
+ },
+ "0x6081258689a75d253d87ce902a8de3887239fe80": {
+  "cat": "corretora"
+ },
+ "0x9c2bd617b77961ee2c5e3038dfb0c822cb75d82a": {
+  "cat": "corretora"
+ },
+ "0x51e3d44172868acc60d68ca99591ce4230bc75e0": {
+  "cat": "corretora"
+ },
+ "0xf89d7b9c864f589bbf53a82105107622b35eaa40": {
+  "cat": "corretora"
+ },
+ "0xe86f3aaa57f63b2afeca68178182a91bc3909962": {
+  "cat": "corretora"
+ },
+ "0xd9abecb39a5885d1e531ed3599adfed620e2fc8a": {
+  "cat": "troca descentralizada"
+ },
+ "0xbeea392a0cbf2e871bc35d4df813a01c62778872": {
+  "cat": "contrato do Polymarket"
+ },
+ "0xa153274173260dcb33537bc5749cddd0f57462ff": {
+  "cat": "contrato do Polymarket"
+ },
+ "0xe3333700ca9d93003f00f0f71f8515005f6c00aa": {
+  "cat": "contrato do Polymarket"
+ },
+ "0xff5b2659713ba27c01acc6e8ce4ab1e16bf371f9": {
+  "cat": "contrato do Polymarket"
+ },
+ "0x19ab546e77d0cd3245b2aad46bd80dc4707d6307": {
+  "cat": "corretora"
+ },
+ "0xee7ae85f2fe2239e27d9c1e23fffe168d63b4055": {
+  "cat": "corretora"
+ },
+ "0x1205f31718499dbf1fca446663b532ef87481fe1": {
+  "cat": "troca descentralizada"
+ },
+ "0x06959153b974d0d5fdfd87d561db6d8d4fa0bb0b": {
+  "cat": "corretora"
+ },
+ "0x0b5c4a7fcda49e0a8661419bb55b86161a86db2a": {
+  "cat": "MoonPay"
+ },
+ "0x9573a11d939753737e8f09f80f07f6462c093a1c": {
+  "cat": "corretora"
+ },
+ "0x505e71695e9bc45943c58adec1650577bca68fd9": {
+  "cat": "corretora"
+ },
+ "0x1440ec793ae50fa046b95bfeca5af475b6003f9e": {
+  "cat": "MoonPay"
+ },
+ "0x05cd9922a5d37fae921fc5dee280a9dbc4c3b393": {
+  "cat": "contrato do Polymarket"
+ }
+}

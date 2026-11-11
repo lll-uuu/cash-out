@@ -10,6 +10,7 @@
 //
 // Usage:  node analyze.js            (writes analysis/)
 // Optional: ETHERSCAN_API_KEY=...    (free key from etherscan.io; enables the funding section)
+//           CASHOUT_OFFLINE=1         (rebuild the report from analysis/cache.json without any network call)
 
 const fs = require("fs");
 const path = require("path");
@@ -24,10 +25,14 @@ const A = {
   beforeSwingHours: 2,    // how far back to look for money placed ahead of a swing
 };
 
-const DATA = "data", OUT = "analysis", CACHE = path.join(OUT, "cache.json");
+const DATA = "data", OUT = "analysis", CACHE = path.join(OUT, "cache.json"), FUNDERS = path.join(OUT, "funders.json");
 const API = "https://data-api.polymarket.com";
 const ESCAN = "https://api.etherscan.io/v2/api?chainid=137";
 const KEY = process.env.ETHERSCAN_API_KEY || "";
+const OFFLINE = !!process.env.CASHOUT_OFFLINE;
+// Public name tags of services (Polymarket contracts, exchanges, bridges, swaps), checked by hand on Polygonscan.
+// Only services go here, never personal wallets.
+const LABELS = fs.existsSync(path.join("analysis", "labels.json")) ? JSON.parse(fs.readFileSync(path.join("analysis", "labels.json"), "utf8")) : {};
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const hourOf = ts => Math.floor(ts / 3600) * 3600;
 const iso = ts => new Date(ts * 1000).toISOString().slice(0, 13) + "Z";
@@ -173,6 +178,37 @@ async function funding(wallet) {
     .map(x => ({ from: x.from.toLowerCase(), ts: +x.timeStamp, usd: r2(Number(x.value) / 10 ** Number(x.tokenDecimal)), token: x.tokenSymbol }));
   return { inflows };
 }
+
+// What kind of address a funder is. Order: hand-checked service labels, then what the chain says.
+// Polymarket accounts are smart wallets (ProxyWallet, Safe, DepositWallet): money from one of them is
+// money moved from another Polymarket account, not money entering from outside.
+const USER_ACCOUNT = /^(ProxyWallet|GnosisSafeProxy|SafeProxy|DepositWallet)$/;
+const DEX = /Pool|Pair|Router|Swap/i;
+async function funderCategory(addr) {
+  if (LABELS[addr]) return { cat: LABELS[addr].cat, src: "labels.json" };
+  const code = await get(`${ESCAN}&module=proxy&action=eth_getCode&address=${addr}&tag=latest&apikey=${KEY}`);
+  if (!code || typeof code.result !== "string") return null;
+  if (code.result === "0x") return { cat: "carteira sem rótulo", src: "etherscan" };
+  await sleep(250);
+  const src = await get(`${ESCAN}&module=contract&action=getsourcecode&address=${addr}&apikey=${KEY}`);
+  const name = src && Array.isArray(src.result) && src.result[0] ? src.result[0].ContractName || "" : "";
+  const cat = USER_ACCOUNT.test(name) ? "conta de usuário do Polymarket" : DEX.test(name) ? "troca descentralizada" : "outro contrato";
+  return { cat, src: "etherscan", contract: name };
+}
+const POLY_CATS = new Set(["contrato do Polymarket", "conta de usuário do Polymarket"]);
+const CAT_ORDER = [
+  ["contrato do Polymarket", "Contratos do próprio Polymarket (prêmios, trocas, depósitos)"],
+  ["conta de usuário do Polymarket", "Outra conta do Polymarket (transferência entre contas)"],
+  ["troca descentralizada", "Troca descentralizada (outra cripto convertida em dólar digital)"],
+  ["ponte entre redes", "Ponte entre blockchains"],
+  ["corretora", "Corretora com rótulo público"],
+  ["carteira abastecida por corretora", "Carteira pessoal abastecida por corretora"],
+  ["carteira abastecida pela ChangeNOW", "Carteira pessoal abastecida pela ChangeNOW (troca sem cadastro)"],
+  ["MoonPay", "MoonPay (compra com cartão)"],
+  ["carteira sem rótulo", "Carteira pessoal sem rótulo"],
+  ["outro contrato", "Outro contrato"],
+  ["não verificado", "Ainda não verificado"],
+];
 
 // ---------- 5. The report ----------
 
@@ -323,45 +359,37 @@ function walletAge(wallets, cache, per, trades) {
   }));
 }
 
-function fundingSummary(wallets, fund, per) {
-  // How many studied wallets each funder address paid. Addresses are counted, never printed.
-  const funders = new Map();
+function fundingSummary(wallets, fund, per, funders) {
+  // Addresses are counted and classified, never printed.
+  const catOf = a => (funders[a] && funders[a].cat) || "não verificado";
   let withData = 0, noOutside = 0, inflowUsd = 0;
   const tokens = {};
+  const byCat = {}; // cat -> { usd, wallets:Set }
+  const personal = new Map(); // unlabeled personal funder -> studied wallets it paid
   for (const w of wallets) {
     const f = fund[w]; if (!f) continue;
     withData++;
-    if (!f.inflows.length) { noOutside++; continue; }
+    let outside = false;
     for (const x of f.inflows) {
+      const c = catOf(x.from);
       inflowUsd += x.usd; tokens[x.token] = (tokens[x.token] || 0) + x.usd;
-      if (!funders.has(x.from)) funders.set(x.from, new Set());
-      funders.get(x.from).add(w);
+      (byCat[c] = byCat[c] || { usd: 0, wallets: new Set() }).usd += x.usd;
+      byCat[c].wallets.add(w);
+      if (!POLY_CATS.has(c)) outside = true;
+      if (c === "carteira sem rótulo") { if (!personal.has(x.from)) personal.set(x.from, new Set()); personal.get(x.from).add(w); }
     }
+    if (!outside) noOutside++;
   }
-  // Classify each studied wallet by the most connected address that funded it.
-  const cls = { hub: 0, shared: 0, own: 0 };
-  const clsUsd = { hub: 0, shared: 0, own: 0 };
-  const sharedSizes = [];
-  const seenCluster = new Set();
-  for (const w of wallets) {
-    const f = fund[w]; if (!f || !f.inflows.length) continue;
-    const reach = Math.max(...f.inflows.map(x => funders.get(x.from).size));
-    const k = reach >= 5 ? "hub" : reach >= 2 ? "shared" : "own";
-    cls[k]++; clsUsd[k] += per.get(w).usd;
-  }
-  for (const [from, ws] of funders) {
-    if (ws.size >= 2 && ws.size < 5 && !seenCluster.has(from)) { seenCluster.add(from); sharedSizes.push(ws.size); }
-  }
-  const crossFunded = [...funders.keys()].filter(f => wallets.has(f)).length; // studied wallets that funded other studied wallets
+  const sharedSizes = [...personal.values()].map(s => s.size).filter(n => n >= A.minGroup).sort((a, b) => b - a);
+  const crossFunded = Object.keys(fund).length ? [...new Set(Object.values(fund).flatMap(f => f.inflows.map(x => x.from)))].filter(a => wallets.has(a)).length : 0;
+  let betNoOutside = 0;
+  for (const w of wallets) { const f = fund[w]; if (f && !f.inflows.some(x => !POLY_CATS.has(catOf(x.from)))) betNoOutside += per.get(w).usd; }
   return {
-    walletsChecked: withData, walletsNoOutsideInflow: noOutside, inflowUsd: r2(inflowUsd),
+    walletsChecked: withData, walletsNoOutsideInflow: noOutside, betUsdNoOutsideInflow: r2(betNoOutside), inflowUsd: r2(inflowUsd),
     tokens: Object.fromEntries(Object.entries(tokens).map(([k, v]) => [k, r2(v)])),
-    byFunderType: {
-      viaHub: { wallets: cls.hub, betUsd: r2(clsUsd.hub) },
-      viaSharedFunder: { wallets: cls.shared, betUsd: r2(clsUsd.shared) },
-      ownFunder: { wallets: cls.own, betUsd: r2(clsUsd.own) },
-    },
-    sharedFunderGroups: sharedSizes.length, sharedFunderGroupSizes: sharedSizes.sort((a, b) => b - a),
+    byCategory: CAT_ORDER.filter(([k]) => byCat[k]).map(([k, label]) => ({ key: k, label, inflowUsd: r2(byCat[k].usd), pct: pct(byCat[k].usd, inflowUsd), wallets: byCat[k].wallets.size })),
+    funderAddresses: Object.keys(funders).length,
+    personalFunderGroups: sharedSizes.length, personalFunderGroupSizes: sharedSizes,
     walletsThatFundedOtherStudiedWallets: crossFunded >= A.minGroup ? crossFunded : (crossFunded ? `<${A.minGroup}` : 0),
   };
 }
@@ -462,20 +490,21 @@ function markdown(R) {
   } else if (!f) {
     p(`Esta seção precisa de uma chave gratuita do Etherscan (secret \`ETHERSCAN_API_KEY\`).`);
   } else {
-    p(`Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos ${f.walletsChecked} grandes apostadores verificados, na rede Polygon. Contratos do próprio Polymarket não contam como origem.`);
+    p(`Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos ${f.walletsChecked} grandes apostadores verificados, na rede Polygon, ao longo de todo o histórico delas: ${money(f.inflowUsd)} no total. Cada endereço de origem foi classificado pelo rótulo público no Polygonscan ou pelo tipo de contrato; os endereços não são publicados.`);
     p(``);
-    p(`| Origem | Carteiras | Apostado na eleição |`);
-    p(`|---|---:|---:|`);
-    p(`| Endereço que também abasteceu 5+ das carteiras estudadas (provável corretora, ponte ou serviço de depósito) | ${few(f.byFunderType.viaHub.wallets)} | ${money(f.byFunderType.viaHub.betUsd)} |`);
-    p(`| Endereço que abasteceu 2 a 4 das carteiras estudadas (possível mesmo dono) | ${few(f.byFunderType.viaSharedFunder.wallets)} | ${money(f.byFunderType.viaSharedFunder.betUsd)} |`);
-    p(`| Endereço exclusivo | ${few(f.byFunderType.ownFunder.wallets)} | ${money(f.byFunderType.ownFunder.betUsd)} |`);
-    p(`| Sem entrada visível (dinheiro chegou por dentro do Polymarket) | ${few(f.walletsNoOutsideInflow)} | – |`);
+    p(`| Origem | Entradas | % | Carteiras |`);
+    p(`|---|---:|---:|---:|`);
+    for (const c of f.byCategory) p(`| ${c.label} | ${money(c.inflowUsd)} | ${pc(c.pct)} | ${few(c.wallets)} |`);
     p(``);
-    p(`${f.sharedFunderGroups} grupos de carteiras dividem uma mesma origem (tamanhos: ${f.sharedFunderGroupSizes.join(", ") || "–"}). Carteiras estudadas que abasteceram outras carteiras estudadas: ${f.walletsThatFundedOtherStudiedWallets}.`);
+    p(`Nenhum endereço com rótulo de casa de apostas ou cassino aparece entre as origens. Isso não prova que esse dinheiro não exista: a blockchain só mostra o último passo, e dinheiro de cassino pode passar por corretora, ponte ou troca antes de chegar; casas que operam por Pix nem passam pela blockchain.`);
+    p(``);
+    p(`**Sem entrada de fora do Polymarket:** ${few(f.walletsNoOutsideInflow)} carteiras (${money(f.betUsdNoOutsideInflow)} apostados na eleição) só receberam dinheiro de contratos ou de outras contas do próprio Polymarket, ou nenhuma entrada visível. Para elas, só o Polymarket sabe de onde veio o dinheiro.`);
+    p(``);
+    p(`${f.personalFunderGroups} grupos de 3 ou mais carteiras estudadas foram abastecidos por uma mesma carteira pessoal sem rótulo (possível mesmo dono; tamanhos: ${f.personalFunderGroupSizes.join(", ") || "–"}). Carteiras estudadas que abasteceram outras carteiras estudadas: ${f.walletsThatFundedOtherStudiedWallets}.`);
     p(``);
     p(`Moedas de entrada: ${Object.entries(f.tokens).map(([k, v]) => `${k} ${money(v)}`).join(", ")}.`);
     p(``);
-    p(`A blockchain mostra o endereço de origem, não a pessoa. Quase todo dinheiro chega por corretoras e pontes, que misturam milhares de clientes; a partir daí o rastro só continua com dados das próprias corretoras.`);
+    p(`A blockchain mostra o endereço de origem, não a pessoa. Corretoras, pontes e trocas misturam milhares de clientes; a partir delas o rastro só continua com dados das próprias empresas, que autoridades como o Coaf podem pedir.`);
   }
   p(``);
   return L1.join("\n");
@@ -489,23 +518,37 @@ async function main() {
   console.log(`${files.length} snapshots, ${trades.length} trades, ${G.per.size} wallets; studying ${G.flagged.size} big + ${G.baseline.size} baseline`);
 
   const cache = fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, "utf8")) : { history: {}, funding: {} };
+  // What kind of address each funder is (category only), kept in its own small file.
+  cache.funders = fs.existsSync(FUNDERS) ? JSON.parse(fs.readFileSync(FUNDERS, "utf8")) : (cache.funders || {});
   const now = Math.floor(Date.now() / 1000);
   const study = [...G.flagged, ...G.baseline];
   let fetched = 0;
   for (const w of study) {
     const h = cache.history[w];
-    if (h && now - h.at < A.refreshDays * 86400) continue;
+    if (OFFLINE || (h && now - h.at < A.refreshDays * 86400)) continue;
     try { cache.history[w] = await history(w); fetched++; } catch (e) { console.log("history failed:", e.message); }
     await sleep(120);
   }
-  if (KEY) {
+  if (KEY && !OFFLINE) {
     for (const w of G.flagged) {
       if (cache.funding[w] && now - cache.funding[w].at < A.refreshDays * 86400) continue;
       try { cache.funding[w] = { at: now, ...(await funding(w)) }; } catch (e) { console.log("funding failed:", e.message); }
       await sleep(250); // stays under the free tier's rate
     }
   }
-  fs.writeFileSync(CACHE, JSON.stringify(cache));
+  // Classify every address that funded a big bettor (hand-checked labels first, then the chain).
+  for (const [a, l] of Object.entries(LABELS)) cache.funders[a] = { cat: l.cat, src: "labels.json" };
+  if (KEY && !OFFLINE) {
+    const all = new Set(Object.values(cache.funding).flatMap(f => f.inflows.map(x => x.from)));
+    for (const a of all) {
+      if (cache.funders[a]) continue;
+      try { const c = await funderCategory(a); if (c) cache.funders[a] = c; } catch (e) { console.log("funder check failed:", e.message); }
+      await sleep(250);
+    }
+  }
+  const { funders: fundersOut, ...cacheOut } = cache;
+  fs.writeFileSync(CACHE, JSON.stringify(cacheOut));
+  fs.writeFileSync(FUNDERS, JSON.stringify(fundersOut, null, 0));
   console.log(`read ${fetched} wallet histories`);
 
   const group = (label, set) => {
@@ -541,7 +584,7 @@ async function main() {
     timezones: { big: timezones(G.flagged, cache.history), baseline: timezones(G.baseline, cache.history) },
     walletAge: walletAge(G.flagged, cache.history, G.per, trades),
     otherMarkets: { big: otherMarkets(G.flagged, cache.history), baseline: otherMarkets(G.baseline, cache.history) },
-    funding: KEY ? fundingSummary(G.flagged, cache.funding, G.per) : null,
+    funding: Object.keys(cache.funding).length ? fundingSummary(G.flagged, cache.funding, G.per, cache.funders) : null,
   };
 
   const rows = hourlyTimeline(trades, G, anomalies, share);

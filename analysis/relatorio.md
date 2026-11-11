@@ -1,6 +1,6 @@
 # Cash Out: análise agregada
 
-Atualizado em 2026-11-10 14:07 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
+Atualizado em 2026-11-10 09:54 (Brasília). 355 horas registradas, de 2026-10-10T13Z a 2026-10-26T03Z (UTC).
 
 Nenhum endereço de carteira aparece aqui. Todo número é soma ou contagem de um grupo, e grupos com menos de 3 carteiras são omitidos.
 
@@ -152,17 +152,28 @@ Mercados em comum entre os grandes apostadores (3+ carteiras):
 
 ## De onde vem o dinheiro
 
-Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 784 grandes apostadores verificados, na rede Polygon. Contratos do próprio Polymarket não contam como origem.
+Entradas de stablecoins (USDC, pUSD e similares) nas carteiras dos 784 grandes apostadores verificados, na rede Polygon, ao longo de todo o histórico delas: US$ 29.404.671 no total. Cada endereço de origem foi classificado pelo rótulo público no Polygonscan ou pelo tipo de contrato; os endereços não são publicados.
 
-| Origem | Carteiras | Apostado na eleição |
-|---|---:|---:|
-| Endereço que também abasteceu 5+ das carteiras estudadas (provável corretora, ponte ou serviço de depósito) | 600 | US$ 21.303.092 |
-| Endereço que abasteceu 2 a 4 das carteiras estudadas (possível mesmo dono) | 7 | US$ 77.187 |
-| Endereço exclusivo | 17 | US$ 782.460 |
-| Sem entrada visível (dinheiro chegou por dentro do Polymarket) | 160 | – |
+| Origem | Entradas | % | Carteiras |
+|---|---:|---:|---:|
+| Contratos do próprio Polymarket (prêmios, trocas, depósitos) | US$ 7.629.069 | 25,9% | 476 |
+| Outra conta do Polymarket (transferência entre contas) | US$ 4.775.741 | 16,2% | 73 |
+| Troca descentralizada (outra cripto convertida em dólar digital) | US$ 5.338.871 | 18,2% | 110 |
+| Ponte entre blockchains | US$ 4.280.586 | 14,6% | 224 |
+| Corretora com rótulo público | US$ 1.802.619 | 6,1% | 68 |
+| Carteira pessoal abastecida por corretora | US$ 451.090 | 1,5% | 16 |
+| Carteira pessoal abastecida pela ChangeNOW (troca sem cadastro) | US$ 247.025 | 0,8% | 3 |
+| MoonPay (compra com cartão) | US$ 14.654 | 0% | 12 |
+| Carteira pessoal sem rótulo | US$ 4.472.672 | 15,2% | 40 |
+| Outro contrato | US$ 21.602 | 0,1% | 3 |
+| Ainda não verificado | US$ 370.741 | 1,3% | 479 |
 
-104 grupos de carteiras dividem uma mesma origem (tamanhos: 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2). Carteiras estudadas que abasteceram outras carteiras estudadas: 76.
+Nenhum endereço com rótulo de casa de apostas ou cassino aparece entre as origens. Isso não prova que esse dinheiro não exista: a blockchain só mostra o último passo, e dinheiro de cassino pode passar por corretora, ponte ou troca antes de chegar; casas que operam por Pix nem passam pela blockchain.
+
+**Sem entrada de fora do Polymarket:** 234 carteiras (US$ 3.601.634 apostados na eleição) só receberam dinheiro de contratos ou de outras contas do próprio Polymarket, ou nenhuma entrada visível. Para elas, só o Polymarket sabe de onde veio o dinheiro.
+
+1 grupos de 3 ou mais carteiras estudadas foram abastecidos por uma mesma carteira pessoal sem rótulo (possível mesmo dono; tamanhos: 6). Carteiras estudadas que abasteceram outras carteiras estudadas: 76.
 
 Moedas de entrada: USDC.e US$ 21.671.108, pUSD US$ 2.441.444, USDC US$ 5.285.403, USDT0 US$ 6.716.
 
-A blockchain mostra o endereço de origem, não a pessoa. Quase todo dinheiro chega por corretoras e pontes, que misturam milhares de clientes; a partir daí o rastro só continua com dados das próprias corretoras.
+A blockchain mostra o endereço de origem, não a pessoa. Corretoras, pontes e trocas misturam milhares de clientes; a partir delas o rastro só continua com dados das próprias empresas, que autoridades como o Coaf podem pedir.
